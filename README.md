@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-Fundamentos front-end e back-end
 # Trybe
 ​
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _Gabriel T. Araújo da Silva https://www.linkedin.com/in/gabriel-tarick-bb708917b/_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
@@ -567,4 +565,4 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 # [...]
 
->>>>>>> 69b2db3328ef84ef4c30f7a910a16f1d505ba294
+
