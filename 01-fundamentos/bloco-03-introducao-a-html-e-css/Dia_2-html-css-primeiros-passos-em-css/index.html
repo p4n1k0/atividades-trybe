@@ -5,32 +5,42 @@
     <title>HTML</title>
     <style>
         h1 {
-            font-family: sans-serif;
+            font-family: Helvetica, sans-serif;
             font-size: 16px;
             color: orange
+            
         }
         body {
-          font-size: 16px;
+          text-align: center;
+          font-size: 16px;          
         }
         p {
           font-weight: 600;
-          font-size: 48px;
+          font-size: 3em;          
         }
         ul {
+            
             background-color: springgreen ;
         }
+        li {counter-increment: li}
         .cordenada {
-          background-color: palegreen;
+          background-color: rgb(152, 178, 251);
+          font-style: italic;
+          text-decoration:underline;
+          line-height: 40px;
         }
+        #amarelo {background-color: yellow;}
+        #vermelho {background-color: red;}
+        #marrom {background-color: brown;}
     </style>
   </head>
   <body>
     <h1>Exercícios 3.2</h1>
     <p class="cordenada">Qual é a sua cor favorita?</p>
     <ul class="cordenada">
-      <li>Amarelo</li>
-      <li>Vermelho</li>
-      <li>Marrom</li>
+      <li id="amarelo">Amarelo</li>
+      <li id="vermelho">Vermelho</li>
+      <li id="marrom">Marrom</li>
     </ul>
   </body>
 </html>
