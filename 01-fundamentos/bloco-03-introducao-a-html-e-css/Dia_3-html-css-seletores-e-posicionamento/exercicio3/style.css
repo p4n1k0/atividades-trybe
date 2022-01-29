@@ -2,7 +2,7 @@ h1, p {
     text-align: center;
 }
 
-ol, ul {
+li {
     list-style: none;
 }
 
@@ -11,5 +11,6 @@ li:hover {
 }
 
 li:active {
+    font-family: sans-serif;
     color: red;
 }
