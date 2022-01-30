@@ -1,32 +1,20 @@
-ol {
+ol li {
     background-color: yellow;
 }
 
-ol li:nth-of-type(1) {
-    text-transform: capitalize;
+ol li:nth-of-type(even) {
+    color: green
 }
 
-ol li:nth-of-type(2) {
-    color:green;
+ol li:nth-of-type(odd) {
+    text-transform: uppercase;
 }
 
-ol li:nth-of-type(3) {
-    text-transform: capitalize;
-}
-
-ol li:nth-of-type(4) {
-    color:green;
-}
-
-ol li:nth-of-type(5) {
-    text-transform: capitalize;
-}
-
-h1, h2, h3 {
+h1, h2 {
     color: red;
 }
 
-h1 {
+h1 em, h2 em{
     font-size: 40px;
     border: 1px solid black;
 }
@@ -36,20 +24,47 @@ li {
 }
 
 li em {
-    font-weight: bold;
+    font-weight: 600;
 }
 
-ul:nth-of-type(1) li:nth-of-type(1) {
+ul:nth-of-type(1) li:nth-of-type(1){
     color:blue;
 }
 
 ul:nth-of-type(1) li:nth-of-type(2) {
     color:blue;
-    background-color: pink;
 }
 
 ul:nth-of-type(1) li:nth-of-type(3) {
-    color: blue;
+    color:blue;
+}
+
+.pinkbg {
+    background-color: pink;
+}
+
+#aliados li a:hover {
+    font-weight: 600;
+}
+
+#aliados li a[href*="stackoverflow"] {
+    color:orange
+}
+
+#aliados li a[href*="w3schools"] {
+    color:green;
+}
+
+#aliados li a[href*="mdn"] {
+    color:black;
+}
+
+#aliados li a[href*="devdocs"] {
+    color:yellow;
+}
+
+#aliados li a[href*="trybe"] {
+    color:green;
 }
 
 
