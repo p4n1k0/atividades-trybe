@@ -39,6 +39,19 @@ li em {
     font-weight: bold;
 }
 
+ul:nth-of-type(1) li:nth-of-type(1) {
+    color:blue;
+}
+
+ul:nth-of-type(1) li:nth-of-type(2) {
+    color:blue;
+    background-color: pink;
+}
+
+ul:nth-of-type(1) li:nth-of-type(3) {
+    color: blue;
+}
+
 
 
 
