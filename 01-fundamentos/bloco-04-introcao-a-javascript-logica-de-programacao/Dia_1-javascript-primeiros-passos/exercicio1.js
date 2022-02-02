@@ -1,2 +1,3 @@
 const myName = "Gabriel";
-const birthCity = "1992";
+const birthCity = "São Paulo";
+let birthYear = "1992";
