@@ -1,0 +1,2 @@
+const currentHour=5;
+
