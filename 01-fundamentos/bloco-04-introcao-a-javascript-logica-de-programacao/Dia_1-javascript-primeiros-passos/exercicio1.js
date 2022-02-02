@@ -1,6 +1,6 @@
 const myName = "Gabriel";
 const birthCity = "São Paulo";
-let birthYear = "1992";
+let birthYear = "2030";
 
-console.log(myName, birthCity, birthYear);
+console.log(birthYear);
 
