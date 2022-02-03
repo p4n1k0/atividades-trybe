@@ -1,4 +1,4 @@
-const peca = "bispo";
+const peca = "Bispo";
 
 switch (peca.toLowerCase()){
     case "rei":
