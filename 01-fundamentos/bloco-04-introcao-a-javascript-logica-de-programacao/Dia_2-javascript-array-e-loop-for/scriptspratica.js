@@ -1,11 +1,7 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [];
 
-let numerosMenores = numbers[0];
-
-for(let index = 1; index < numbers.length; index += 1){
-    if(numbers[index] < numerosMenores){
-        numerosMenores = numbers[index];
-    }    
+for(let i = 0; i <= 25; i += 1){
+    numbers.push(i);
 }
 
-console.log(numerosMenores);
+console.log(numbers);
