@@ -1,15 +1,10 @@
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [];
 
-let impares = 0;
-
-for(let index = 0; index < numbers.length; index += 1){
-    if(numbers[index] % 2 !== 0){
-        impares += 1;
-    }    
+for(let i = 1; i <= 25; i += 1){
+    numbers.push(i);                    // push para colocar os numeros 1 até 25
 }
 
-if(impares === 2 % 0){
-    console.log("nenhum valor ímpar encontrado");
+for(let index2 = 0; index2 < numbers.length; index2 += 1){
+    console.log(numbers[index2] / 2);      
 }
 
-console.log(impares);
