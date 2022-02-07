@@ -7,3 +7,5 @@ let player = {
         silver: 3,
     },
 };
+
+console.log("A jogadora " + player.name + " " + player.lastname + " tem" + " " + player.age);
