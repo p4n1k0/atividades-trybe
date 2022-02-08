@@ -1,16 +1,18 @@
-const n1 = 8;
-const n2 = 10;
-const n3 = 7;
-
-if(n1 > n2 && n1 > n3){
-    console.log('O maior número é:' + n1 + '(n1)');
-
-}else if(n2 > n1 && n2 > n3){
-    console.log('O maior número é:' + n2 + '(n2)');
-
-}else if(n3 > n1 && n3 > n2){
-    console.log('O maior núemro é:' + n3 + '(n3)');
+function maior(a, b, c){
+    if(a > b && a > c){
+        return "O maior número é: " + a;
+    }else if(b > a && b > c){
+        return "O maior número é: " + b;
+    }else if(c > a && c > b){
+        return "O maior número é: " + c;
+    }else{
+        return "Os núemros são iguais";
+    }
 }
+
+console.log(maior(50, 30, 10));
+console.log(maior(30,70,9));
+console.log(maior(90, 90, 90));
 
 
 

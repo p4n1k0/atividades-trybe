@@ -1,9 +1,14 @@
-const n1 = 2;
-const n2 = 4;
+function maiorMenor(a, b){
+    if(a > b){
+        return a + " é maior que " + b;
+    }else if(b > a){
+        return b + " é maior que " + a;
+    }else{
+        return "Os números são iguais";
+    }
+}
 
-if(n1 > n2){
-    console.log("'n1' é maior que 'n2'");
 
-}else{
-    console.log("'n2' é maior que 'n1'");
-};
+console.log(maiorMenor(40, 30));
+console.log(maiorMenor(30, 50));
+console.log(maiorMenor(20, 20));
