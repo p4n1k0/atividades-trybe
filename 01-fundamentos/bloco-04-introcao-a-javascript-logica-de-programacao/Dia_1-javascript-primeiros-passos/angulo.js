@@ -1,17 +1,18 @@
-const x = 60;
-const y = -60;
-const z = 60;
+function angulos(x, y, z){
+    let somaDosAngulos = x + y + z;
+    let todosSaoPositivos = x > 0 && y > 0 && z > 0;
 
-let somaDosAngulos = x + y + z;
-let todosSaoPositivos = x > 0 && y > 0 && z > 0;
-
-if(todosSaoPositivos){
-    if(somaDosAngulos === 180){
-        console.log(true);
+    if(todosSaoPositivos){
+        if(somaDosAngulos === 180){
+            return true;
+        }else{
+            return false;        
+        }
     }else{
-    console.log(false);
-    };
-
-}else{
-    console.log("Erro: ângulo inválido");
+        return "Erro: ângulo inválido";
+    }
 }
+
+console.log(angulos(60, 60, 60));
+console.log(angulos(90, 90, 90));
+console.log(angulos(0, 40, 50));
