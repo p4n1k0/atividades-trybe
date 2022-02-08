@@ -17,6 +17,8 @@ let leitor = {
     editora: 'Rocco',
   });
 
-  console.log(leitor.livrosFavoritos);
+  console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos");
+
+  // console.log(leitor.livrosFavoritos);
 
   // console.log("O livro favorito de " + leitor.nome + " " + leitor.sobrenome + " se chama" + " '" + leitor.livrosFavoritos[0].titulo + "'");
