@@ -8,3 +8,4 @@ function verificaPalindrome(palavra){
 }
 
 console.log(verificaPalindrome('ovo'));
+console.log(verificaPalindrome('faca'));
