@@ -11,9 +11,25 @@
     </section>    
   </main>
   <script>
-      const elemento = document.getElementById('elementoOndeVoceEsta');
-      
-      const pai = elemento.parentElement;
+
+    //acessa elemento elementoOndeVoceEsta
+      const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+    
+    //acessa pai a partir do elementoOndeVoceEsta e adicona cor  
+      const pai = elementoOndeVoceEsta.parentElement;
       pai.style.color = 'red';
+    
+    // acessa o primeiroFilhoDoFilho e adiciona texto
+      const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+      primeiroFilhoDoFilho.innerText = 'neto do filho';
+    
+    // acessa o primeiroFilho a partir do pai  
+      const primeiroFilho = pai.firstElementChild;
+    
+    // acessa primeiroFilho a partir de elementoOndeVoceEsta
+      const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
+    
+
+
 
   </script>
