@@ -73,11 +73,18 @@
         }
         changeColor ();
 
-        function mudaTexto (){
+        function changeText (){
             let el = document.getElementsByTagName('h1')[0];
             el.innerHTML = "Exercício 5.1 - JavaScript";           
         }
-        mudaTexto ();
+        changeText ();
+
+        function textoMuda (){
+            let texto = document.getElementsByTagName('p')[0];
+            texto.innerHTML = texto.innerHTML.toUpperCase();
+        }
+        textoMuda();
+        // ref: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
         
 
 
