@@ -93,6 +93,17 @@
       imagem.src = 'https://picsum.photos/200';
       sectionEsquerda.appendChild(imagem);
 
+      //8
+      const lista = document.createElement('ul');
+      sectionDireita.appendChild(lista);
+      const array = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (const n in array) {
+        const li = document.createElement('li');
+        li.innerHTML = array[n];
+        lista.appendChild(li);     
+      }
+
+
 
 
 
