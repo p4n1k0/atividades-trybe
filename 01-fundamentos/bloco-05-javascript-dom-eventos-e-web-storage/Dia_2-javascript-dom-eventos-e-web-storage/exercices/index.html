@@ -13,30 +13,37 @@
   <script>
 
     //acessa elemento elementoOndeVoceEsta
-      const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+    //  const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
     
     //acessa pai a partir do elementoOndeVoceEsta e adicona cor  
-      const pai = elementoOndeVoceEsta.parentElement;
-      pai.style.color = 'red';
+    //  const pai = elementoOndeVoceEsta.parentElement;
+    //  pai.style.color = 'red';
     
     // acessa o primeiroFilhoDoFilho e adiciona texto
-      const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
-      primeiroFilhoDoFilho.innerText = 'fio do fio';
+    //  const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+    //  primeiroFilhoDoFilho.innerText = 'fio do fio';
     
     // acessa o primeiroFilho a partir do pai  
-      const primeiroFilho = pai.firstElementChild;
+    //  const primeiroFilho = pai.firstElementChild;
 
     // acessa primeiroFilho a partir de elementoOndeVoceEsta
-      const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
+    //  const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
 
     // acessa texto Atenção a partir de elementoOndeVoceEsta
-      const elemetoTexto = elementoOndeVoceEsta.nextSibling;  
+    //  const elemetoTexto = elementoOndeVoceEsta.nextSibling;  
 
     // acessa terceiroFilho a partir de elementoOndeVoceEsta
-      const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
+    //  const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
 
     // acessa terceiroFilho a partir de pai
-      const terceiroFilho2 = pai.lastElementChild.previousElementSibling
+    //  const terceiroFilho2 = pai.lastElementChild.previousElementSibling
+
+    // cria irmao para elementoOndeVoceEsta
+      const pai = document.getElementById('pai');
+      const irmaoElementoOndeVoceEsta = document.createElement('section');
+      irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+      pai.appendChild(irmaoElementoOndeVoceEsta);  
+
 
      
 
