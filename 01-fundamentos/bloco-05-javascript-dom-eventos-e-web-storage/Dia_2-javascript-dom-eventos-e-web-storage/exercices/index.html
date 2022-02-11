@@ -51,10 +51,14 @@
       elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
 
     // cria filho para primeiroFilhoDoFilho
-    const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+      const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
       const filhoPrimeiroFilhoDoFilho = document.createElement('section');
       filhoPrimeiroFilhoDofilho.id = 'filhoPrimeiroFilhoDoFilho';
       primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
+
+    // acessa terceiroFilho a partir desse ultimo filho criado
+      const terceiroFilho = filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
+      console.log(terceiroFilho);
 
     
 
