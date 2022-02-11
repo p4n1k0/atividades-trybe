@@ -122,7 +122,20 @@
 
       //3.
       const esquerdaSection = document.getElementsByClassName('left-content')[0];
-      mainElement.remove(esquerdaSection);      
+      mainElement.remove(esquerdaSection); 
+
+      //4.
+      const direitaCentroSection = document.getElementsByClassName('right-content')[0];
+      direitaCentroSection.style.marginRight = 'auto';  
+
+      //5.
+      const trocaCorCenterC = document.getElementsByClassName('center-content')[0];
+      trocaCorCenterC.parentNode.style.backgroundColor = 'green';  
+      console.log(trocaCorCenterC); 
+
+      //6.
+      ul.lastChild.remove();
+      ul.lastChild.remove();
 
         
          
