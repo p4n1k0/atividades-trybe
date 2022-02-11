@@ -59,10 +59,15 @@
     <script>
       // COLOQUE SEU CÓDIGO AQUI
       //1
-      let pai = document.body;
-      let titulo = document.createElement('h1').innerText="Exercício 5.2 - JavaScript DOM";
-      pai.appendChild(titulo);
+      const paiBody = document.body;
+      const titulo = document.createElement('h1').innerText="Exercício 5.2 - JavaScript DOM";
+      paiBody.appendChild(titulo);
 
+      //2
+      const mainElement = document.createElement('main');
+      mainElement.className = "main-content";
+      document.body.appendChild(mainElement);
+      
 
     </script>
   </body>
