@@ -74,9 +74,13 @@
       mainElement.appendChild(sectionElement);
 
       //4
-      const paragrafo = document.createElement('p');
+      const paragrafo = document.createElement('p').innerText="paragraph";
       sectionElement.appendChild(paragrafo);
-      
+
+      //5
+      const sectionEsquerda = document.createElement('section');
+      sectionEsquerda.className = "left-content";
+      mainElement.appendChild(sectionEsquerda);
 
     </script>
   </body>
