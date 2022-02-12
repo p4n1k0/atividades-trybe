@@ -17,6 +17,10 @@ function mudaTech(event){
     event.target.classList.add('tech');
     input.value = '';
 }
+
+firstLi.addEventListener('click', mudaTech);
+secondLi.addEventListener('click', mudaTech);
+thirdLi.addEventListener('click', mudaTech);
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
 
