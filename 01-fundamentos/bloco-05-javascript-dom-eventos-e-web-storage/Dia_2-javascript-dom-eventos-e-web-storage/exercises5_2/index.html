@@ -67,7 +67,82 @@
       const mainElement = document.createElement('main');
       mainElement.className = "main-content";
       document.body.appendChild(mainElement);
+
+      //3
+      const sectionElement = document.createElement('section');
+      sectionElement.className = "center-content";
+      mainElement.appendChild(sectionElement);
+
+      //4
+      const paragrafo = document.createElement('p').innerText="paragraph";
+      sectionElement.appendChild(paragrafo);
+
+      //5
+      const sectionEsquerda = document.createElement('section');
+      sectionEsquerda.className = "left-content";
+      mainElement.appendChild(sectionEsquerda);
+
+      //6
+      const sectionDireita = document.createElement('section');
+      sectionDireita.className = 'right-content';
+      mainElement.appendChild(sectionDireita);
+
+      //7
+      const imagem = document.createElement('img');
+      imagem.className = 'small-image';
+      imagem.src = 'https://picsum.photos/200';
+      sectionEsquerda.appendChild(imagem);
+
+      //8
+      const lista = document.createElement('ul');
+      sectionDireita.appendChild(lista);
+      const array = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+      for (const n in array) {
+        const li = document.createElement('li');
+        li.innerHTML = array[n];
+        lista.appendChild(li);     
+      }
+
+      //9
+      for (let i = 1; i <= 3; i += 1){
+        const h33 = document.createElement('h3');
+        mainElement.appendChild(h33);
+      }
+
+      //1.
+      const title = document.querySelector('h1');
+      title.className = 'title';
       
+
+      //2.
+      const descricao = document.querySelector('h3');
+      for (let index = 0; index <= 3; index += 1){
+        h33[index].className = 'description';
+      };
+
+      //3.
+      const esquerdaSection = document.getElementsByClassName('left-content')[0];
+      mainElement.remove(esquerdaSection); 
+
+      //4.
+      const direitaCentroSection = document.getElementsByClassName('right-content')[0];
+      direitaCentroSection.style.marginRight = 'auto';  
+
+      //5.
+      const trocaCorCenterC = document.getElementsByClassName('center-content')[0];
+      trocaCorCenterC.parentNode.style.backgroundColor = 'green';  
+      console.log(trocaCorCenterC); 
+
+      //6.
+      ul.lastChild.remove();
+      ul.lastChild.remove();
+
+        
+         
+
+
+
+
 
     </script>
   </body>
