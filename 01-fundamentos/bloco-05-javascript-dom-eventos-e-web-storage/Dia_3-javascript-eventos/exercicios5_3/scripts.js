@@ -95,3 +95,23 @@ function criaBotaoSextaFeira(nomeBotao) {
 
 criaBotaoSextaFeira('sexta-feira');
 
+//5. ref: gabarito
+function mostraSextas(sextasArray) {
+  let pegaBotaoSextas = document.querySelector('#btn-friday');
+  let sextas = document.getElementsByClassName('friday');
+  let novoTextoSexta = 'Sextou!!';
+
+  pegaBotaoSextas.addEventListener('click', function(){
+    for (let i = 0; i < sextas.length; i += 1) {
+      if (sextas[i].innerHTML !== novoTextoSexta) {
+        sextas[i].innerHTML = novoTextoSexta;
+      } else {
+        sextas[i].innerHTML = sextasArray[i];
+      }
+    }
+  })  
+};
+
+let dezSextas = [4, 11, 18, 25];
+mostraSextas(dezSextas);
+
