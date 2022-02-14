@@ -82,3 +82,16 @@ function mostraFeriados() {
 
 mostraFeriados();
 
+//4. ref: gabarito
+function criaBotaoSextaFeira(nomeBotao) {
+  let containerBotao = document.querySelector('.buttons-container');
+  let novoBotao = document.createElement('button');
+  let novoBotaoId = 'btn-friday';
+
+  novoBotao.innerHTML = nomeBotao;
+  novoBotao.id = novoBotaoId;
+  containerBotao.appendChild(novoBotao);
+};
+
+criaBotaoSextaFeira('sexta-feira');
+
