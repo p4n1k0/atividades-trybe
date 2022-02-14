@@ -44,3 +44,15 @@ function createDaysOfTheWeek() {
       };
   }
   diasDezembro();
+
+  function criaBotaoFeriado(nomeBotao) {
+    let containerBotao = document.querySelector('.buttons-container');
+    let novoBotao = document.createElement('button');
+    let novoBotaoId = 'btn-holiday';
+
+    novoBotao.innerHTML = nomeBotao;
+    novoBotaoId.id = novoBotaoId;
+    containerBotao.appendChild(novoBotao);
+  };
+
+  criaBotaoFeriado('Feriados');
