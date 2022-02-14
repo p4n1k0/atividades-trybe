@@ -15,6 +15,8 @@ function createDaysOfTheWeek() {
   
   // Escreva seu código abaixo.
 
+  //ref: gabarito
+
   let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
   function diasDezembro () {
@@ -43,7 +45,10 @@ function createDaysOfTheWeek() {
           };
       };
   }
+
   diasDezembro();
+
+  // ref: gabarito
 
   function criaBotaoFeriado(nomeBotao) {
     let containerBotao = document.querySelector('.buttons-container');
@@ -55,4 +60,25 @@ function createDaysOfTheWeek() {
     containerBotao.appendChild(novoBotao);
   };
 
-  criaBotaoFeriado('Feriados');
+criaBotaoFeriado('Feriados');
+
+// ref: gabarito
+function mostraFeriados() {
+  let pegaBotaoFeriado = document.querySelector('#btn-holiday');
+  let pegaFeriados = document.querySelectorAll('.holiday');
+  let bgColor = 'rgb(238,238,238)';
+  let achaNovaCor = 'white';
+
+  pegaBotaoFeriado.addEventListener('click', function() {
+    for (let i = 0; i < pegaBotaoFeriado.length; i += 1) {
+      if (pegaBotaoFeriado[i].style.bg === achaNovaCor) {
+        pegaBotaoFeriado[i].styke.bg = bg;
+      } else {
+        pegaBotaoFeriado[i].style.bg = achaNovaCor;
+      }
+    }
+  })
+};    
+
+mostraFeriados();
+
