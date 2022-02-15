@@ -159,3 +159,19 @@ function novoTaskDiv(color) {
 };
 
 novoTaskDiv('blue');
+
+//9. ref: gabarito
+function setTaskClass() {
+  let selecionaTask = document.getElementsByClassName('task selected');
+  let minhasTasks = document.querySelector('.task');
+
+  minhasTasks.addEventListener('click', function(event) {
+    if (selecionaTask.length === 0) {
+      event.target.className = 'task selected';
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+ 
+setTaskClass();
