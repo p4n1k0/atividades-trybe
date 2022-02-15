@@ -148,3 +148,14 @@ function newTaskSpan(task) {
 
 newTaskSpan('Projeto');
 
+//8. ref: gabarito
+function novoTaskDiv(color) {
+  let tasksContainer = document.querySelector('.my-tasks');
+  let novoTask = document.createElement('div');
+
+  novoTask.className = 'task';
+  novoTask.style.backgroundColor = color;
+  tasksContainer.appendChild(novoTask);
+};
+
+novoTaskDiv('blue');
