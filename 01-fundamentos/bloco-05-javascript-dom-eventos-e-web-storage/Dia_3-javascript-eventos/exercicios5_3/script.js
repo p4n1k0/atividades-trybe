@@ -175,3 +175,20 @@ function setTaskClass() {
 };
  
 setTaskClass();
+
+function setDayColor() {
+  let selecionaTask = document.getElementsByClassName('task selected');
+  let dias = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let corTask = taskDiv.style.backgroundColor;
+
+  dias.addEventListener('click', function(event){
+    let eventoTargetCor = event.target.style.color;
+    if (selecionaTask.length > 0 && eventoTargetCor !== corTask) {
+      let cor = selecionaTask[0].style.backgroundColor;
+      event.target.style.color = cor;
+    } else if (eventoTargetCor === corTask && selecionaTask.length !== 0) {
+      event.target.style.color = 'rgb(119, 119, 119';
+    }
+  });
+};
