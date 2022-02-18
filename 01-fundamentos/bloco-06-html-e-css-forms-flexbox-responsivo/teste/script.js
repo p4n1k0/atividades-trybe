@@ -7,3 +7,7 @@ HREF_LINK.addEventListener('click', (event) =>{
     event.preventDefault();
 });
 
+INPUT_CHECKBOX.addEventListener('click', (event) => {
+    event.preventDefault();
+})  
+
