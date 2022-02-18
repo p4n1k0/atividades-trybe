@@ -11,3 +11,11 @@ INPUT_CHECKBOX.addEventListener('click', (event) => {
     event.preventDefault();
 })  
 
+INPUT_TEXT.addEventListener('keypress', (event) => {
+    event.preventDefault();
+    const letra = event.key;
+    if (letra !== 'a') {
+        event.preventDefault;
+    }
+})
+
