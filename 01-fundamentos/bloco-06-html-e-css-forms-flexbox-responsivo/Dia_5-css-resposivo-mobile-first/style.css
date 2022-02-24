@@ -71,3 +71,10 @@ body {
           display: block;
       }
   }
+
+  @media (min-width: 600px) and (max-width: 1000px) {
+    .card:nth-of-type(2) {
+        display: block;
+    }
+  }
+
