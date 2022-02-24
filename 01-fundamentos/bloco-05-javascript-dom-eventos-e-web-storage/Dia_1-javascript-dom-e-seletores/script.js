@@ -14,3 +14,6 @@ const noEmergencyTasksHaders = document.querySelectorAll('.no-emergency-tasks h3
 for (let i = 0; i < noEmergencyTasksHaders.length; i += 1) {
     noEmergencyTasksHaders[i].style.background = 'black';
 }
+
+const footerHeader = document.querySelector('#footer-container');
+footerHeader.style.background = '#008080';
