@@ -20,8 +20,16 @@
     </section>
   </main>
   <script>
-    
+
     const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+    
+    const pai = elementoOndeVoceEsta.parentElement;
+    pai.style.color = 'blue';   
+
+    const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+    primeiroFilhoDoFilho.innerHTML = 'primeiro filho do filho';
+
+    
 
   </script>
 </body>
