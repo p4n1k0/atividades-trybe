@@ -88,14 +88,20 @@
       elementImg.src = 'https://picsum.photos/200';
       sectionLeft.appendChild(elementImg);
 
-      const elementiUl = document.createElement('ul');
+      const elementUl = document.createElement('ul');
       sectionRight.appendChild(elementUl);
       const arrayNumbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
 
-      for (const num in arrayNumbers) {
+      for (let num in arrayNumbers) {
         const elementLi = document.createElement('li');
         elementLi.innerHTML = arrayNumbers[num];
-        sectionRight.appendChild(elementLi);             
+        elementUl.appendChild(elementLi);             
+      }
+
+      for (let i = 0; i <= 3; i += 1) {
+        const elementH3 = document.createElement('h3');
+        elementH3.innerHTML = 'Show ' + i;
+        elementMain.appendChild(elementH3);
       }
 
 
