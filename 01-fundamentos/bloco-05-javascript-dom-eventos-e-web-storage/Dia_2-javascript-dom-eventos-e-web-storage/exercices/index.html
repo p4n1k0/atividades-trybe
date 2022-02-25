@@ -1,4 +1,13 @@
-<main id="paiDoPai">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <main id="paiDoPai">
     <section id="pai">
       <section id="primeiroFilho"></section>
       <section id="elementoOndeVoceEsta">
@@ -8,70 +17,13 @@
       Atenção!
       <section id="terceiroFilho"></section>
       <section id="quartoEUltimoFilho"></section>
-    </section>    
+    </section>
   </main>
   <script>
-
-    //acessa elemento elementoOndeVoceEsta
-    //  const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
     
-    //acessa pai a partir do elementoOndeVoceEsta e adicona cor  
-    //  const pai = elementoOndeVoceEsta.parentElement;
-    //  pai.style.color = 'red';
-    
-    // acessa o primeiroFilhoDoFilho e adiciona texto
-    //  const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
-    //  primeiroFilhoDoFilho.innerText = 'fio do fio';
-    
-    // acessa o primeiroFilho a partir do pai  
-    //  const primeiroFilho = pai.firstElementChild;
-
-    // acessa primeiroFilho a partir de elementoOndeVoceEsta
-    //  const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
-
-    // acessa texto Atenção a partir de elementoOndeVoceEsta
-    //  const elemetoTexto = elementoOndeVoceEsta.nextSibling;  
-
-    // acessa terceiroFilho a partir de elementoOndeVoceEsta
-    //  const terceiroFilho = elementoOndeVoceEsta.nextElementSibling;
-
-    // acessa terceiroFilho a partir de pai
-    //  const terceiroFilho2 = pai.lastElementChild.previousElementSibling
-
-    // cria irmao para elementoOndeVoceEsta
-    //  const pai = document.getElementById('pai');
-    //  const irmaoElementoOndeVoceEsta = document.createElement('section');
-    //  irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
-    // pai.appendChild(irmaoElementoOndeVoceEsta);  
-
-    // cria filho para elementoOndeVoceEsta
-    //  const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
-    //  const filhoElementoOndeVoceEsta = document.createElement('section');
-    //  filhoElementoOndeVoceEsta.id = 'filhoElementoOndeVoceEsta';
-    //  elementoOndeVoceEsta.appendChild(filhoElementoOndeVoceEsta);
-
-    // cria filho para primeiroFilhoDoFilho
-    //  const primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
-    //  const filhoPrimeiroFilhoDoFilho = document.createElement('section');
-    //  filhoPrimeiroFilhoDofilho.id = 'filhoPrimeiroFilhoDoFilho';
-    //  primeiroFilhoDoFilho.appendChild(filhoPrimeiroFilhoDoFilho);
-
-    // acessa terceiroFilho a partir desse ultimo filho criado
-    // const terceiroFilho = filhoPrimeiroFilhoDoFilho.parentElement.parentElement.nextElementSibling;
-    // console.log(terceiroFilho); 
-    
-    // remove todos os elementos filho de paiDoPai, menos pai ref: gabarito
-      const pai = document.getElementById('pai');
-
-      for (let i = pai.childNodes.length -1; i >= 0; i -= 1){
-        const deletaFilhos = pai.childNodes[i];
-        if(deletaFilhos.id !== 'elementoOndeVoceEsta'){
-          deletaFilhos.remove();
-        }
-      }
-
-      const segundoEUltimoFilhoDoFilho = document.getElementById('segudoEUltimoFilhoDoFilho');
-      segundoEUltimoFilhoDoFilho.remove();
-
+    const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
 
   </script>
+</body>
+</html>
+
