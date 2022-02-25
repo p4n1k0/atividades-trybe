@@ -21,23 +21,28 @@
   </main>
   <script>
 
-    const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+   // const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
     
-    const pai = elementoOndeVoceEsta.parentElement;
-    pai.style.color = 'blue';   
+   // const pai = elementoOndeVoceEsta.parentElement;
+   // pai.style.color = 'blue';   
 
-    const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
-    primeiroFilhoDoFilho.innerHTML = 'primeiro filho do filho';
+   // const primeiroFilhoDoFilho = elementoOndeVoceEsta.firstElementChild;
+   // primeiroFilhoDoFilho.innerHTML = 'primeiro filho do filho';
 
-    const primeiroFilho = pai.firstElementChild;
+   // const primeiroFilho = pai.firstElementChild;
 
-    const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
+   // const primeiroFilho2 = elementoOndeVoceEsta.previousElementSibling;
 
-    const textElement = elementoOndeVoceEsta.nextSibling;
+   // const textElement = elementoOndeVoceEsta.nextSibling;
 
-    const terceiroFilho =  elementoOndeVoceEsta.nextElementSibling;
+   // const terceiroFilho =  elementoOndeVoceEsta.nextElementSibling;
 
-    const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+   // const terceiroFilho2 = pai.lastElementChild.previousElementSibling;
+
+    const pai = document.getElementById('pai');
+    const irmaoElementoOndeVoceEsta = document.createElement('section');
+    irmaoElementoOndeVoceEsta.id = 'irmaoElementoOndeVoceEsta';
+    pai.appendChild(irmaoElementoOndeVoceEsta);
 
   </script>
 </body>
