@@ -107,8 +107,11 @@
       const title = document.querySelector('h1');
       title.className = 'title';
 
-      const description = document.querySelectorAll('h3');
-      description.className = 'description';
+      const elementsH3 = document.getElementsByTagName('h3');
+      
+      for (let i = 0; i < elementsH3.length; i += 1) {
+        elementsH3[i].className = 'description';        
+      }
 
      
 
