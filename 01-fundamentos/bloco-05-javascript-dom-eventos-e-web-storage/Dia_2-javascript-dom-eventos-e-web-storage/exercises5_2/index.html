@@ -72,8 +72,13 @@
       elementMain.appendChild(elementSectionCenter);
 
       const paragraph = document.createElement('p');
-      paragraph.innerHTML = 'Chama no texto'
+      paragraph.innerHTML = 'Chama no texto';
       elementSectionCenter.appendChild(paragraph);
+
+      const sectionLeft = document.createElement('section');
+      sectionLeft.className = 'left-content';
+      sectionLeft.innerHTML = 'Chama em outro texto';
+      elementMain.appendChild(sectionLeft);
       
 
     </script>
