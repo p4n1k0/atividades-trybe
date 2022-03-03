@@ -11,32 +11,13 @@ const myWebpage = document.getElementById('my-spotrybefy');
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
-function mudaTech(event){
-    const elementTec = document.querySelector('.tech');
-    elementTec.classList.remove('tech');
-    event.target.classList.add('tech');
-    input.value = '';
-}
-
-firstLi.addEventListener('click', mudaTech);
-secondLi.addEventListener('click', mudaTech);
-thirdLi.addEventListener('click', mudaTech);
 
 // 3. Crie uma função que, ao digitar na caixa de texto, altere o texto do elemento
 // com a classe 'tech';
-input.addEventListener('input', function(event){
-    const elementTec = document.querySelector('.tech');
-    elementTec.innerText = event.target.value;
-});
-
 
 // 4. Crie uma função que, ao clicar duas vezes em 'Meu top 3 do Spotrybefy', ele
 // redirecione para alguma página;
 // 4.1. Que tal redirecionar para seu portfólio?
-
-myWebpage.addEventListener('dblclick', function(){
-  window.location.replace('https://p4n1k0.github.io/');
-});
 
 // 5. Crie uma função que, ao passar o mouse sobre 'Meu top 3 do Spotrybefy', altere
 // a cor do mesmo;
@@ -56,4 +37,3 @@ firstLi.addEventListener('dblclick', resetText);
 // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // navegador fará esse trabalho por você, não é legal? Desse jeito, o
 // event.target na nossa função retornará o objeto 'firstLi'.
-
