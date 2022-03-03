@@ -1,10 +1,2 @@
-const fatorial = number => {
-    let result = 1;
-
-    for (let i = 2; i <= number; i += 1) {
-        result = result * i;
-    }
-    return result;
-}
-
+const fatorial = number => number > 1 ? number * fatorial(number - 1) : 1;
 console.log(fatorial(10));
