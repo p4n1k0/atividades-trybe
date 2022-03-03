@@ -84,6 +84,15 @@
         }
         changeToUpCaser();
 
+        function showParagraphs() {
+          let paragraphs = document.getElementsByTagName('p');
+
+          for(let i = 0; i < paragraphs.length; i += 1) {            
+            console.log(paragraphs[i].innerHTML);
+          }
+        }
+        showParagraphs();
+
 
     </script>
   </body>

@@ -57,88 +57,68 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
-      //1
-      const paiBody = document.body;
-      const titulo = document.createElement('h1').innerText="Exercício 5.2 - JavaScript DOM";
-      paiBody.appendChild(titulo);
+      // COLOQUE SEU CÓDIGO AQUI      
+      
+      const elementH1 = document.createElement('h1');
+      elementH1.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      document.body.appendChild(elementH1);           
 
-      //2
-      const mainElement = document.createElement('main');
-      mainElement.className = "main-content";
-      document.body.appendChild(mainElement);
+      const elementMain = document.createElement('main');
+      elementMain.className = 'main-content';
+      document.body.appendChild(elementMain);
 
-      //3
-      const sectionElement = document.createElement('section');
-      sectionElement.className = "center-content";
-      mainElement.appendChild(sectionElement);
+      const elementSectionCenter = document.createElement('section');
+      elementSectionCenter.className = 'center-content';
+      elementMain.appendChild(elementSectionCenter);
 
-      //4
-      const paragrafo = document.createElement('p').innerText="paragraph";
-      sectionElement.appendChild(paragrafo);
+      const paragraph = document.createElement('p');
+      paragraph.innerHTML = 'Chama no texto';
+      elementSectionCenter.appendChild(paragraph);
 
-      //5
-      const sectionEsquerda = document.createElement('section');
-      sectionEsquerda.className = "left-content";
-      mainElement.appendChild(sectionEsquerda);
+      const sectionLeft = document.createElement('section');
+      sectionLeft.className = 'left-content';      
+      elementMain.appendChild(sectionLeft);
 
-      //6
-      const sectionDireita = document.createElement('section');
-      sectionDireita.className = 'right-content';
-      mainElement.appendChild(sectionDireita);
+      const sectionRight = document.createElement('section');
+      sectionRight.className = 'right-content';
+      elementMain.appendChild(sectionRight);
 
-      //7
-      const imagem = document.createElement('img');
-      imagem.className = 'small-image';
-      imagem.src = 'https://picsum.photos/200';
-      sectionEsquerda.appendChild(imagem);
+      const elementImg = document.createElement('img');
+      elementImg.className = 'small-image';
+      elementImg.src = 'https://picsum.photos/200';
+      sectionLeft.appendChild(elementImg);
 
-      //8
-      const lista = document.createElement('ul');
-      sectionDireita.appendChild(lista);
-      const array = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
-      for (const n in array) {
-        const li = document.createElement('li');
-        li.innerHTML = array[n];
-        lista.appendChild(li);     
+      const elementUl = document.createElement('ul');
+      sectionRight.appendChild(elementUl);
+      const arrayNumbers = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+
+      for (let num in arrayNumbers) {
+        const elementLi = document.createElement('li');
+        elementLi.innerHTML = arrayNumbers[num];
+        elementUl.appendChild(elementLi);             
       }
 
-      //9
-      for (let i = 1; i <= 3; i += 1){
-        const h33 = document.createElement('h3');
-        mainElement.appendChild(h33);
+      for (let i = 0; i <= 3; i += 1) {
+        const elementH3 = document.createElement('h3');
+        elementH3.innerHTML = 'Show ' + i;
+        elementMain.appendChild(elementH3);
       }
 
-      //1.
       const title = document.querySelector('h1');
       title.className = 'title';
+
       
+      const elementsH3 = document.getElementsByTagName('h3');
+      
+      for (let i = 0; i < elementsH3.length; i += 1) {
+        elementsH3[i].className = 'description';        
+      }
 
-      //2.
-      const descricao = document.querySelector('h3');
-      for (let index = 0; index <= 3; index += 1){
-        h33[index].className = 'description';
-      };
+      
+      const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+      elementMain.removeChild(sectionLeftContent)
+     
 
-      //3.
-      const esquerdaSection = document.getElementsByClassName('left-content')[0];
-      mainElement.remove(esquerdaSection); 
-
-      //4.
-      const direitaCentroSection = document.getElementsByClassName('right-content')[0];
-      direitaCentroSection.style.marginRight = 'auto';  
-
-      //5.
-      const trocaCorCenterC = document.getElementsByClassName('center-content')[0];
-      trocaCorCenterC.parentNode.style.backgroundColor = 'green';  
-      console.log(trocaCorCenterC); 
-
-      //6.
-      ul.lastChild.remove();
-      ul.lastChild.remove();
-
-        
-         
 
 
 
