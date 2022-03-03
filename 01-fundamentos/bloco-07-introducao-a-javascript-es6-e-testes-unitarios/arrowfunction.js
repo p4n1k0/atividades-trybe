@@ -28,4 +28,4 @@ const testingScope = escopo => {
   }
   
   const sortedArray = sortOddAndEvans();
-  console.log(`Os números ${oddsAndEvens} se encontram ordenados de forma crescente!`); 
+  console.log(`Os números ${sortedArray} se encontram ordenados de forma crescente!`); 
