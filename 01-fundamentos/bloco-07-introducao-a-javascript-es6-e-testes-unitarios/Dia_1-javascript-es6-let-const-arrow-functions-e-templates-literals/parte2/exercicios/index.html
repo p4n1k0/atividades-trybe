@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Exercício 3</title>
 </head>
 <body>
     <div>
         <span id="text"></span>
     </div>
-    <button id="button_test">click aqui!</button>
+    <button id="button-test">clique</button>
 </body>
-    <script>
-        let clickount = 0;
-        let textToDisplay = document.getElementById('text');
-        
-        document.getElementById('button_test').addEventListener('click', () => textToDisplay.innerHTML = clickount += 1);
-    </script>
+<script>
+    let clickCount = 0;
+    let textToDisplay = document.getElementById('text');
+    document.getElementById('button-test').addEventListener('click', () => textToDisplay.innerHTML = clickCount += 1);
+</script>
 </html>
