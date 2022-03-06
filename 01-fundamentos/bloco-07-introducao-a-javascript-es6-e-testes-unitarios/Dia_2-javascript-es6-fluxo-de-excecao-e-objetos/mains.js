@@ -1,3 +1,8 @@
+const sum = (value1, value2) => value1 + value2;
+
+console.log(sum(2, 3));
+
+
 const objeto = (object, key, value) => {
     let obj = {};
     object = obj;   
@@ -39,26 +44,3 @@ console.log('Estudante 2');
 listSkills(student2);
 
 
-const student = {
-    Html: 'Muito Bom',
-    Css: 'Bom',
-    JavaScript: 'Ótimo',
-    SoftSkill: 'Ótimo',
-  };
-  
-  const listSkillsValuesWithFor = (student) => {
-    const skills = [];
-    for(skill in student) {
-      skills.push(student[skill]);
-    }
-  
-    return skills;
-  };
-  
-  const listSkillsValuesWithValues = (student) => Object.values(student);
-  
-  // Sem Object.values
-  console.log(listSkillsValuesWithFor(student));
-  
-  // Com Object.values
-  console.log(listSkillsValuesWithValues(student));
