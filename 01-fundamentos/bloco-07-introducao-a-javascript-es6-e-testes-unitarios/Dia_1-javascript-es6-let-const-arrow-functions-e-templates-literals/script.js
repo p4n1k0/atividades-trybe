@@ -11,12 +11,13 @@ const factorial = number => {
 
 console.log(factorial(4));
 
-//Bônus 
+//Bônus recursiva
 const fatorial = numero => numero > 1 ? numero * fatorial(numero - 1) : 1;
 console.log(fatorial(4)); 
 
-//Exercício 2 
 
+
+//Exercício 2
 const longestWord = text => {
     let wordArray = text.split(' ');
     let maxLength = 0;
@@ -33,4 +34,7 @@ const longestWord = text => {
 
 console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"));
 
+//Recursiva
+const longstWord = text => text.split(' ').sort((wordA, wordB) => wordB.length - wordA.length)[0];
 
+console.log(longstWord('Antonio foi no banheiro e não sabemos o que aconteceu'));
