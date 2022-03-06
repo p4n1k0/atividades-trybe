@@ -1,3 +1,5 @@
+//Parte 2
+//Exercício 1 
 const factorial = number => {
     let result = 1
 
@@ -8,3 +10,11 @@ const factorial = number => {
 }
 
 console.log(factorial(4));
+
+//Bônus 
+const fatorial = numero => numero > 1 ? numero * fatorial(numero - 1) : 1;
+console.log(fatorial(4)); 
+
+//Exercício 2 
+
+
