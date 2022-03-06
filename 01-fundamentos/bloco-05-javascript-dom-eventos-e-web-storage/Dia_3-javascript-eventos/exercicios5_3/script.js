@@ -1,194 +1,189 @@
 function createDaysOfTheWeek() {
-    const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
-    const weekDaysList = document.querySelector('.week-days');
-  
-    for (let index = 0; index < weekDays.length; index += 1) {
-      const days = weekDays[index];
-      const dayListItem = document.createElement('li');
-      dayListItem.innerHTML = days;
-  
-      weekDaysList.appendChild(dayListItem);
-    };
+  const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado']
+  const weekDaysList = document.querySelector('.week-days');
+
+  for (let index = 0; index < weekDays.length; index += 1) {
+    const days = weekDays[index];
+    const dayListItem = document.createElement('li');
+    dayListItem.innerHTML = days;
+
+    weekDaysList.appendChild(dayListItem);
   };
-  
-  createDaysOfTheWeek();
-  
-  // Escreva seu código abaixo.
+};
 
-  //ref: gabarito
+createDaysOfTheWeek();
 
-  let dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+// Escreva seu código abaixo.
+const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
-  function diasDezembro () {
-      let pegaDiasLista = document.querySelector('#days');
+function createDaysOfTheMonth() {
+  let getDaysList = document.querySelector('#days');
 
-      for (let i = 0; i < dezDaysList.length; i += 1) {
-          let day = dezDaysList[i];
-          let diaLista = document.createElement('li')
-          
-          if (day === 24 || day === 31) {
-            diaLista.className = 'day holiday';
-            diaLista.innerHTML = day;
-            pegaDiasLista.appendChild(diaLista);
-          } else if (day === 4 || day === 11 || day === 18) {
-            diaLista.className = 'day friday';
-            diaLista.innerHTML = day;
-            pegaDiasLista.appendChild(diaLista)
-          } else if (day === 25) {
-            diaLista.className = 'day holiday friday';
-            diaLista.innerHTML = day;
-            pegaDiasLista.appendChild(diaLista);
-          } else {
-            diaLista.innerHTML = day;
-            diaLista.className = 'day';
-            pegaDiasLista.appendChild(diaLista);
-          };
-      };
-  }
+  for (let i = 0; i < dezDaysList.length; i += 1) {
+    let day = dezDaysList[i];
+    let dayItem = document.createElement('li');
 
-  diasDezembro();
+    if (day === 24 || day === 31) {
+      dayItem.className = 'day holiday';
+      dayItem.innerHTML = day;
+      getDaysList.appendChild(dayItem);
+    } else if (day === 4 || day === 11 || day === 18) {
+      dayItem.className = 'day friday';
+      dayItem.innerHTML = day;
+      getDaysList.appendChild(dayItem);
+    } else if (day === 25) {
+      dayItem.className = 'day holiday friday';
+      dayItem.innerHTML = day;
+      getDaysList.appendChild(dayItem);
+    } else {
+      dayItem.innerHTML = day;
+      dayItem.className = 'day';
+      getDaysList.appendChild(dayItem);
+    }
+  };  
+};
 
-  // ref: gabarito
+createDaysOfTheMonth();
 
-  function criaBotaoFeriado(nomeBotao) {
-    let containerBotao = document.querySelector('.buttons-container');
-    let novoBotao = document.createElement('button');
-    let novoBotaoId = 'btn-holiday';
 
-    novoBotao.innerHTML = nomeBotao;
-    novoBotao.id = novoBotaoId;
-    containerBotao.appendChild(novoBotao);
-  };
+function createHolidayButton(buttonName) {
+   let buttonContainer = document.querySelector('.buttons-container');
+   let newButton = document.createElement('button');
+   let newButtonID = 'btn-holiday';
+   newButton.innerHTML = buttonName;
+   newButton.id = newButtonID;
+   buttonContainer.appendChild(newButton);
+};
 
-criaBotaoFeriado('Feriados');
+createHolidayButton('Feriados');
 
-// ref: gabarito
-function mostraFeriados() {
-  let pegaBotaoFeriado = document.querySelector('#btn-holiday');
-  let pegaFeriados = document.querySelectorAll('.holiday');
-  let bgColor = 'rgb(238,238,238)';
-  let achaNovaCor = 'white';
+function displayHolidays() {
+  let getHolidayButton = document.querySelector('#btn-holiday');
+  let getHolidays = document.querySelectorAll('.holiday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
 
-  pegaBotaoFeriado.addEventListener('click', function() {
-    for (let i = 0; i < pegaFeriados.length; i += 1) {
-      if (pegaFeriados[i].style.backgroundColor === achaNovaCor) {
-        pegaFeriados[i].style.backgroundColor = bgColor;
+  getHolidayButton.addEventListener('click', function() {
+    for (let i = 0; i < getHolidays.length; i += 1) {
+      if (getHolidays[i].style.backgroundColor === setNewColor) {
+        getHolidays[i].style.backgroundColor = backgroundColor;
       } else {
-        pegaFeriados[i].style.backgroundColor = achaNovaCor;
+        getHolidays[i].style.backgroundColor = setNewColor;
       }
     }
   })
-};    
-
-mostraFeriados();
-
-//4. ref: gabarito
-function criaBotaoSextaFeira(nomeBotao) {
-  let containerBotao = document.querySelector('.buttons-container');
-  let novoBotao = document.createElement('button');
-  let novoBotaoId = 'btn-friday';
-
-  novoBotao.innerHTML = nomeBotao;
-  novoBotao.id = novoBotaoId;
-  containerBotao.appendChild(novoBotao);
 };
 
-criaBotaoSextaFeira('sexta-feira');
+displayHolidays();
 
-//5. ref: gabarito
-function mostraSextas(sextasArray) {
-  let pegaBotaoSextas = document.querySelector('#btn-friday');
-  let sextas = document.getElementsByClassName('friday');
-  let novoTextoSexta = 'Sextou!!';
 
-  pegaBotaoSextas.addEventListener('click', function(){
-    for (let i = 0; i < sextas.length; i += 1) {
-      if (sextas[i].innerHTML !== novoTextoSexta) {
-        sextas[i].innerHTML = novoTextoSexta;
-      } else {
-        sextas[i].innerHTML = sextasArray[i];
-      }
-    }
-  })  
-};
 
-let dezSextas = [4, 11, 18, 25];
-mostraSextas(dezSextas);
-
-//6. ref: gabarito
-function diaMouseOver() {
-  let dias = document.querySelector('#days');
-
-  dias.addEventListener('mouseover', function(event) {
-    event.target.style.fontSize = '30px';
-    event.target.style.fontWeight = '600';
-  }) 
+function createFridayButton(buttonName) {
+  let buttonContainer = document.querySelector('.buttons-container');
+  let newButton = document.createElement('button');
+  let newButtonID = 'btn-friday';
+  newButton.innerHTML = buttonName;
+  newButton.id = newButtonID;
+  buttonContainer.appendChild(newButton);
 }
 
-function diaMouseOut() {
-  let dias = document.querySelector('#days');
+createFridayButton('Sexta-feira');
 
-  dias.addEventListener('mouseout', function(event) {
-    event.target.style.fontWeight = '200';
-    event.target.style.fontSize = '20px';
+function displayFridays(fridayArray) {
+  let getFridayButton = document.querySelector('#btn-friday');
+  let fridays = document.getElementsByClassName('friday');
+  let newFridayText = 'SEXTOU o/'; 
+
+  getFridayButton.addEventListener('click', function () {
+    for (let i = 0; i < fridays.length; i += 1) {
+      if (fridays[i].innerHTML !== newFridayText) {
+        fridays[i].innerHTML = newFridayText;
+      } else {
+        fridays[i].innerHTML = fridayArray[i];
+      }
+    }
+  })
+}
+
+let dezFridays = [4, 11, 18, 25];
+displayFridays(dezFridays);
+
+
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
   })
 };
 
-diaMouseOver();
-diaMouseOut();
+function dayMouseOut() {
+  let days = document.querySelector('#days');
 
-//7. ref: gabarito
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px'
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
+
+
 function newTaskSpan(task) {
   let tasksContainer = document.querySelector('.my-tasks');
-  let nomeTask = document.createElement('span');
+  let taskName = document.createElement('span');
 
-  nomeTask.innerHTML = task;
-  tasksContainer.appendChild(nomeTask);
-};
+  taskName.innerHTML = task; 
+  tasksContainer.appendChild(taskName);
+}
 
-newTaskSpan('Projeto');
+newTaskSpan('Estudar');
 
-//8. ref: gabarito
-function novoTaskDiv(color) {
+
+function newTasksDiv(color) {
   let tasksContainer = document.querySelector('.my-tasks');
-  let novoTask = document.createElement('div');
+  let newTask = document.createElement('div');
 
-  novoTask.className = 'task';
-  novoTask.style.backgroundColor = color;
-  tasksContainer.appendChild(novoTask);
+  newTask.className = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask);
 };
 
-novoTaskDiv('blue');
+newTasksDiv('blue');
 
-//9. ref: gabarito
 function setTaskClass() {
-  let selecionaTask = document.getElementsByClassName('task selected');
-  let minhasTasks = document.querySelector('.task');
+  let selectedTask = document.getElementsByClassName('task selected');
+  let myTasks = document.querySelector('.task');
 
-  minhasTasks.addEventListener('click', function(event) {
-    if (selecionaTask.length === 0) {
+  myTasks.addEventListener('click', function(event) {
+    if (selectedTask.length === 0) {
       event.target.className = 'task selected';
     } else {
       event.target.className = 'task';
     }
   });
 };
- 
+
 setTaskClass();
 
-function setDayColor() {
-  let selecionaTask = document.getElementsByClassName('task selected');
-  let dias = document.querySelector('#days');
-  let taskDiv = document.querySelector('.task');
-  let corTask = taskDiv.style.backgroundColor;
 
-  dias.addEventListener('click', function(event){
-    let eventoTargetCor = event.target.style.color;
-    if (selecionaTask.length > 0 && eventoTargetCor !== corTask) {
-      let cor = selecionaTask[0].style.backgroundColor;
-      event.target.style.color = cor;
-    } else if (eventoTargetCor === corTask && selecionaTask.length !== 0) {
-      event.target.style.color = 'rgb(119, 119, 119';
+function setDayColor() {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', function (event) {
+    let eventTargetColor = event.target.style.color;
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor;
+      event.target.style.color = color;
+    } else if (eventTargetColor === taskColor && selectedTask.length !== 0) {
+      event.target.style.color = 'rgb(119,119,119)';
     }
-  });
+  });  
 };
+
+setDayColor();
