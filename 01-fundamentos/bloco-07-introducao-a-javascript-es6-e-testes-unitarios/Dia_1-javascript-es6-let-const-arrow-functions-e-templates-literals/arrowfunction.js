@@ -25,5 +25,5 @@ const sortOddsAndEvens = () => {
 
   return oddsAndEvens;    
 }
-const sortedArray = sortOddsAndEvens;
+const sortedArray = sortOddsAndEvens();
 console.log(`Os números ${sortedArray} se encontram ordenados de forma crescente!`); 
