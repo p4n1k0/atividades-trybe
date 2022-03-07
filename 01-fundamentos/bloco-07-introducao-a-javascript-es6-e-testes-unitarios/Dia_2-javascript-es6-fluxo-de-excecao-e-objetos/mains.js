@@ -15,7 +15,7 @@ const verifyIsNumber = (value1, value2) => {
   
   console.log(sum(2, '3'));
 
-const objeto = (object, key, value) => {
+const objet = (object, key, value) => {
     let obj = {};
     object = obj;   
     const name = value 
@@ -24,7 +24,7 @@ const objeto = (object, key, value) => {
     return object;
 }
 
-console.log(objeto('customer', 'name', 'Gabriel'));
+console.log(objet('customer', 'name', 'Gabriel'));
 
 
 const student1 = {
@@ -55,6 +55,8 @@ listSkills(student1);
 console.log('Estudante 2');
 listSkills(student2);
 
+
+
 const países = {
   França: 'Paris',
   Brasil: 'Brasília',
@@ -69,4 +71,20 @@ for(index in pairKeyValue) {
   console.log('País:', pairKeyValue[index][0]);
   console.log('Capital:', pairKeyValue[index][1]);
 };
+
+
+
+
+const person = {
+  name:'Roberto',
+};
+
+const lastName = {
+  lastName: 'Silva',
+};
+
+const newPerson = Object.assign({},person,lastName);
+newPerson.name = 'Gilberto';
+console.log(newPerson);
+console.log(person);
 
