@@ -1,7 +1,19 @@
-const sum = (value1, value2) => value1 + value2;
-
-console.log(sum(2, 3));
-
+const verifyIsNumber = (value1, value2) => {
+    if (typeof value1 !== 'number' || typeof value2 !== 'number') {
+      throw new Error('Os valores devem ser numéricos');
+    }
+  };
+  
+  const sum = (value1, value2) => {
+    try {
+      verifyIsNumber(value1, value2);
+      return value1 + value2;
+    } catch (error) {
+      throw error.message;
+    }
+  };
+  
+  console.log(sum(2, '3'));
 
 const objeto = (object, key, value) => {
     let obj = {};
@@ -43,4 +55,18 @@ listSkills(student1);
 console.log('Estudante 2');
 listSkills(student2);
 
+const países = {
+  França: 'Paris',
+  Brasil: 'Brasília',
+  Espanha: 'Madrid',
+  Portugal: 'Lisboa',
+};
+const pairKeyValue = Object.entries(países);
+console.log(pairKeyValue);
+
+for(index in pairKeyValue) {
+  console.log('--------');
+  console.log('País:', pairKeyValue[index][0]);
+  console.log('Capital:', pairKeyValue[index][1]);
+};
 
