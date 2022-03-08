@@ -7,5 +7,6 @@ describe('testa a função sum', () => {
     });
     it('deve retornar um erro caso receba como parâmetro uma string', () => {
         expect(() => sum(4, '5')).toThrowError();
+        expect(() => sum(4, '5')).toThrowError('parameters must be numbers');
     })    
 })
