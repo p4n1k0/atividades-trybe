@@ -6,6 +6,7 @@ describe('testa a função myFizzBuzz', () => {
         expect(myFizzBuzz(9)).toBe('fizz');
         expect(myFizzBuzz(10)).toBe('buzz');
         expect(myFizzBuzz(1)).toBe(1);
+        expect(myFizzBuzz('2')).toBe(false);
     }) 
 })
 
