@@ -8,7 +8,7 @@ describe('testa a função myFizzBuzz', () => {
         expect(myFizzBuzz(1)).toBe(1);
         expect(myFizzBuzz('2')).toBe(false);
     }) 
-})
+});
 
 
 
