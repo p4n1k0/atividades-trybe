@@ -1,4 +1,3 @@
-const { expect } = require('@jest/globals');
 const myFizzBuzz = require('./myFizzBuzz.js');
 
 describe('testa a função myFizzBuzz', () => {
@@ -6,6 +5,7 @@ describe('testa a função myFizzBuzz', () => {
         expect(myFizzBuzz(15)).toBe('fizzbuzz');
         expect(myFizzBuzz(9)).toBe('fizz');
         expect(myFizzBuzz(10)).toBe('buzz');
+        expect(myFizzBuzz(1)).toBe(1);
     }) 
 })
 
