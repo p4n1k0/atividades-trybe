@@ -29,4 +29,19 @@ describe('Testa a função encode e decode', () => {
       it('decode é uma função', () => {
         expect(typeof decode).toEqual('function');
       });
-})
+      it('converte apenas o número 1 na vogal "a"', () => {
+        expect(decode('1n1')).toEqual('ana');
+      });
+      it('converte apenas o número 2 na vogal "e"', () => {
+        expect(decode('2l2')).toEqual('ele');
+      });
+      it('converte apenas o número 3 na vogal "i"', () => {
+        expect(decode('f3l3p3')).toEqual('filipi');
+      });
+      it('converte apenas o número 4 na vogal "o"', () => {
+        expect(decode('4v4')).toEqual('ovo');
+      });
+      it('converte apenas o número 5 na vogal "u"', () => {
+        expect(decode('5r5b5')).toEqual('urubu');
+      }); 
+});
