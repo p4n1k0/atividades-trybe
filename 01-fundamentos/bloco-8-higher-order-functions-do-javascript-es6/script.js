@@ -1,17 +1,11 @@
-const deManha = string => {
-  return string;
+function wakeUp() {
+  return 'Acordando!!';
 }
 
-console.log(deManha('Acordando!!'));
+function breakfast() {
+  return 'Bora tomar café!!';
+} 
 
-const cafeDaManha = breakfast => {
-  return breakfast;
-}
-
-console.log(cafeDaManha('Bora tomar café!!'));
-
-const isTimeSleep = sleep => {
-  return sleep
-}
-
-console.log(isTimeSleep('Partiu dormir!!'));
+function sleep() {
+  return 'Partiu dormir!!';
+} 
