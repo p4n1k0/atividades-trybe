@@ -58,6 +58,22 @@ const hasName = (arr, name) => {
 console.log(hasName(names, 'Ana'));
 
 
+// const people = [
+//   { name: 'Mateus', age: 18 },
+//   { name: 'José', age: 16 },
+//   { name: 'Ana', age: 23 },
+//   { name: 'Cláudia', age: 20 },
+//   { name: 'Bruna', age: 19 },
+// ];
+
+// const verifyAges = (arr, minimumAge) => {
+//   //Adicione seu código aqui
+//   return arr.every((person) => person.age >= minimumAge);
+// }
+
+// console.log(verifyAges(people, 18));
+
+
 const people = [
   { name: 'Mateus', age: 18 },
   { name: 'José', age: 16 },
@@ -66,9 +82,7 @@ const people = [
   { name: 'Bruna', age: 19 },
 ];
 
-const verifyAges = (arr, minimumAge) => {
-  //Adicione seu código aqui
-  return arr.every((person) => person.age >= minimumAge);
-}
+// Adicione se código aqui
+people.sort((a, b) => a.age - b.age);
 
-console.log(verifyAges(people, 18));
+console.log(people);
