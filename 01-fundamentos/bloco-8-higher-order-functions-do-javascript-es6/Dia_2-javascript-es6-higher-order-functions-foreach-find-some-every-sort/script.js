@@ -24,14 +24,14 @@ const findDivisibleBy3And5 = () => {
 
 console.log(findDivisibleBy3And5());
 
-const names = ['João', 'Irene', 'Fernando', 'Maria'];
+// const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
-const findNameWithFiveLetters = () => {
-  // Adicione seu código aqui:
-  return names.find((name) => name.length === 5);
-}
+// const findNameWithFiveLetters = () => {
+//   // Adicione seu código aqui:
+//   return names.find((name) => name.length === 5);
+// }
 
-console.log(findNameWithFiveLetters());
+//console.log(findNameWithFiveLetters());
 
 
 const musicas = [
@@ -45,5 +45,14 @@ const musicas = [
     return musicas.find((musica) => musica.id === id);
   }
   
-  console.log(findMusic('31031685'))
-  
+  console.log(findMusic('31031685'));
+
+
+  const names = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  //Adicione seu código aqui
+  return arr.some((currentName) => currentName === name);
+}
+
+console.log(hasName(names, 'Ana'))
