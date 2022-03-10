@@ -31,6 +31,7 @@ function numberChecker (myNumber, number) {
 function lotteryResult (myNumber, callback) {
     const number = Math.floor((Math.random() * 5) + 1);
 
+    console.log(number);
     return callback(myNumber, number);
 }
 
