@@ -19,7 +19,6 @@ function newEmployees(callback) {
   console.log(newEmployees(employeeGenerator)); 
 
 
-
 function numberChecker (myNumber, number) {
     if (myNumber === number) {
         return 'Lucky day, you won!';
@@ -29,6 +28,10 @@ function numberChecker (myNumber, number) {
     }
 }
 
-const lotteryResult = (myNumber, callback) => {
+function lotteryResult (myNumber, callback) {
+    const number = Math.floor((Math.random() * 5) + 1);
 
+    return callback(myNumber, number);
 }
+
+console.log(lotteryResult(2, numberChecker));
