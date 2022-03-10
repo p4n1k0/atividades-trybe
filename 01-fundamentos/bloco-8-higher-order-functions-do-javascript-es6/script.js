@@ -1,11 +1,14 @@
-function wakeUp() {
-  return 'Acordando!!';
-}
+const wakeUp = () => 'Acordando!!';
 
-function breakfast() {
-  return 'Bora tomar café!!';
-} 
+const breakfast = () => 'Bora tomar café!!';
 
-function sleep() {
-  return 'Partiu dormir!!';
-} 
+const sleep = () => 'Partiu dormir!!';
+
+function doingThings (callback) {
+  const result = callback();
+  console.log(result);
+};
+
+doingThings(wakeUp);
+doingThings(breakfast);
+doingThings(sleep);
