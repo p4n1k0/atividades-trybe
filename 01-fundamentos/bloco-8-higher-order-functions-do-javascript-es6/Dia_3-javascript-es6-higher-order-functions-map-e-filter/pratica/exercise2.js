@@ -89,13 +89,12 @@ const books = [
   ];
   
   function nameAndAge() {
-    return books.map((book) => ({
-        author: book.author.name,
-        age: book.releaseYear - book.author.birthYear,
-    }))
-    .sort((a, b) => a.age - b.age);    
+       return books.map((book) => (
+         {
+           author: book.author.name,
+           age: book.releaseYear - book.author.birthYear,
+         }
+       )).sort((obj1, obj2) => obj1.age - obj2.age);
   }
 
   console.log(nameAndAge());
-
-//  NOME_DO_LIVRO - GÊNERO_DO_LIVRO - NOME_DA_PESSOA_AUTORA
