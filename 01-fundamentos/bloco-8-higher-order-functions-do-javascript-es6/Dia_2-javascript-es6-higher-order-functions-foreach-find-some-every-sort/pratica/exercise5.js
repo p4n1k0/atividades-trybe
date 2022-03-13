@@ -60,11 +60,11 @@ const books = [
       releaseYear: 1928,
     },
   ];
-  
+
   const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
-    return books.every((born) => born.author.birthYear > 1900 && born.author.birthYear <= 2000); 
-}
+  return books.every((book) => book.author.birthYear > 1900 && book.author.birthYear < 2001);
+} 
 
 console.log(everyoneWasBornOnSecXX());
