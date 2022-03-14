@@ -67,12 +67,10 @@ const books = [
     'Isaac Asimov',
     'J. R. R. Tolkien',
   ];
-  //ref: gabarito
+ 
   function fantasyOrScienceFictionAuthors() {
-      const wantedGenres = ['Fantasia', 'Ficção Científica']; 
-    return books.filter((book)  => wantedGenres.includes(book.genre))
-    .map((book) => book.author.name).sort(); 
+
   }
-  
+
   console.log(fantasyOrScienceFictionAuthors());
 

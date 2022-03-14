@@ -11,7 +11,8 @@ function sleep() {
 }
 
 const doingThings = (callback) => {
-    console.log(callback());
+    const result = (callback());
+    console.log(result);
 }
 
 doingThings(sleep);
