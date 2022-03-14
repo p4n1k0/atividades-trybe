@@ -1,3 +1,4 @@
+//.forEach
 const emailListInData = [
     'roberta@email.com',
     'paulo@email.com',
@@ -9,31 +10,29 @@ const emailListInData = [
     console.log(`O email ${email} esta cadastrado em nosso banco de dados!`);
   };
   
-  // Adicione seu código aqui
-
-  emailListInData.forEach(showEmailList);
-  console.log(emailListInData);
+emailListInData.forEach(showEmailList);   
 
 
-  const numbers = [19, 21, 30, 3, 45, 22, 15];
+//.find
+const numbers = [19, 21, 30, 3, 45, 22, 15];
 
 const findDivisibleBy3And5 = () => {
-  // Adiciona seu código aqui
   return numbers.find((number) => number % 3 === 0 && number % 5 === 0);
 }
 
-console.log(findDivisibleBy3And5());
+console.log(findDivisibleBy3And5())
 
+//.find
 const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
 const findNameWithFiveLetters = () => {
-  // Adicione seu código aqui:
   return names.find((name) => name.length === 5);
 }
 
 console.log(findNameWithFiveLetters());
 
 
+//find.
 const musicas = [
     { id: '31031685', title: 'Partita in C moll BWV 997' },
     { id: '31031686', title: 'Toccata and Fugue, BWV 565' },
@@ -41,9 +40,8 @@ const musicas = [
   ]
   
   function findMusic(id) {
-    // Adicione seu código aqui
     return musicas.find((musica) => musica.id === id);
   }
   
   console.log(findMusic('31031685'))
-  
+
