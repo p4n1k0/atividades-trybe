@@ -87,8 +87,7 @@ const books = [
   
   function oldBooksOrdered() {
     const currentYear = new Date().getFullYear();
-    return books.filter((book) => (
-      book.releaseYear < currentYear - 60
+    return books.filter((book) => (book.releaseYear < currentYear - 60
     )).sort((yearA, yearB) => yearB.releaseYear - yearA.releaseYear);
   }
   
