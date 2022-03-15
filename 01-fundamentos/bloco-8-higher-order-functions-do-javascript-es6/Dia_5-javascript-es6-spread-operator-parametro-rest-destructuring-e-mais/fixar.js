@@ -25,3 +25,20 @@ console.log(weekend); // ['Saturday', 'Sunday']
 
 const weekdays = [...workDays, ...weekend];
 console.log(weekdays); // ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+
+
+const user = {
+  name: 'Maria',
+  age: 21,
+  nationality: 'Brazilian',
+};
+
+const jobInfos = {
+  profession: 'Software engineer',
+  squad: 'Rocket Landing Logic',
+  squadInitials: 'RLL',
+};
+
+const customer = { ...user, ...jobInfos };
+
+console.log(customer);
