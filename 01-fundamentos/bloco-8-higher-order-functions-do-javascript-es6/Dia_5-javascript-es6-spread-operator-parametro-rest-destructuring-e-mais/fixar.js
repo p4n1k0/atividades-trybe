@@ -44,3 +44,13 @@ const customer = { ...user, ...jobInfos };
 const { name, age, nationality, profession, squad, squadInitials } = customer;
 
 console.log(`Hi, my name is ${name}, I'm ${age} years old and I'm ${nationality}. I work as a ${profession} and my squad is ${squadInitials}-${squad}`);
+
+
+
+let comida = 'gato';
+let animal = 'água';
+let bebida = 'arroz';
+
+[comida, animal, bebida] = [bebida, comida, animal];
+
+console.log(comida, animal, bebida); // arroz gato água
