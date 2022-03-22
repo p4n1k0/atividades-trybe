@@ -13,11 +13,17 @@ const temperatureInFahrenheit = (temperature) =>
 const greet = (temperature) =>
   console.log(`Hi there! Curiosity here. Right now is ${temperature}ºC at Mars`);
 
-// definição da função sendMarsTemperature...
-const sendMarsTemperature = (onSuccess) => {
-  const currentTemperature = getMarsTemperature();
-  setTimeout(() => onSuccess(currentTemperature), messageDelay());
-};
+const handleError = (errorReason) => console.log(`Error getting temperature: ${errorReason}`);  
 
-sendMarsTemperature(temperatureInFahrenheit);
-sendMarsTemperature(greet);
+// definição da função sendMarsTemperature...
+const sendMarsTemperature = (onSuccess, onError) => {
+  const currentTemperature = getMarsTemperature();
+  const messageSuccessfullySent = Math.random() <= 0.6;
+  setTimeout(() => {
+    if(messageSuccessfullySent) onSuccess(currentTemperature)
+    else onError('Robot is busy');
+  }, messageDelay());  
+}
+
+sendMarsTemperature(temperatureInFahrenheit, handleError);
+sendMarsTemperature(greet, handleError);
