@@ -19,5 +19,29 @@ describe('testando implementações', () => {
         expect(service.randomNumber(5)).toBe(10);
         expect(service.randomNumber).toHaveBeenCalledTimes(1);
         expect(service.randomNumber).toHaveBeenCalledWith(5);
-    });    
+    });
+    
+    test('mockando função para receber um parâmetro e retornar em caixa baixa', () => {
+        const mockFirstFunction = jest.spyOn(service, 'firstFunction'). mockImplementation(a => a.toLowerCase());
+
+        expect(mockFirstFunction('UPPERCASE')).toBe('uppercase');
+        expect(service.firstFunction).toHaveBeenCalledTimes(1);
+        expect(service.firstFunction).toHaveBeenCalledWith('UPPERCASE');        
+    });
+
+    test('mockando função que recebe um parâmetro e retorna a última letra', () => {
+        const mockSecondFunction = jest.spyOn(service, 'secondFunction'). mockImplementation(a => a.charAt(a.length - 1));
+
+        expect(mockSecondFunction('letter')).toBe('r');
+        expect(service.secondFunction).toHaveBeenCalledTimes(1);
+        expect(service.secondFunction).toHaveBeenCalledWith('letter');
+    });
+
+    test('mockando função que recebe 3 parâmetros e os concatena', () => {
+        const mockThirdFunction = jest.spyOn(service, 'thirdFunction').mockImplementation((a, b, c) => a.concat(b, c));
+
+        expect(mockThirdFunction('tr', 'y', 'be')).toBe('trybe');
+        expect(service.thirdFunction).toHaveBeenCalledTimes(1);
+        expect(service.thirdFunction).toHaveBeenCalledWith('tr', 'y', 'be');
+    });
 });
