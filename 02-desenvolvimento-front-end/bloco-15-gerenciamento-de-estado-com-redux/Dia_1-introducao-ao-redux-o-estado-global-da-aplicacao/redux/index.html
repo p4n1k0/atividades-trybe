@@ -59,7 +59,13 @@
       document.getElementById('previous').addEventListener('click', () => {
         store.dispatch({ type: 'PREVIOUS_COLOR' });
       });
-      
+
+      store.subscribe(() => {
+        const { colors, index } = store.getState();
+        document.getElementById('value').innerHTML = colors [index];
+        document.getElementById('container').style.backgroundColor = colors[index];
+      });
+
       const store = Redux.createStore(meuReducer);
     </script>
   </body>
