@@ -1,8 +1,12 @@
-import './App.css';
+import staringCat from '../src/assets/staringCat.jpg';
 import Image from './Image';
 
 function App() {
-  return (<Image />);
+  return (
+    <main>
+      <Image source={staringCat} alternativeText="Cute cat staring" />
+    </main>
+  );
 }
 
 export default App;
