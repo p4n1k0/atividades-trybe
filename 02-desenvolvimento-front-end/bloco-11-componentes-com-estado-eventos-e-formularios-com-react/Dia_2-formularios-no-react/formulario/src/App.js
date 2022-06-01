@@ -9,20 +9,22 @@ class App extends Component {
       name: '',
       age: '',
       anecdote: '',
+      terms: false,
     };
     this.handleChange = this.handleChange.bind(this);
   }
 
   handleChange({ target }) {
-    const { name, value } = target;
-
+    const { name } = target;
+    const value = (target.type === 'checkbox') ? target.checked : target.value;
+    
     this.setState({
       [name]: value,
     });
   }
 
   render() {
-    const { name, email, age, anecdote } = this.state;
+    const { name, email, age, anecdote, terms } = this.state;
 
     return (
       <div>
@@ -73,6 +75,17 @@ class App extends Component {
               onChange={ this.handleChange }
               value={ anecdote }
             />
+          </label>
+
+          <label htmlFor="terms">
+            <input
+              id="terms"
+              type="checkbox"
+              name="terms"
+              onChange={ this.handleChange }
+              value={ terms }
+            />
+            Concordo com termos e acordos
           </label>
 
         </form>
