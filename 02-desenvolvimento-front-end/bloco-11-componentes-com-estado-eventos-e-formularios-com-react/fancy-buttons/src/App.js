@@ -16,15 +16,21 @@ export default class App extends Component {
 
 
 handleButtonOne() {
-  console.log('Clicou no botao 1!', this);
+  this.setState(() => ({
+    clicksBtnOne: 1,
+  }))
 }
 
 handleButtonTwo() {
-  console.log('Clicou no botao 2!', this);
+  this.setState(() => ({
+    clicksBtnTwo: 1,
+  }))
 }
 
 handleButtonThree() {
-  console.log('Clicou no botao 3!', this);
+  this.setState(() => ({
+    clicksBtnThree: 1,
+  }))
 }
 
   render() {
