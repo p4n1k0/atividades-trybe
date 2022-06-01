@@ -6,19 +6,23 @@ class App extends Component {
 
     this.state = {
       email: '',
+      name: '',
+      age: '',
+      anecdote: '',
     };
-
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
+  handleChange({ target }) {
+    const { name, value } = target;
+
     this.setState({
-      email: event.target.value,
+      [name]: value,
     });
   }
 
   render() {
-    const { email } = this.state;
+    const { name, email, age, anecdote } = this.state;
 
     return (
       <div>
@@ -31,6 +35,8 @@ class App extends Component {
               id="name"
               name="name"
               type="text"
+              onChange={ this.handleChange }
+              value={ name }
             />
           </label>
 
@@ -50,7 +56,8 @@ class App extends Component {
             <select
               id="age"
               name="age"
-              defaultValue=""
+              onChange={ this.handleChange }
+              value={ age }
             >
               <option value="">Selecione</option>
               <option value="adult">Maior que 18</option>
@@ -60,7 +67,12 @@ class App extends Component {
 
           <label htmlFor="anecdote">
             Anedota:
-            <textarea id="anecdote" name="anecdote" />
+            <textarea 
+              id="anecdote"
+              name="anecdote"
+              onChange={ this.handleChange }
+              value={ anecdote }
+            />
           </label>
 
         </form>
