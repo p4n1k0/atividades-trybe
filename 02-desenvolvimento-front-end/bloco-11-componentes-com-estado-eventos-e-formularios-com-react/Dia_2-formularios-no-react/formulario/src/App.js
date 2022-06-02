@@ -12,8 +12,25 @@ class App extends Component {
       age: '',
       anecdote: '',
       terms: false,
+      formularioComErros: true,
     };
     this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleError() {
+    const { name, email, age, anecdote, terms } = this.state;
+    const errorCases = [
+      !name.length,
+      !email.length,
+      !age.length,
+      !anecdote.length,
+      !terms,
+    ];
+    const formularioPreenchido = errorCases.every((error) => error !== true);
+
+    this.setState({
+      formularioComErros: !formularioPreenchido,
+    })
   }
 
   handleChange({ target }) {
@@ -22,11 +39,11 @@ class App extends Component {
 
     this.setState({
       [name]: value,
-    });
+    }, () => { this.handleError(); });    
   } 
 
   render() {
-    const { name, email, age, anecdote, terms } = this.state;
+    const { name, email, age, anecdote, terms, formularioComErros } = this.state;
 
     return (
       <div>
@@ -52,6 +69,9 @@ class App extends Component {
             Concordo com termos e acordos
           </label>
         </form>
+        { formularioComErros
+          ? <span style={ { color: 'red' } }>Preencha todos os campos</span>
+          : <span style={ { color: 'green' } }>Todos campos foram preenchidos</span> }
       </div >
     );
   }
