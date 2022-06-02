@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PersonalFieldset from './PernsonalFieldset';
+import DataFieldset from './DataFieldset';
 
 class App extends Component {
   constructor() {
@@ -21,77 +23,24 @@ class App extends Component {
     this.setState({
       [name]: value,
     });
-  }
-
-  renderSelectInput() {
-    const { age } = this.state;
-
-    return (
-      <label htmlFor="age">
-        Idade:
-        <select
-          id="age"
-          name="age"
-          onChange={this.handleChange}
-          value={age}
-        >
-          <option value="">Selecione</option>
-          <option value="adult">Maior que 18</option>
-          <option value="underage">Menor que 18</option>
-        </select>
-      </label>
-    )
-  }
+  } 
 
   render() {
-    const { name, email, anecdote, terms } = this.state;
+    const { name, email, age, anecdote, terms } = this.state;
 
     return (
       <div>
         <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
         <form className="form">
-          <fieldset>
-            <legend>Informações pessoais</legend>
+          <PersonalFieldset
+            nameValue= { name }
+            emailValue={ email }
+            ageValue={ age }
+            handleChange={ this.handleChange }
+          />
 
-            <label htmlFor="name">
-              Nome:
-              <input
-                id="name"
-                name="name"
-                type="text"
-                onChange={this.handleChange}
-                value={name}
-              />
-            </label>
-
-            <label htmlFor="email">
-              Email:
-              <input
-                id="email"
-                name="email"
-                type="email"
-                onChange={this.handleChange}
-                value={email}
-              />
-            </label>
-
-            {this.renderSelectInput()}
-          </fieldset>
-
-          <fieldset>
-            <label htmlFor="anecdote">
-              Anedota:
-              <textarea
-                id="anecdote"
-                name="anecdote"
-                onChange={this.handleChange}
-                value={anecdote}
-              />
-            </label>
-
-            <input type="file" />
-          </fieldset>
-
+          <DataFieldset anecdoteValue={ anecdote } handleChange={ this.handleChange } />
+          
           <label htmlFor="terms">
             <input
               id="terms"
