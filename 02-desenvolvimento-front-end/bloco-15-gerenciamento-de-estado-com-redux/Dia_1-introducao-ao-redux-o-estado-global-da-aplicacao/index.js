@@ -10,3 +10,6 @@ const ESTADO_INICIAL = {
     };
     
     const store = Redux.createStore(reducer);
+
+    console.log(store.getState());
+    
