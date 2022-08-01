@@ -2,14 +2,16 @@ version: '2.5'
 services:
   frontend:
     build: frontend/    # Especificando o contexto, ou seja, a pasta onde está o Dockerfile.
+    restart: on-failure
     ports:
-      - 3000:3000
-    environment:
-      - DB_HOST=database
+      - 3000:3000    
   backend:
     build: backend/     # Mesmo caso aqui.
+    restart: on-failure
     ports:
       - 3001:3001
+    environment:
+      - DB_HOST=database  
   database:
     image: betrybe/docker-compose-example-database:v1    # Especificando a Imagem Docker diretamente.
     restart: on-failure
