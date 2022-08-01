@@ -15,7 +15,7 @@ services:
     environment:
       - DB_HOST=database
     depends_on:
-      -database  
+      - database  
   database:
     image: betrybe/docker-compose-example-database:v1    # Especificando a Imagem Docker diretamente.
     restart: on-failure
