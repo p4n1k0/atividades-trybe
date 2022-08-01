@@ -1,0 +1,8 @@
+version: '2.5'
+services:
+  frontend:
+    build: frontend/    # Especificando o contexto, ou seja, a pasta onde está o Dockerfile.
+  backend:
+    build: backend/     # Mesmo caso aqui.
+  database:
+    image: betrybe/docker-compose-example-database:v1    # Especificando a Imagem Docker diretamente.
