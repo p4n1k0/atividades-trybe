@@ -55,8 +55,10 @@ function main() {
     const height = readline.questionInt('What\'s your height? (cm) ');
    
     const bmi = handleBMI(weight, height);
+    const bmiResult = handleBMIResult(bmi);
 
     console.log(`BMI: ${bmi.toFixed(2)}`);
+    console.log(`bmiResult`);
 }
 
 main();
