@@ -38,6 +38,18 @@ const BMI_MAX_AND_MIN = {
     },
   };
 
+  function handleBMIResult(imc) {
+    const situacoes = Object.keys(BMI_MAX_AND_MIN); 
+  
+    const resultFind = results.find((situacao) => {
+      const { maxBMI, minBMI } = BMI_MAX_AND_MIN[result]; 
+  
+      return bmi >= minBMI && bmi <= maxBMI;
+    });
+  
+    return resultFind;
+  }
+
 function main() {
     const weight = readline.questionFloat('What\'s your weight? (kg) ');
     const height = readline.questionInt('What\'s your height? (cm) ');
