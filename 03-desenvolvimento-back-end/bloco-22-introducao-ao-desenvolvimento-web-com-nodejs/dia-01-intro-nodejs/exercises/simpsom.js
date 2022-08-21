@@ -13,3 +13,8 @@ async function getSimpsonById(id) {
      }
      return chosenSimpson;
 }
+
+async function main() {
+    const simpson = await getSimpsonById(1);
+    console.log(simpson);
+  }
