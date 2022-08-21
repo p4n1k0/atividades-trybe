@@ -18,3 +18,5 @@ async function main() {
     const simpson = await getSimpsonById(1);
     console.log(simpson);
   }
+
+  main();
