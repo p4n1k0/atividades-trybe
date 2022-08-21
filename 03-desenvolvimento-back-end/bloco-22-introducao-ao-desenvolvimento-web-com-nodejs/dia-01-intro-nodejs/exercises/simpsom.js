@@ -11,4 +11,5 @@ async function getSimpsonById(id) {
      if (!chosenSimpson) {
        throw new Error('id não encontrado');
      }
+     return chosenSimpson;
 }
