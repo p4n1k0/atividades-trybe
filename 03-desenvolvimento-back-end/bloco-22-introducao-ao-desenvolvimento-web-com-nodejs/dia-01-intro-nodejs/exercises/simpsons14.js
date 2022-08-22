@@ -5,5 +5,8 @@ async function createSimpsonsFamily() {
     .readFile('./simpsons.json', 'utf-8');
 
   const simpsons = JSON.parse(fileContent);
+
+  const familyIds = [1, 2, 3, 4];
+  const simpsonsFamily = simpsons.filter((simpson) => familyIds.includes(Number(simpson.id)));
 }
 // ...
