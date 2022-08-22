@@ -7,6 +7,13 @@ async function addNelsonToFamily() {
   const simpsonsFamily = JSON.parse(fileContent);
 
   simpsonsFamily.push({ id: '8', name: 'Nelson Muntz' });
+  console.log(simpsonsFamily);
 
   await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
 }
+
+async function main() {
+    await addNelsonToFamily();
+  }
+
+main()
