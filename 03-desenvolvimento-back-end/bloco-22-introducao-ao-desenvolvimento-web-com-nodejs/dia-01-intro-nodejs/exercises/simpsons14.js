@@ -8,5 +8,7 @@ async function createSimpsonsFamily() {
 
   const familyIds = [1, 2, 3, 4];
   const simpsonsFamily = simpsons.filter((simpson) => familyIds.includes(Number(simpson.id)));
+
+  await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
 }
 // ...
