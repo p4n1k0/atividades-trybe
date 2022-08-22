@@ -8,7 +8,14 @@ async function createSimpsonsFamily() {
 
   const familyIds = [1, 2, 3, 4];
   const simpsonsFamily = simpsons.filter((simpson) => familyIds.includes(Number(simpson.id)));
-
+  console.log(simpsonsFamily);
+  
   await fs.writeFile('./simpsonsFamily.json', JSON.stringify(simpsonsFamily));
 }
+
+async function main() {
+   await createSimpsonsFamily();    
+  }
+
+main();  
 // ...
