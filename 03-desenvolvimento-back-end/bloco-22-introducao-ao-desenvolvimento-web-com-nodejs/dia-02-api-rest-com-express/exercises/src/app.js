@@ -32,7 +32,7 @@ app.get('/filter/myActivities', (req, res) => {
     let filteredActivities = activities;
   
     if (status) {
-      filteredActivities = activities.filter((activity) => activity.status === 'Feito');
+      filteredActivities = activities.filter((activity) => activity.estatus === 'Feito');
     }
   
     res.status(200).json({ activities: filteredActivities });
