@@ -13,14 +13,19 @@ app.use(express.json());
 
 app.get('/teams', (req, res) => res.status(200).json({ teams }));
 
-app.get('/teams/:id', (req, res) => {
+const existingId = (req, res, next) => {
+    const id = Number(req.params.id);
+
+    if (teams.some((t) => t.id === id)) {
+        next();
+    }
+    res.sendStatus(404);
+};
+
+app.get('/teams/:id', existingId, (req, res) => {
     const id = Number(req.params.id);
     const team = teams.find((t) => t.id === id);
-    if (team) {
-        res.json(team);
-    } else {
-        res.sendStatus(404);
-    }
+    res.json(team);
 });
 
 const validateTeam = (req, res, next) => {
