@@ -1,47 +1,62 @@
 const express = require('express');
 
-const teams = [
-    {
-        id: 1,
-        name: 'Sport Club Corinthians Paulista',
-        initials: 'COR',
-    },
-    {
-        id: 2,
-        name: 'São Paulo Futebol Clube',
-        initials: 'SPF',
-    },
-];
-
 const app = express();
+
+let nextId = 3;
+
+const teams = [
+    { id: 1, nome: 'São Paulo Futebol Clube', sigla: 'SPF' },
+    { id: 2, nome: 'Sociedade Esportiva Palmeiras', sigla: 'PAL' },
+  ];
 
 app.use(express.json());
 
-app.get('/', (req, res) => res.status(200).json({ message: 'Olá Mundo!' }));
-
 app.get('/teams', (req, res) => res.status(200).json({ teams }));
 
-app.put('/teams/:id', (req, res) => {
-    const { id } = req.params;
-    const { name, initials } = req.body;
-    let updatedTeam;
-    for (let i = 0; i < teams.length; i += 1) {
-        const team = teams[i];
-        if (team.id === Number(id)) {
-            team.name = name;
-            team.initials = initials;
-            updatedTeam = team;
-        }
+app.get('/teams/:id', (req, res) => {
+    const id = Number(req.params.id);
+    const team = teams.find((t) => t.id === id);
+    if (team) {
+        res.json(team);
+    } else {
+        res.sendStatus(404);
     }
-    res.status(200).json({ updatedTeam });
+});
+
+app.post('/teams', (req, res) => {
+    const requiredProperties = ['nome', 'sigla'];
+    if (requiredProperties.every((property) => property in req.body)) {
+        const team = { id: nextId, ...req.body };
+        teams.push(team);
+        nextId += 1;
+        res.status(201).json(team);        
+    } else {
+        res.sendStatus(400);
+    }
+});
+
+app.put('/teams/:id', (req, res) => {
+    const id = Number(req.params.id);
+    const requiredProperties = ['nome', 'sigla'];
+    const team = teams.find((t) => t.id === id);
+    if (team && requiredProperties.every((property) => property in req.body)) {
+        const index = teams.indexOf(team);
+        const updated = { id, ...req.body };
+        teams.splice(index, 1, updated);
+        res.status(201).json(updated);
+    } else {
+        res.sendStatus(400);
+    }
 });
 
 app.delete('/teams/:id', (req, res) => {
-    const { id } = req.params;
-    const arrayPosition = teams.findIndex((team) => team.id === Number(id));
-    teams.splice(arrayPosition, 1);
-  
-    res.status(200).end();
+    const id = Number(req.params.id);
+    const team = teams.find((t) => t.id === id);
+    if (team) {
+        const index = teams.indexOf(team);
+        teams.splice(index, 1);
+    }  
+    res.sendStatus(200);
   });
 
 module.exports = app;
