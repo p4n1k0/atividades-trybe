@@ -4,6 +4,7 @@ const apiCredentials = require('./middlewares/apiCredentials');
 
 const app = express();
 app.use(apiCredentials); 
+app.use(express.static('./images'));
 
 let nextId = 3;
 
@@ -57,5 +58,7 @@ app.delete('/teams/:id', (req, res) => {
     teams.splice(index, 1);  
     res.sendStatus(200);
   });
+
+  app.use((req, res) => res.sendStatus(404));
 
 module.exports = app;
