@@ -1,4 +1,5 @@
 const express = require('express');
+const auth = require('./middlewares/auth');
 const validateDifficulty = require('./middlewares/validateDifficulty');
 const validateRating = require('./middlewares/validateRating');
 const validateCreatedAt = require('./middlewares/validateCreatedAt');
@@ -10,7 +11,7 @@ const app = express();
 
 app.use(express.json());
 
-app.post('/signup', (_req, res) => {
+app.post('/signup', (req, res) => {
     const { email, password, firstName, phone } = req.body;
 
     if ([email, password, firstName, phone].includes(undefined)) {
@@ -23,8 +24,8 @@ app.post('/signup', (_req, res) => {
 
 });
 
-app.post('activities', validateDifficulty, validateRating, validateCreatedAt, validateDescription, validatePrice, validateName, (_req, res) => {
+app.post('activities', auth, validateDifficulty, validateRating, validateCreatedAt, validateDescription, validatePrice, validateName, (_req, res) => {
     res.status(201).json({ message: 'Atividade registrada com sucesso!' });
-})
+});
 
 module.exports = app;
