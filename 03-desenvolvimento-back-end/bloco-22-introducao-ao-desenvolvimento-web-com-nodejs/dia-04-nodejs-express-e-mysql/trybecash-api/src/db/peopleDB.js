@@ -4,8 +4,14 @@ const insert = (person) => conn.execute(
     `INSERT INTO people 
       (first_name, last_name, email, phone) VALUES (?, ?, ?, ?)`,
     [person.first_name, person.last_name, person.email, person.phone],
-  );
+);
+
+const findAll = () => conn.execute('SELECT * FROM people');
+
+const findById = (id) => conn.execute('SELECT * FROM people WHERE id = ?', [id]);
 
 module.exports = {
-  insert,
+    insert,
+    findAll,
+    findById,
 };
