@@ -1,7 +1,9 @@
 const express = require('express');
 const validateTeam = require('./middlewares/validateTeam');
+const apiCredentials = require('./middlewares/apiCredentials');
 
 const app = express();
+app.use(apiCredentials); 
 
 let nextId = 3;
 
@@ -30,6 +32,9 @@ app.get('/teams/:id', existingId, (req, res) => {
 });
 
 app.post('/teams', validateTeam, (req, res) => {
+    if (!req.teams.includes(req.body.sigla) && teams.every((t) => t.sigla !== req.body.sigla)) {
+        return res.sendStatus(401);
+    }
     const team = { id: nextId, ...req.body };
     teams.push(team);
     nextId += 1;
