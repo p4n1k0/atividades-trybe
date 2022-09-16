@@ -28,15 +28,10 @@ const getById = async (req, res) => {
   const update = async (req, res) => {
     const { id } = req.params;  
     const { title, author, pageQuantity } = req.body;
-  
-    
-  
-    const updatedUser = await BookService.update(id, { title, author, pageQuantity });
-  
+    const updatedUser = await BookService.update(id, { title, author, pageQuantity });  
   
     if (!updatedUser) return res.status(404).json({ message: 'Book not found' });
-  
-  
+   
     res.status(201).json({ message: 'Book updated' });  
   };
 
