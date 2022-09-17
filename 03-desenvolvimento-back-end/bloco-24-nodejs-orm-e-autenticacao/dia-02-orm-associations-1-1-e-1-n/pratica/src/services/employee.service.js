@@ -11,13 +11,10 @@ const getAll = async () => {
 
 
 const getById = async (id) => {
-    const employee = await Employee.findOne({
-        where: { id },
-        include: [{
-            model: Address, as: 'addresses', attributes: { exclude: ['number'] },   
-          }],
-    });
-    return employee;
-}
+    const employee = await Employee.findOne({  
+      where: { id },  
+    });  
+    return employee;  
+  }
 
 module.exports = { getAll, getById };
