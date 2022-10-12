@@ -24,4 +24,6 @@ console.log(`Trapézio com base maior igual a 100cm, base menor igual a 70cm e a
 console.log(`Trapézio com base maior igual a 75cm, base menor igual a 50cm e altura igual a 35cm: ${Exercise.trapezoid(75, 50, 35)}cm²`);
 console.log(`Trapézio com base maior igual a 150cm, base menor igual a 120cm e altura igual a 80cm: ${Exercise.trapezoid(150, 120, 80)}cm²`);
 
-
+console.log(`Círculo com raio igual a 25cm: ${Exercise.circle(25)}cm²`);
+console.log((`Círculo com raio igual a 100cm: ${Exercise.circle(100)}cm²`));
+console.log(`Círculo com raio igual a 12.5cm: ${Exercise.circle(12.5)}cm²`);

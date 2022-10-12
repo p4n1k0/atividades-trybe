@@ -33,3 +33,8 @@ export function rhombus(D:number, d:number): number {
 export function trapezoid(B:number, b:number, h:number): number {
     return((B + b) * h) / 2;
 }
+
+export function circle(radius:number): number {
+    const PI:number = 3.14;
+    return PI * radius ** 2;
+}
