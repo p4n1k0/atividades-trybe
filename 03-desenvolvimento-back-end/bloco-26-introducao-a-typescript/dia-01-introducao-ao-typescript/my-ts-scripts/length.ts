@@ -1,4 +1,4 @@
-const readline = require('readline-sync'); // importa pacote readline-sync
+const readlineLength = require('readline-sync'); // importa pacote readline-sync
 const units = ["km", "hm", "dam", "m", "dm", "cm", "mm"];
 
 function convert(value: number, fromUnit: string, toUnit: string): number {
@@ -11,13 +11,13 @@ function convert(value: number, fromUnit: string, toUnit: string): number {
 
 function exec() {
     // pega valor a ser convertido digitado pela pessoa usuária
-    const value = readline.questionFloat("Digite o valor a ser convertido: \n");
+    const value = readlineLength.questionFloat("Digite o valor a ser convertido: \n");
 
     // pede a pessoa usuária escolha a unidade base
-    const fromUnitChoiceIndex = readline.keyInSelect(units, "Escolha um número para a unidade base:");
+    const fromUnitChoiceIndex = readlineLength.keyInSelect(units, "Escolha um número para a unidade base:");
 
     // pede a pessoa usuária escolha a unidade para conversão
-    const toUnitChoiceIndex = readline.keyInSelect(units, "Escolha um número para a conversão:");
+    const toUnitChoiceIndex = readlineLength.keyInSelect(units, "Escolha um número para a conversão:");
 
     const fromUnitChoice = units[fromUnitChoiceIndex];
     const toUnitChoice = units[toUnitChoiceIndex];
