@@ -26,6 +26,10 @@ export function rectangle(base: number, height: number): number {
     return base * height;
 }
 
-export function rhombus(D:number, d:number):number {
+export function rhombus(D:number, d:number): number {
     return (d * D) / 2;
+}
+
+export function trapezoid(B:number, b:number, h:number): number {
+    return((B + b) * h) / 2;
 }
