@@ -17,3 +17,5 @@ type Address = {
 type StatesOfMatter = "liquid" | "solid" | "gaseous";
 
 type IdentifyingDocument = string | number;
+
+type SO = "linux" | "mac os" | "windows";
