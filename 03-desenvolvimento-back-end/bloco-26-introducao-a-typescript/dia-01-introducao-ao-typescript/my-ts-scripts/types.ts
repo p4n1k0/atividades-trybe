@@ -12,4 +12,6 @@ type Address = {
     district: string;
     city: string;
     state: string;
-  }
+}
+
+type StatesOfMatter = "liquid" | "solid" | "gaseous";
