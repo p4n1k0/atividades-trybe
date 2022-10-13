@@ -3,3 +3,5 @@ type Bird = {
     beaks: 1;
     biped: true;
 }
+
+type Sum = (x: number, y: number) => number;
