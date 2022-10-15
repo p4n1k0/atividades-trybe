@@ -1,4 +1,4 @@
-import connection  from './models/connection';
+/* import connection from './models/connection';
 
 const main = async () => {
   const result = await connection.execute('SELECT * FROM books');
@@ -8,3 +8,4 @@ const main = async () => {
 }
 
 main();
+ */
