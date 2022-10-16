@@ -15,6 +15,7 @@ export default class BookModel {
     this.connection = connection;
   }
 
+
   public async getAll(): Promise<Book[]> {
     const result = await this.connection.execute('SELECT * FROM books');
     const [rows] = result;
