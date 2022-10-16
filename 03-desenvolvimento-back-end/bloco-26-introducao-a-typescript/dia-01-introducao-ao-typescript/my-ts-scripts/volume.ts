@@ -1,28 +1,30 @@
-const readlineVolume = require('readline-sync');
-const u = ["km²", "hm²", "dam²", "m²", "dm²", "cm²", "mm²"];
+import readline from "readline-sync";
+const uni = ["km³", "hm³", "dam³", "m³", "dm³", "cm³", "mm³"];
 
 function convertVolume(value: number, fromUnit: string, toUnit: string): number {
-    const fromIndex = u.indexOf(fromUnit);
-    const toIndex = u.indexOf(toUnit);
+    const fromIndex = uni.indexOf(fromUnit);
+    const toIndex = uni.indexOf(toUnit);
     const exponent = (toIndex - fromIndex);
 
-    return value * Math.pow(100, exponent);
+    return value * Math.pow(1000, exponent);
 }
 
 function exec() {
-    const value = readlineVolume.questionFloat("Digite o valor a ser convertido: \n");
+    const value = readline.questionFloat("Digite o valor a ser convertido: \n");
 
-    const fromUnitChoiceIndex = readlineVolume.keyInSelect(u, "Escolha um número para a unidade base:");
+    const fromUnitChoiceIndex = readline.keyInSelect(uni, "Escolha um número para a unidade base:");
 
-    const toUnitChoiceIndex = readlineVolume.keyInSelect(u, "Escolha um número para a conversão:");
+    const toUnitChoiceIndex = readline.keyInSelect(uni, "Escolha um número para a conversão:");
 
-    const fromUnitChoice = u[fromUnitChoiceIndex];
-    const toUnitChoice = u[toUnitChoiceIndex];
+    const fromUnitChoice = uni[fromUnitChoiceIndex];
 
-    const result = convert(value, fromUnitChoice, toUnitChoice)
+    const toUnitChoice = uni[toUnitChoiceIndex];
+
+    const result = convertVolume(value, fromUnitChoice, toUnitChoice)
+    
 
     const message = `${value}${fromUnitChoice} é igual a ${result}${toUnitChoice}`
-
+ 
     console.log(message);
 }
 

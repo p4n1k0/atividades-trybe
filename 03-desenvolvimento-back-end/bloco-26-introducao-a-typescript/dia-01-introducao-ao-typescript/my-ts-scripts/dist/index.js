@@ -1,5 +1,9 @@
-import readline from "readline-sync";
-
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const readline_sync_1 = __importDefault(require("readline-sync"));
 // cria array de objetos com o nome do script e o caminho do script a ser executado
 const scripts = [
     { name: "Converter comprimento", script: "./length" },
@@ -8,11 +12,8 @@ const scripts = [
     { name: "Converter área", script: "./area" },
     { name: "Converter volume", script: "./volume" }
 ];
-
 // cria novo array somente com os nomes dos scripts
 const scriptNames = scripts.map(item => item.name);
-
 // pede à pessoa usuária para escolher um dos scripts de conversão
-const choice = readline.keyInSelect(scriptNames, "Escolha um número para executar o script de conversão de unidade");
-
+const choice = readline_sync_1.default.keyInSelect(scriptNames, "Escolha um número para executar o script de conversão de unidade");
 require(scripts[choice].script); // executamos o script escolhido usando o require

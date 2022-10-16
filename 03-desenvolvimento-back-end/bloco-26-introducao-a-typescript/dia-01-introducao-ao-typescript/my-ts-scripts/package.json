@@ -12,7 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.3",
-    "@types/node": "^18.8.4",
+    "@types/node": "^18.11.0",
+    "@types/readline-sync": "^1.4.4",
     "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
