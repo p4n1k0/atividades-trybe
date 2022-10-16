@@ -9,3 +9,4 @@ interface Aircraft {
     speedUp: () => void;
     speedDown: () => void;
 }
+
