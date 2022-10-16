@@ -1,5 +1,5 @@
 import connection from "./connection";
-import { Pool } from "mysql2/promise";
+import { Pool, RowDataPacket } from "mysql2/promise";
 
 export interface Book {
   id?: number,
@@ -15,11 +15,9 @@ export default class BookModel {
     this.connection = connection;
   }
 
-
   public async getAll(): Promise<Book[]> {
-    const result = await this.connection.execute('SELECT * FROM books');
-    const [rows] = result;
+    const [rows] = await this.connection.execute<(Book & RowDataPacket)[]>('SELECT * FROM books');
 
-    return rows as Book[];
+    return rows;
   }
 }
