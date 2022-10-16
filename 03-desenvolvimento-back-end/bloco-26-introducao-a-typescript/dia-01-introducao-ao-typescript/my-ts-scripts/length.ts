@@ -1,4 +1,4 @@
-import readline from "readline-sync"; // importamos o pacote readline-sync
+import readline from "readline-sync"; // importa
 const units = ["km", "hm", "dam", "m", "dm", "cm", "mm"];
 
 function convert(value: number, fromUnit: string, toUnit: string): number {
