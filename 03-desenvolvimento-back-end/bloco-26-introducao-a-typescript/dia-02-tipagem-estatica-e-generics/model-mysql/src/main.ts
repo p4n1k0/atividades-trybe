@@ -1,10 +1,10 @@
-import connection from './models/connection';
+import BookModel from "./models/Book";
 
 const main = async () => {
-    const result = await connection.execute('SELECT * FROM books');
-    const [rows] = result;
+  const bookModel = new BookModel();
 
-    console.log(rows);
+  const books = await bookModel.getAll();
+  console.log(books)
 }
 
 main();
