@@ -3,5 +3,9 @@
     "@types/sequelize": "^4.28.14",
     "dotenv": "^16.0.3",
     "sequelize": "^6.25.2"
+  },
+  "devDependencies": {
+    "mysql2": "^2.3.3",
+    "sequelize-cli": "^6.5.1"
   }
 }
