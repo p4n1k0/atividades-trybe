@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@types/readline-sync": "^1.4.4",
+    "@types/sequelize": "^4.28.14",
     "dotenv": "^16.0.3",
     "mysql2": "^2.3.3",
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "sequelize": "^6.25.2"
   }
 }
