@@ -33,12 +33,9 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
             console.error(err);
 
             res.sendStatus(500);
-
     }
 
-
     next();
-
 });
 
 app.listen(PORT, () => {
