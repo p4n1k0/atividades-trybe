@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { StatusCodes } from './statusCodes';
+import { statusCodes } from './statusCodes';
 import BookService from '../services/books.service';
 
 class BooksController {
@@ -7,8 +7,7 @@ class BooksController {
 
   public getAll = async (_req: Request, res: Response) => {
     const books = await this.bookService.getAll();
-
-    res.status(StatusCodes.OK).json(books);
+    res.status(statusCodes.OK).json(books);
   };
 }
 
