@@ -19,14 +19,14 @@ class BookService {
 
     public async getById(id: number): Promise<Book> {
         const book = await this.model.getById(id);
-    
-        return book;    
-      }
+
+        return book;
+    }
 
 
-      public create(book: Book): Promise<Book> {
-        return this.model.create(book);    
-      }
+    public create(book: Book): Promise<Book> {
+        return this.model.create(book);
+    }
 }
 
 export default BookService;
