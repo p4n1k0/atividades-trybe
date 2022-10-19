@@ -22,6 +22,11 @@ class BookService {
     
         return book;    
       }
+
+
+      public create(book: Book): Promise<Book> {
+        return this.model.create(book);    
+      }
 }
 
 export default BookService;
