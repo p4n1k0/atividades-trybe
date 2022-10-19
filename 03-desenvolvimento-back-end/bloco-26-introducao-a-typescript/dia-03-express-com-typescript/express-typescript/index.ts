@@ -9,11 +9,11 @@ app.use(express.json());
 
 const PORT = 8000;
 
+app.use(BooksRoutes);
+
 app.get('/', (req: Request, res: Response) => {
     res.status(statusCodes.OK).send('Express + TypeScript')
 });
-
-app.use(BooksRoutes);
 
 app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
     const { name, message, details } = err as any;
