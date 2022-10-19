@@ -6,9 +6,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const statusCodes_1 = __importDefault(require("./statusCodes"));
 require("express-async-errors");
+const userRouter_1 = __importDefault(require("./routes/userRouter"));
 const app = (0, express_1.default)();
+const { PORT = 3000 } = process.env;
 app.use(express_1.default.json());
-const PORT = 8000;
+app.use(userRouter_1.default);
+app.use('/users', userRouter_1.default);
 app.get('/', (req, res) => {
     res.status(statusCodes_1.default.OK).send('Express + TypeScript');
 });
