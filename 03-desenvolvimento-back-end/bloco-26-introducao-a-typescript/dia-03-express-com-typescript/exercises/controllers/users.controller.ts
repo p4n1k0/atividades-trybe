@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
 import UserService from '../services/users.service';
+import { IUser } from '../interfaces';
 
 
 class UsersController {
@@ -22,6 +23,13 @@ class UsersController {
     }
 
     res.status(statusCodes.OK).json(user);
+  }
+
+  public create = async (req: Request, res: Response) => {
+    const user = req.body as IUser;
+    const userCreated = await this.userService.create(user);
+
+    res.status(statusCodes.CREATED).json(userCreated);
   }
 }
 

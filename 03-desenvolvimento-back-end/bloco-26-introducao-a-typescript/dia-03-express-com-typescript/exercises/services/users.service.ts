@@ -1,6 +1,8 @@
+import jwt from 'jsonwebtoken'
 import connection from '../models/connection';
 import UserModel from '../models/user.model';
-import { User } from '../interfaces/index';
+import { secret, config } from '../middlewares/jwtConfig'
+import { User, IUser } from '../interfaces/index';
 
 const MESSAGES = {
     USER_NOT_FOUND: 'User not found',
@@ -26,11 +28,21 @@ class UserService {
     public async getById(id: number): Promise<User | null> {
         const user = await this.model.getById(id);
 
-        if (user === null) {
-            return 
+        return user;
+    }
+
+    public async create(user: IUser): Promise<IUser> {
+        const userExists = await this.model.getByEmail(user.email);
+
+        if (userExists) {
+            console.log('User alread exists');            
         }
 
-        return user;
+        const payload = await this.model.create(user);
+        const token = jwt.sign({ payload }, secret, config);
+        const data = { token, ...payload };
+        
+        return  data ;
     }
 }
 

@@ -1,6 +1,7 @@
-
 import { NextFunction, Request, Response } from 'express';
+import statusCodes from '../statusCodes';
 import { IUser } from '../interfaces';
+
 
 function validateData(name: string, password: string, email: string) {
     if (password.length < 6 || password.length > 12) {
@@ -32,7 +33,7 @@ export default function validateBody(
 
     if (!name || !email || !password) {
         const message = 'The fields "name", "email" and "password" are required';
-        return res.status(400).json({ message });
+        return res.status(statusCodes.BAD_REQUEST).json({ message });
     }
 
     const error = validateData(name, password, email);
