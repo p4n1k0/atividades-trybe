@@ -23,8 +23,12 @@ class UserService {
         return users;
     }
 
-    public async getById(id: number): Promise<User> {
+    public async getById(id: number): Promise<User | null> {
         const user = await this.model.getById(id);
+
+        if (user === null) {
+            return 
+        }
 
         return user;
     }
