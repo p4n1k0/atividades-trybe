@@ -15,4 +15,14 @@ export default class BookModel {
 
         return users as User[];
     }
+
+    public async getById(id: number): Promise<User | null> {
+        const query = 'SELECT * FROM Users WHERE id = ?';
+        const values = [id];
+      
+        const [data] = await connection.execute(query, values);
+        const [user] = data as User[];
+      
+        return user || null;
+      }
 }
