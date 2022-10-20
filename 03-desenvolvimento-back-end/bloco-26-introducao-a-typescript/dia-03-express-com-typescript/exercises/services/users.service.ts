@@ -2,6 +2,13 @@ import connection from '../models/connection';
 import UserModel from '../models/user.model';
 import { User } from '../interfaces/index';
 
+const MESSAGES = {
+    USER_NOT_FOUND: 'User not found',
+    UNAUTHORIZED: 'Invalid email or password',
+    USER_EXISTS: 'User already exists',
+    FORBIDDEN: 'You are not allowed to take this action',
+};
+
 
 class UserService {
     public model: UserModel;
@@ -14,6 +21,12 @@ class UserService {
         const users = await this.model.getAll();
 
         return users;
+    }
+
+    public async getById(id: number): Promise<User> {
+        const user = await this.model.getById(id);
+
+        return user;
     }
 }
 

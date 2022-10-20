@@ -5,6 +5,7 @@ const router = Router();
 
 const usersController = new UsersController();
 
-router.get('/users', usersController.getAll);
+router.get('/', usersController.getAll);
+router.get('/:id', usersController.getById);
 
 export default router;

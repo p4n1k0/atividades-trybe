@@ -16,6 +16,15 @@ export default class UserModel {
         return users as User[];
     }
 
+    public async getById(id: number): Promise<User> {
+        const result = await this.connection
+            .execute('SELECT * FROM Users WHERE id = ?', [id]);
+        const [rows] = result;
+        const [user] = rows as User[];
+
+        return user;
+    }
+
     public async create(user: IUser): Promise<User> {
         const { name, email, password } = user;
 
@@ -27,6 +36,6 @@ export default class UserModel {
         const [dataInserted] = result;
         const { insertId } = dataInserted;
 
-        return { id: insertId, ... user };
+        return { id: insertId, ...user };
     }
 }
