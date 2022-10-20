@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
-import UserService  from '../services/userService';
+import UserService  from '../services/users.service';
 
 
 class UsersController {
