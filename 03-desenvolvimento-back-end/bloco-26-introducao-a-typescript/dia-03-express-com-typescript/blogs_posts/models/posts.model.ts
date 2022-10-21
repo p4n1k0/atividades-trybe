@@ -62,4 +62,13 @@ export default class PostModel {
 
         return postToBeDeleted;
     }
+
+    public async getAllBySearchTerm(term: string): Promise<Post[]> {
+        const result = await this.connection
+            .execute('SELECT * FROM Posts WHERE title LIKE ? OR author LIKE ? OR category LIKE ? OR publicationDate LIKE ?',
+                [`%${term}%`, `%${term}%`, `%${term}%`, `%${term}%`]);                
+        const [posts] = result;
+
+        return posts as Post[];
+    }
 }

@@ -47,6 +47,13 @@ class PostsController {
     res.status(statusCodes.OK)
       .json({ message: 'Post deleted successfully' });
   };
+
+  public getAllBySearchTerm = async (req: Request, res: Response) => {
+    const term = req.query.term as string;
+    const data = await this.postService.getAllBySearchTerm(term);
+
+    res.status(statusCodes.OK).json(data);
+  }
 }
 
 export default PostsController;

@@ -43,7 +43,17 @@ class PostService {
         const data = await this.model.remove(id);
 
         if (data === null) {
-            return { message: 'Post not found' };
+            throw new NotFoundError('NotFoundError');
+        }
+
+        return data;
+    }
+
+    public async getAllBySearchTerm(term: string) {
+        const data = await this.model.getAllBySearchTerm(term);
+
+        if (!data || data.length === 0) {
+            throw new NotFoundError('NotFoundError');
         }
 
         return data;
