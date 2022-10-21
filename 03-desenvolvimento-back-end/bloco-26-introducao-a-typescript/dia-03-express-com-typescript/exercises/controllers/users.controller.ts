@@ -46,6 +46,23 @@ class UsersController {
 
     res.status(statusCodes.NO_CONTENT)
   }
+
+  public remove = async (req: Request, res: Response) => {
+    const { authorization: token } = req.headers;
+
+    if (!token) {
+      return res.status(statusCodes.UNAUTHORIZED)
+        .json({ message: 'Token not found' })
+    }
+
+    const id = Number(req.params.id);
+    const user = req.body;
+
+    await this.userService.update(id, user, token as string)
+
+    res.status(statusCodes.OK)
+      .json({ message: 'User deleted successfully'});
+  };
 }
 
 export default UsersController;

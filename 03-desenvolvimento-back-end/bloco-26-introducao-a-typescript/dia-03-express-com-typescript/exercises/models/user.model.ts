@@ -61,4 +61,18 @@ export default class UserModel {
 
         return editedUser;
     }
+
+    public async remove(id: number): Promise<User | null> {
+        const userToBeDeleted = await this.getById(id);
+        if (!userToBeDeleted) {
+            return null;
+        }
+
+        await this.connection.execute(
+            'DELETE FROM Users WHERE id = ?',
+            [id],
+        );
+
+        return userToBeDeleted;
+    }
 }

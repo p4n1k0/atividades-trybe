@@ -48,6 +48,22 @@ class UserService {
 
         return this.model.update(id, user);
     }
+
+    public async remove(id: number, token: string) {
+        const { payload } = jwt.verify(token, secret) as IToken;
+
+        if (payload.id !== id) {
+            return 'You are not allowed to take this action';
+        }
+        
+        const userFound = await this.model.remove(id);
+
+        if (userFound === null) {
+            return 'User not found';
+        }
+
+        return userFound;
+    }
 }
 
 export default UserService;
