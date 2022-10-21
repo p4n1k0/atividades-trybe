@@ -4,6 +4,7 @@ import PostsController from '../controllers/posts.controller';
 const router = Router();
 const postsController = new PostsController();
 
-router.get('/posts', postsController.getAll)
+router.get('/', postsController.getAll);
+router.get('/:id', postsController.getById)
 
 export default router;

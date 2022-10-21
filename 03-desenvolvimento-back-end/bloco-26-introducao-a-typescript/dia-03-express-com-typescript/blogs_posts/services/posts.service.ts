@@ -14,6 +14,13 @@ class PostService {
 
         return posts;
     }
+
+
+    public async getById(id: number): Promise<Post | null> {
+        const  data = await this.model.getById(id);
+
+        return data;
+    }
 }
 
 export default PostService;
