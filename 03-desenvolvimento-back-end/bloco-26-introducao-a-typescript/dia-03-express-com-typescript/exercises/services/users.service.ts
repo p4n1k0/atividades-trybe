@@ -3,14 +3,8 @@ import connection from '../models/connection';
 import UserModel from '../models/user.model';
 import { secret, config } from '../middlewares/jwtConfig'
 import { User, IUser } from '../interfaces/index';
-
-const MESSAGES = {
-    USER_NOT_FOUND: 'User not found',
-    UNAUTHORIZED: 'Invalid email or password',
-    USER_EXISTS: 'User already exists',
-    FORBIDDEN: 'You are not allowed to take this action',
-};
-
+import IToken from '../interfaces/itoken.interface';
+import { NotFoundError } from 'restify-errors';
 
 class UserService {
     public model: UserModel;
@@ -43,6 +37,16 @@ class UserService {
         const data = { token, ...payload };
         
         return  data ;
+    }
+
+    public async update(id: number, user: IUser, token: string) {
+        const { payload } = jwt.verify(token, secret) as IToken;
+
+        if (payload.id !== id) {
+            throw new NotFoundError ('NotFoundError');
+        }
+
+        return this.model.update(id, user);
     }
 }
 

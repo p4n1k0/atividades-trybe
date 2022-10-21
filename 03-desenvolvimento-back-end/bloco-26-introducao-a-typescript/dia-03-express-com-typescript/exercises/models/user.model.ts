@@ -29,10 +29,10 @@ export default class UserModel {
         const result = await this.connection
             .execute('SELECT * FROM Users WHERE email = ?', [email]);
 
-            const [insertEmail] = result
-            const [user] = insertEmail as User[];
+        const [insertEmail] = result
+        const [user] = insertEmail as User[];
 
-            return user || null;
+        return user || null;
     }
 
     public async create(user: IUser): Promise<User> {
@@ -47,5 +47,18 @@ export default class UserModel {
         const { insertId } = dataInserted;
 
         return { id: insertId, ...user };
+    }
+
+    public async update(id: number, user: IUser): Promise<User> {
+        const { name, email, password } = user;
+
+        await this.connection.execute(
+            'UPDATE Users SET name = ?, email = ?, password = ? WHERE id = ?',
+            [name, email, password]
+        );
+
+        const editedUser: User = { id, name, email, password };
+
+        return editedUser;
     }
 }

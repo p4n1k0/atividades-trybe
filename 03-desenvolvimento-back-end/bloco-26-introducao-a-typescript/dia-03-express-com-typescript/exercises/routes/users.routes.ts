@@ -12,5 +12,6 @@ router.get('/:id', usersController.getById);
 router.use(userMiddleware);
 
 router.post('/', usersController.create);
+router.put('/:id', usersController.update);
 
 export default router;

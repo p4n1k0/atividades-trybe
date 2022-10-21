@@ -17,9 +17,9 @@ class UsersController {
     const id = parseInt(req.params.id);
     const user = await this.userService.getById(Number(id));
 
-    if(!user) {
+    if (!user) {
       return res.status(statusCodes.NOT_FOUND)
-      .json({ message: 'User not found' });
+        .json({ message: 'User not found' });
     }
 
     res.status(statusCodes.OK).json(user);
@@ -30,6 +30,21 @@ class UsersController {
     const userCreated = await this.userService.create(user);
 
     res.status(statusCodes.CREATED).json(userCreated);
+  }
+
+  public update = async (req: Request, res: Response) => {
+    const { authorization: token } = req.headers
+
+    if (!token) {
+      return res.status(statusCodes.UNAUTHORIZED)
+        .json({ message: 'Token not found' })
+    }
+
+    const id = Number(req.params.id);
+    const user = req.body as IUser;
+    await this.userService.update(id, user, token as string);
+
+    res.status(statusCodes.NO_CONTENT)
   }
 }
 
