@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
 import PostService from '../services/posts.service';
+import { IPost } from '../interfaces';
 
 
 class PostsController {
@@ -22,6 +23,13 @@ class PostsController {
     }
 
     res.status(statusCodes.OK).json(post);
+  }
+
+  public create = async (req: Request, res: Response) => {
+    const post = req.body as IPost;
+    const postCreated = await this.postService.create(post);
+
+    res.status(statusCodes.CREATED).json(postCreated);
   }
 }
 
