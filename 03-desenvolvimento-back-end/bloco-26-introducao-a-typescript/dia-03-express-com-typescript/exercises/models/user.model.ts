@@ -35,7 +35,7 @@ export default class UserModel {
         return user || null;
     }
 
-    public async create(user: IUser): Promise<User> {
+    public async create(user: IUser) {
         const { name, email, password } = user;
 
         const result = await this.connection.execute<ResultSetHeader>

@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken'
 import connection from '../models/connection';
 import UserModel from '../models/user.model';
 import { secret, config } from '../middlewares/jwtConfig'
-import { User, IUser } from '../interfaces/index';
+import { User, IUser, UserCredentials } from '../interfaces/index';
 import IToken from '../interfaces/itoken.interface';
 import { NotFoundError } from 'restify-errors';
 
@@ -13,19 +13,19 @@ class UserService {
         this.model = new UserModel(connection);
     }
 
-    public async getAll(): Promise<User[]> {
+    public async getAll() {
         const users = await this.model.getAll();
 
         return users;
     }
 
-    public async getById(id: number): Promise<User | null> {
+    public async getById(id: number) {
         const user = await this.model.getById(id);
 
         return user;
     }
 
-    public async create(user: IUser): Promise<IUser> {
+    public async create(user: IUser) {
         const userExists = await this.model.getByEmail(user.email);
 
         if (userExists) {
@@ -53,16 +53,26 @@ class UserService {
         const { payload } = jwt.verify(token, secret) as IToken;
 
         if (payload.id !== id) {
-            return 'You are not allowed to take this action';
+            return { message: 'You are not allowed to take this action'};
         }
         
         const userFound = await this.model.remove(id);
 
         if (userFound === null) {
-            return 'User not found';
+            return { message: 'User not found'};
         }
 
         return userFound;
+    }
+
+    public async login(userCredentials: UserCredentials){
+        const data = await this.model.getByEmail(userCredentials.email);
+
+        if (data === null || data.password !== userCredentials.password) {
+            return { message: 'Invalid email or password'}
+        }
+
+        return { data: { token: 'fake token' } };
     }
 }
 
