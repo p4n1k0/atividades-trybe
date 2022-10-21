@@ -31,6 +31,14 @@ class PostsController {
 
     res.status(statusCodes.CREATED).json(postCreated);
   }
+
+  public update = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    const post = req.body as IPost;
+    const data = await this.postService.update(id, post)
+
+    res.status(statusCodes.NO_CONTENT).json(data);
+  }
 }
 
 export default PostsController;

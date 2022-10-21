@@ -39,4 +39,13 @@ export default class PostModel {
 
         return { id: insertId, ...post };
     }
+
+    public async update(id: number, post: IPost) {
+        const { title, author, category, publicationDate } = post;
+
+        await this.connection.execute(
+            'UPDATE Users SET title = ?, author = ?, category = ?, publicationDate = ?, WHERE id = ?',
+            [title, author, category, publicationDate, id]
+        );
+    }
 }

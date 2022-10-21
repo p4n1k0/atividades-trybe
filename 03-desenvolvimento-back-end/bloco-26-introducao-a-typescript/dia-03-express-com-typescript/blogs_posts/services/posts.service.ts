@@ -1,6 +1,7 @@
 import { IPost } from '../interfaces';
 import connection from '../models/connection';
 import PostModel from '../models/posts.model';
+import { NotFoundError } from 'restify-errors';
 
 class PostService {
     public model: PostModel;
@@ -26,6 +27,16 @@ class PostService {
         const data = await this.model.create(post);
 
         return data
+    }
+
+    public async update(id: number, post: IPost) {
+        const postExists = await this.model.getById(id);
+
+        if (!postExists) {
+            throw new NotFoundError('NotFoundError');
+        }
+
+        return await this.model.update(id, post);
     }
 }
 
