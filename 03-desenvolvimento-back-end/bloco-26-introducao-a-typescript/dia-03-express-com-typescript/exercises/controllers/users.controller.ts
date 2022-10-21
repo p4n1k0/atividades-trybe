@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
 import UserService from '../services/users.service';
-import { IUser } from '../interfaces';
+import { IUser, UserCredentials } from '../interfaces';
 
 
 class UsersController {
@@ -63,6 +63,13 @@ class UsersController {
     res.status(statusCodes.OK)
       .json({ message: 'User deleted successfully'});
   };
+
+  public login = async (req: Request, res: Response) => {
+    const userCredentials = req.body as UserCredentials;
+    const { data } = await this.userService.login(userCredentials);
+
+    res.status(statusCodes.OK).json(data);
+  }
 }
 
 export default UsersController;
