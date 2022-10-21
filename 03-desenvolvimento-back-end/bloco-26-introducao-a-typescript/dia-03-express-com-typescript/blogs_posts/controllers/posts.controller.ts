@@ -37,8 +37,16 @@ class PostsController {
     const post = req.body as IPost;
     const data = await this.postService.update(id, post)
 
-    res.status(statusCodes.NO_CONTENT).json(data);
+    res.status(statusCodes.OK).json(data);
   }
+
+  public remove = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    await this.postService.remove(id)
+
+    res.status(statusCodes.OK)
+      .json({ message: 'Post deleted successfully' });
+  };
 }
 
 export default PostsController;

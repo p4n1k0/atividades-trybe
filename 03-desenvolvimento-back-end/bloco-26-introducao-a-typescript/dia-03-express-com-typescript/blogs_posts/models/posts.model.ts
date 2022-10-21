@@ -44,8 +44,22 @@ export default class PostModel {
         const { title, author, category, publicationDate } = post;
 
         await this.connection.execute(
-            'UPDATE Users SET title = ?, author = ?, category = ?, publicationDate = ?, WHERE id = ?',
+            'UPDATE Posts SET title = ?, author = ?, category = ?, publicationDate = ? WHERE id = ?',
             [title, author, category, publicationDate, id]
         );
+    }
+
+    public async remove(id: number): Promise<Post | null> {
+        const postToBeDeleted = await this.getById(id);
+        if (!postToBeDeleted) {
+            return null;
+        }
+
+        await this.connection.execute(
+            'DELETE FROM Posts WHERE id = ?',
+            [id],
+        );
+
+        return postToBeDeleted;
     }
 }

@@ -38,6 +38,16 @@ class PostService {
 
         return await this.model.update(id, post);
     }
+
+    public async remove(id: number) {
+        const data = await this.model.remove(id);
+
+        if (data === null) {
+            return { message: 'Post not found' };
+        }
+
+        return data;
+    }
 }
 
 export default PostService;
