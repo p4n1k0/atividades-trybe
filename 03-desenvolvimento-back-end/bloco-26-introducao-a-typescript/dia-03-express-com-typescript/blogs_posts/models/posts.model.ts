@@ -1,5 +1,5 @@
 import { Pool } from 'mysql2/promise';
-import { Post } from '../interfaces/index';
+import { Post, IPost } from '../interfaces/index';
 
 
 export default class PostModel {
@@ -12,9 +12,9 @@ export default class PostModel {
     public async getAll(): Promise<Post[]> {
         const result = await this.connection
             .execute('SELECT * FROM Posts')
-        const [rows] = result;
+        const [posts] = result;
 
-        return rows as Post[];
+        return posts as Post[];
     }
 
     public async getById(id: number): Promise<Post | null> {
