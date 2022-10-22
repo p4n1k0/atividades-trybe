@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
 import ProductService from '../services/product.service';
+import { IProduct } from '../interfaces/index'
 
 class ProductsController {
     constructor(private productService = new ProductService()) { }
@@ -21,6 +22,13 @@ class ProductsController {
         }
 
         res.status(statusCodes.OK).json(product);
+    }
+
+    public create = async (req: Request, res: Response) => {
+        const product = req.body as IProduct;
+        const productCreated = await this.productService.create(product);
+
+        res.status(statusCodes.CREATED).json(productCreated);
     }
 }
 

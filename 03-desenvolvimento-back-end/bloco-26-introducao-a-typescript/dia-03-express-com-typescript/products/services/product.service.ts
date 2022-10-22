@@ -1,4 +1,4 @@
-import { Product } from '../interfaces';
+import { IProduct, Product } from '../interfaces';
 import connection from '../models/connection';
 import ProductModel from '../models/product.model';
 
@@ -19,6 +19,12 @@ class ProductService {
         const product = await this.model.getById(id);
 
         return product;
+    }
+
+      public async create(product: IProduct) {
+        const data = await this.model.create(product);
+
+        return data
     }
 }
 
