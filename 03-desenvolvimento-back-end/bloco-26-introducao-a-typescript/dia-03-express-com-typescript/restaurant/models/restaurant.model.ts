@@ -15,4 +15,13 @@ export default class RestaurantModel {
 
         return restaurants as Restaurant[];
     }
+
+    public async getById(id: number): Promise<Restaurant | null> {
+        const result = await this.connection
+            .execute('SELECT * FROM Restaurants WHERE id = ?', [id]);
+        const [restaurants] = result;
+        const [restaurant] = restaurants as Restaurant[];
+
+        return restaurant || null;
+    }
 }

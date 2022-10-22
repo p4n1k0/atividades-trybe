@@ -2,7 +2,7 @@ import { Restaurant } from '../interfaces';
 import connection from '../models/connection';
 import RestaurantModel from '../models/restaurant.model';
 
-class ProductService {
+class RestaurantService {
     public model: RestaurantModel;
 
     constructor() {
@@ -14,6 +14,12 @@ class ProductService {
 
         return restaurants;
     }
+
+    public async getById(id: number) {
+        const restaurant = await this.model.getById(id);
+
+        return restaurant;
+    }
 }
 
-export default ProductService;
+export default RestaurantService;

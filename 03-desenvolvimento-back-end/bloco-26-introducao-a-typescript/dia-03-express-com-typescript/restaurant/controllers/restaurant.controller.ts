@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
 import RestaurantService from '../services/restaurant.service';
 
-class ProductsController {
+class RestaurantController {
     constructor(private service = new RestaurantService()) { }
 
     public getAll = async (_req: Request, res: Response) => {
@@ -10,6 +10,18 @@ class ProductsController {
 
         res.status(statusCodes.OK).json(restaurants);
     }
+
+    public getById = async (req: Request, res: Response) => {
+        const id = parseInt(req.params.id);
+        const restaurant = await this.service.getById(Number(id));
+
+        if (!restaurant) {
+            return res.status(statusCodes.NOT_FOUND)
+                .json({ message: 'Restaurant not found' })
+        }
+
+        res.status(statusCodes.OK).json(restaurant);
+    }
 }
 
-export default ProductsController;
+export default RestaurantController;
