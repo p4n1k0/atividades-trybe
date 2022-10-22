@@ -11,5 +11,6 @@ router.get('/:id', productsController.getById);
 router.use(productMiddleware);
 
 router.post('/', productsController.create);
+router.put('/:id', productsController.update);
 
 export default router;

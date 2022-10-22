@@ -39,4 +39,13 @@ export default class BookModel {
 
         return { id: insertId, ...product };
     }
+
+    public async update(id: number, product: IProduct) {
+        const { name, brand, price, manufacturingDate, expirationDate } = product;
+
+        await this.connection.execute(
+            'UPDATE Posts SET name = ?, brand = ?, price = ?,  manufacturingDate = ?, expirationDate = ? WHERE id = ?',
+            [name, brand, price, manufacturingDate, expirationDate, id]
+        );
+    }
 }

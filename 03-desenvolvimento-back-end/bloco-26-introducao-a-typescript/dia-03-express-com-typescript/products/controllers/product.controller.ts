@@ -30,6 +30,14 @@ class ProductsController {
 
         res.status(statusCodes.CREATED).json(productCreated);
     }
+
+    public update = async (req: Request, res: Response) => {
+        const id = Number(req.params.id);
+        const product = req.body as IProduct;
+        const data = await this.productService.update(id, product)
+    
+        res.status(statusCodes.OK).json(data);
+      }
 }
 
 export default ProductsController;
