@@ -47,6 +47,17 @@ class RestaurantService {
 
         return restaurant;
     }
+
+
+    public async getAllOpen() {
+        const data = await this.model.getAllOpen();
+
+        if (!data.length) {
+            throw new NotFoundError('NotFoundError');
+        }
+
+        return data;
+    }
 }
 
 export default RestaurantService;

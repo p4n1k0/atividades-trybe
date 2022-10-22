@@ -47,6 +47,12 @@ class RestaurantController {
         res.status(statusCodes.OK)
             .json({ message: 'Product deleted successfully' });
     };
+    
+    public getAllOpen = async (_req: Request, res: Response) => {
+        const data = await this.service.getAllOpen();
+
+        res.status(statusCodes.OK).json(data);
+    }
 }
 
 export default RestaurantController;

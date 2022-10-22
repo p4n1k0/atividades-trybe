@@ -66,4 +66,12 @@ export default class RestaurantModel {
 
         return restaurantToBeDeleted;
     }
+
+    public async getAllOpen(): Promise<Restaurant[]> {
+        const result = await this.connection
+            .execute(`SELECT * FROM Restaurants WHERE openingTime <= ? time(NOW()) AND closingTime >= time(NOW())`);
+        const [restaurants] = result;
+
+        return restaurants as Restaurant[];
+    }
 }
