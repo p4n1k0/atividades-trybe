@@ -10,6 +10,18 @@ class ProductsController {
 
         res.status(statusCodes.OK).json(products);
     }
+
+    public getById = async (req: Request, res: Response) => {
+        const id = parseInt(req.params.id);
+        const product = await this.productService.getById(Number(id));
+
+        if (!product) {
+            return res.status(statusCodes.NOT_FOUND)
+                .json({ message: 'Product not found' })
+        }
+
+        res.status(statusCodes.OK).json(product);
+    }
 }
 
 export default ProductsController;

@@ -14,6 +14,12 @@ class ProductService {
 
         return products;
     }
+
+    public async getById(id: number) {
+        const product = await this.model.getById(id);
+
+        return product;
+    }
 }
 
 export default ProductService;
