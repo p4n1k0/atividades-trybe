@@ -1,12 +1,15 @@
 import express, { NextFunction, Request, Response } from 'express';
 import statusCodes from './statusCodes';
 import 'express-async-errors';
+import RestaurantRoutes from './routes/restaurant.routes';
 
 const app = express();
 
 app.use(express.json());
 
 const PORT = 8000;
+
+app.use(RestaurantRoutes);
 
 app.get('/', (req: Request, res: Response) => {
     res.status(statusCodes.OK).send('Express + TypeScript')
