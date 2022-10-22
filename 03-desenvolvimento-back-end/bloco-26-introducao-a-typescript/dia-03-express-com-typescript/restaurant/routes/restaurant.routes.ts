@@ -7,9 +7,11 @@ const controller = new RestaurantController();
 
 router.get('/', controller.getAll);
 router.get('/:id', controller.getById);
+router.delete('/:id', controller.remove);
 
 router.use(middleware);
 
 router.post('/', controller.create);
+router.put('/:id', controller.update);
 
 export default router;

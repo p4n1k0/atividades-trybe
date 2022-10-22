@@ -1,6 +1,7 @@
 import { IRestaurant, Restaurant } from '../interfaces';
 import connection from '../models/connection';
 import RestaurantModel from '../models/restaurant.model';
+import { NotFoundError } from 'restify-errors';
 
 class RestaurantService {
     public model: RestaurantModel;
@@ -25,6 +26,26 @@ class RestaurantService {
         const data = await this.model.create(restaurant);
 
         return data
+    }
+
+    public async update(id: number, restaurant: IRestaurant) {
+        const restauranttExists = await this.model.update(id, restaurant);
+
+        if (restauranttExists === null) {
+            throw new NotFoundError('NotFoundError');
+        }
+
+        return await this.model.update(id, restaurant);
+    }
+
+    public async remove(id: number) {
+        const restaurant = await this.model.remove(id);
+
+        if (restaurant === null) {
+            throw new NotFoundError('NotFoundError');
+        }
+
+        return restaurant;
     }
 }
 

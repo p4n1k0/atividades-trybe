@@ -39,4 +39,31 @@ export default class RestaurantModel {
 
         return { id: insertId, ...restaurant };
     }
+
+    public async update(id: number, restaurant: IRestaurant): Promise<Restaurant> {
+        const { name, category, openingTime, closingTime } = restaurant;
+
+        await this.connection.execute(
+            'UPDATE Restaurants SET name = ?, category = ?, openingTime = ?,  closingTime = ? WHERE id = ?',
+            [name, category, openingTime, closingTime, id]
+        );
+
+        const editedRestaurant: Restaurant = { id, ...restaurant }
+
+        return editedRestaurant;
+    }
+
+    public async remove(id: number): Promise<Restaurant | null> {
+        const restaurantToBeDeleted = await this.getById(id);
+        if (!restaurantToBeDeleted) {
+            return null;
+        }
+
+        await this.connection.execute(
+            'DELETE FROM Restaurants WHERE id = ?',
+            [id],
+        );
+
+        return restaurantToBeDeleted;
+    }
 }

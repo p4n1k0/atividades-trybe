@@ -30,6 +30,23 @@ class RestaurantController {
 
         res.status(statusCodes.CREATED).json(restaurantCreated);
     }
+
+    public update = async (req: Request, res: Response) => {
+        const id = Number(req.params.id);
+        const restaurant = req.body as IRestaurant;
+        const data = await this.service.update(id, restaurant)
+
+        res.status(statusCodes.OK).json(data);
+    }
+
+
+    public remove = async (req: Request, res: Response) => {
+        const id = Number(req.params.id);
+        await this.service.remove(id)
+
+        res.status(statusCodes.OK)
+            .json({ message: 'Product deleted successfully' });
+    };
 }
 
 export default RestaurantController;
