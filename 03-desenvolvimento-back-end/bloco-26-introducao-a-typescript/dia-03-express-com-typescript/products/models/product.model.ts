@@ -71,4 +71,14 @@ export default class ProductModel {
 
         return products as Product[];
     }
+
+    public async getAllNotExpired(): Promise<Product[]> {
+        const currentTime = new Date().toISOString().slice(0, 10);
+        const result = await this.connection
+            .execute('SELECT * FROM Products WHERE expiration_date >= ?',
+                [currentTime]);
+        const [products] = result;
+
+        return products as Product[];
+    }
 }

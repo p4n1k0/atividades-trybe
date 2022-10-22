@@ -61,6 +61,12 @@ class ProductService {
 
         return data;
     }
+
+    public async getAllNotExpired() {
+        const data = await this.model.getAllNotExpired();
+
+        return data
+    }
 }
 
 export default ProductService;

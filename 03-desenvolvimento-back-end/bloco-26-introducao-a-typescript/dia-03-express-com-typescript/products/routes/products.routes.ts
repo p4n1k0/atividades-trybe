@@ -3,16 +3,17 @@ import ProductsController from '../controllers/product.controller';
 import productMiddleware from '../middlewares/product.middleware';
 
 const router = Router();
-const productsController = new ProductsController();
+const controller = new ProductsController();
 
-router.get('/price', productsController.getAllByPriceRange)
-router.get('/', productsController.getAll);
-router.get('/:id', productsController.getById);
-router.delete('/:id', productsController.remove);
+router.get('/price', controller.getAllByPriceRange);
+router.get('/n-expired', controller.getAllNotExpired);
+router.get('/', controller.getAll);
+router.get('/:id', controller.getById);
+router.delete('/:id', controller.remove);
 
 router.use(productMiddleware);
 
-router.post('/', productsController.create);
-router.put('/:id', productsController.update);
+router.post('/', controller.create);
+router.put('/:id', controller.update);
 
 export default router;
