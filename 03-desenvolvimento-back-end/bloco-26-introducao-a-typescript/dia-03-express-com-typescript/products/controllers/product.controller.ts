@@ -35,9 +35,17 @@ class ProductsController {
         const id = Number(req.params.id);
         const product = req.body as IProduct;
         const data = await this.productService.update(id, product)
-    
+
         res.status(statusCodes.OK).json(data);
-      }
+    }
+
+    public remove = async (req: Request, res: Response) => {
+        const id = Number(req.params.id);
+        await this.productService.remove(id)
+
+        res.status(statusCodes.OK)
+            .json({ message: 'Product deleted successfully' });
+    };
 }
 
 export default ProductsController;

@@ -7,6 +7,7 @@ const productsController = new ProductsController();
 
 router.get('/', productsController.getAll);
 router.get('/:id', productsController.getById);
+router.delete('/:id', productsController.remove);
 
 router.use(productMiddleware);
 

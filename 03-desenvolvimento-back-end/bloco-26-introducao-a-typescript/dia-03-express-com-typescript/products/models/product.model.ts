@@ -48,4 +48,18 @@ export default class BookModel {
             [name, brand, price, manufacturingDate, expirationDate, id]
         );
     }
+
+    public async remove(id: number): Promise<Product | null> {
+        const productToBeDeleted = await this.getById(id);
+        if (!productToBeDeleted) {
+            return null;
+        }
+
+        await this.connection.execute(
+            'DELETE FROM Products WHERE id = ?',
+            [id],
+        );
+
+        return productToBeDeleted;
+    }
 }

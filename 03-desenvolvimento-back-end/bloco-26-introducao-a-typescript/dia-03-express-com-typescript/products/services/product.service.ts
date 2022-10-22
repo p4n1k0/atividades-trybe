@@ -37,6 +37,16 @@ class ProductService {
 
         return await this.model.update(id, product);
     }
+
+    public async remove(id: number) {
+        const product = await this.model.remove(id);
+
+        if (product === null) {
+            throw new NotFoundError('NotFoundError');
+        }
+
+        return product;
+    }
 }
 
 export default ProductService;
