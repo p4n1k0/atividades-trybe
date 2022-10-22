@@ -2,7 +2,7 @@ import { Pool, ResultSetHeader } from 'mysql2/promise';
 import { IProduct, Product } from '../interfaces';
 
 
-export default class BookModel {
+export default class ProductModel {
     public connection: Pool;
 
     constructor(connection: Pool) {
@@ -61,5 +61,14 @@ export default class BookModel {
         );
 
         return productToBeDeleted;
+    }
+
+    public async getAllByPriceRange(start: number, end: number): Promise<Product[]> {
+        const result = await this.connection
+            .execute('SELECT * FROM Products WHERE price >= ? AND price <= ?',
+                [start, end]);
+        const [products] = result;
+
+        return products as Product[];
     }
 }

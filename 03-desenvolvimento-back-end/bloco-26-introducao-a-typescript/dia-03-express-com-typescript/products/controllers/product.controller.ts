@@ -46,6 +46,13 @@ class ProductsController {
         res.status(statusCodes.OK)
             .json({ message: 'Product deleted successfully' });
     };
+
+    public getAllByPriceRange = async (req: Request, res: Response) => {
+        const { start, end } = req.query;
+        const data = await this.productService.getAllByPriceRange(Number(start), Number(end));
+
+        res.status(statusCodes.OK).json(data);
+    }
 }
 
 export default ProductsController;

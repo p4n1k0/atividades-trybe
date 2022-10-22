@@ -47,6 +47,20 @@ class ProductService {
 
         return product;
     }
+
+        public async getAllByPriceRange(start: number, end: number) {
+        if (Number.isNaN(start) || Number.isNaN(end)) {
+            return {  message: '"start and "end params must be numbers' } 
+        }
+
+        if (start > end) {
+            return { message: '"end" param must be greater than "start"' };
+        }
+
+        const data = await this.model.getAllByPriceRange(start, end)
+
+        return data;
+    }
 }
 
 export default ProductService;

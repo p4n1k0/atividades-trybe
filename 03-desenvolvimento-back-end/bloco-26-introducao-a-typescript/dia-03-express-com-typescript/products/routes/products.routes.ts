@@ -5,6 +5,7 @@ import productMiddleware from '../middlewares/product.middleware';
 const router = Router();
 const productsController = new ProductsController();
 
+router.get('/price', productsController.getAllByPriceRange)
 router.get('/', productsController.getAll);
 router.get('/:id', productsController.getById);
 router.delete('/:id', productsController.remove);
