@@ -1,4 +1,4 @@
-import { Restaurant } from '../interfaces';
+import { IRestaurant, Restaurant } from '../interfaces';
 import connection from '../models/connection';
 import RestaurantModel from '../models/restaurant.model';
 
@@ -19,6 +19,12 @@ class RestaurantService {
         const restaurant = await this.model.getById(id);
 
         return restaurant;
+    }
+
+    public async create(restaurant: IRestaurant) {
+        const data = await this.model.create(restaurant);
+
+        return data
     }
 }
 

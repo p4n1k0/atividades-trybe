@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import statusCodes from '../statusCodes';
 import RestaurantService from '../services/restaurant.service';
+import { IRestaurant } from '../interfaces';
 
 class RestaurantController {
     constructor(private service = new RestaurantService()) { }
@@ -21,6 +22,13 @@ class RestaurantController {
         }
 
         res.status(statusCodes.OK).json(restaurant);
+    }
+
+    public create = async (req: Request, res: Response) => {
+        const restaurant = req.body as IRestaurant;
+        const restaurantCreated = await this.service.create(restaurant);
+
+        res.status(statusCodes.CREATED).json(restaurantCreated);
     }
 }
 
