@@ -1,0 +1,18 @@
+use('class')
+// Retorna documento com _id = 8.
+// db.bios.find({ _id: 8 })
+
+// Retorna documento com _id = 8, exibindo campos _id e name
+// db.bios.find({ _id: 8 }, { name: 1 })
+
+// Retorna apenas os campos name e birth do documento com _id = 8
+// db.bios.find({ _id: 8 }, { name: 1, birth: 1, _id: 0 })
+
+// Retorna todos os documentos em que o campo name.first seja igua a John, utilizando pretty()
+// db.bios.find({ "name.first": "John" }).pretty()
+
+// Retorna os 3 primeiros documentos da coleção bios com pretty()
+// db.bios.find().limit(3).pretty()
+
+// Retorna 2 documentos da bios pulando os 5 primeiros documentos
+// db.bios.find().skip(5).limit(2)
