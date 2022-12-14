@@ -1,0 +1,64 @@
+use('business')
+// Retorno documento com _id = 8.
+// db.bios.find({ _id: 8 })
+
+// Retorno documento com _id = 8, exibindo campos _id e name
+// db.bios.find({ _id: 8 }, { name: 1 })
+
+// Retorno apenas os campos name e birth do documento com _id = 8
+// db.bios.find({ _id: 8 }, { name: 1, birth: 1, _id: 0 })
+
+// Retorno todos os documentos em que o campo name.first seja igua a John, utilizando pretty()
+// db.bios.find({ "name.first": "John" }).pretty()
+
+// Retorno os 3 primeiros documentos da coleção bios com pretty()
+// db.bios.find().limit(3).pretty()
+
+// Retorno 2 documentos da bios pulando os 5 primeiros documentos
+// db.bios.find().skip(5).limit(2)
+
+// Retorno quatidade de documentos da coleção books
+// db.books.countDocuments({})
+
+// Conto livos existentes com status "PUBLISH"
+// db.books.countDocuments(
+//    { status: 'PUBLISH' }
+// )
+
+// Exibo campos title, isbn e pagecount dos 3 primeiros livros sem o campo _id
+// db.books.find(
+//     {},
+//     {
+//         _id: 0,
+//         title: 1,
+//         isbn: 1,
+//         pageCount: 1
+//     }
+// ).limit(3).pretty()
+
+// Pulo 5 documentos e exibo campos _id, title, authors e status dos livros com status "MEAP", limitando 10 documentos
+// db.bookd.find(
+//    {
+//        status: "MEAP"
+//    },
+//    {
+//        title: 1,
+//        authors: 1,
+//        status: 1
+//    }
+// ).skip(5).limit(10).pretty()
+
+// Seleciono e faço a contagem dos restaurantes presentes nos bairros Queens, Staten Island e Bronx. (utilizando o atributo borough)
+// db.restaurants.countDocuments({ borough: { $in: ["Queens", "Staten Island", "Bronx"] } });
+
+// Seleciono e faço a contagem dos restaurantes que não possuem culinária do tipo American. (utilizando o atributo cuisine)
+// db.restaurants.countDocuments({ cuisine: { $ne: "American" } });
+
+// Seleciono e faço a contagem dos restaurantes que possuem avaliação maior ou igual a 8. (utilizando o atributo rating)
+// db.restaurants.countDocuments({ rating: { $gte: 8 } });
+
+// Seleciono e faço a contagem dos restaurantes que possuem avaliação menor que 4.
+// db.restaurants.countDocuments({ rating: { $lt: 4 } });
+
+// Seleciono e faço a contagem dos restaurantes que não possuem as avaliações 5, 6 e 7.
+db.restaurants.countDocuments({ rating: { $nin: [5, 6, 7] } });
