@@ -1,6 +1,16 @@
-import { Schema, model } from 'mongoose';
+import { Schema, model, connect } from 'mongoose';
 
-const petSchema = new Schema({
+// 1. Cria a interface que representa as informações de um Pet
+interface IPet {
+    name: string;
+    species: string;
+    age?: number; //Campo opcional definido por: (?)  
+    weight: number;
+    dailyMealsNumber: number;
+}
+
+// 2. Cria o Schema de acordo com Interface por meio do Generic: <IPet>
+const petSchema = new Schema<IPet>({
     name: { type: String, required: true },
     species: { type: String, required: true },
     age: { type: Number, required: false },
@@ -8,4 +18,5 @@ const petSchema = new Schema({
     dailyMealsNumber: { type: Number, required: true, min: 2, max: 5 },
 });
 
-const Pet = model('Pet', petSchema);
+// 3. Cria a Model de acordo com a Interface e o Schema
+const Pet = model<IPet>('Pet', petSchema); // Aceita somente schemas do tipo IPet
