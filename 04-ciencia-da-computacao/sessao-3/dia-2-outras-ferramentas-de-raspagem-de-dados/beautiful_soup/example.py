@@ -10,10 +10,10 @@ html_content = page.text
 soup = BeautifulSoup(html_content, 'html.parser')
 
 # imprime todas as ocorrências da tag 'p' da página ou uma lista vazia caso nenhum elemento corresponda a pesquisa
-print(soup.find_all('p'))
+# print(soup.find_all('p'))
 
 # imprime o elemento com o id especificado ou 'None' caso nenhum elemento corresponda a pesquisa
-# print(soup.find(id='quote'))
+print(soup.find(id='quote'))
 
 # imprime todo o texto da página
 # print(soup.get_text())
