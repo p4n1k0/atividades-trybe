@@ -1,39 +1,57 @@
-# importação do webdriver, que é o que possibilita a implementação para todos
-# os principais navegadores da web
 from selenium import webdriver
-from selenium.webdriver.common.by import By # Importa o By
+from selenium.webdriver.common.by import By
 
-# criação de uma instância de navegador utilizando o Firefox
 firefox = webdriver.Firefox()
 
-# requisições para essa instância criada utilizando o método `get`
-firefox.get('https://books.toscrape.com/')
 
-# Define função que fará o scrape da URL recebida
 def scrape(url):
     firefox.get(url)
 
-    # itera entre elementos com essa classe
-    for book in firefox.find_elements(By.CLASS_NAME, 'product_pod'):
-        # cria dict vazio para guardar os elementos capturados
+    books = []
+
+    for book in firefox.find_elements(By.CLASS_NAME, "product_pod"):
         new_item = {}
 
-        # cria uma chave 'title' no dict que vai receber o resultado da busca
-        # O título está em uma tag anchor que está dentro de uma tag 'H3'
-        new_item['title'] = (
-            book.find_elements(By.TAG_NAME, 'h3')
-            .find_element(By.TAG_NAME, 'a')
-            .get_attribute('innerHTML')
+        new_item["title"] = (
+            book.find_element(By.TAG_NAME, "h3")
+            .find_element(By.TAG_NAME, "a")
+            .get_attribute("innerHTML")
         )
 
-        # o link está dentro de um atributo 'href'
-        new_item['link'] = (
-            book.find_element(By.CLASS_NAME, 'image_container')
-            .find_element(By.TAG_NAME, 'a')
-            .get_attribute('href')
+        new_item["price"] = book.find_element(
+            By.CLASS_NAME, "price_color"
+        ).get_attribute("innerHTML")
+
+        new_item["link"] = (
+            book.find_element(By.CLASS_NAME, "image_container")
+            .find_element(By.TAG_NAME, "a")
+            .get_attribute("href")
         )
-        
-        print(new_item)
 
+        books.append(new_item)
+    return books
 
-scrape('https://books.toscrape.com/')
+firefox.get("https://books.toscrape.com/")
+
+all_books = []
+url2request = "https://books.toscrape.com/"
+
+# Cria uma variável com o seletor que captura o link do botão de passar para
+# a próxima página
+next_page_link = (
+    firefox.find_element(By.CLASS_NAME, "next")
+    .get_attribute("innerHTML")
+)
+
+# Enquanto este botão de 'next' existir na página ele irá iterar
+while next_page_link:
+    # Usa o método extend para colocar todos os elementos de uma lista dentro
+    # de outra
+    all_books.extend(scrape(url2request))
+    url2request = (
+        firefox.find_element(By.CLASS_NAME, "next")
+        .find_element(By.TAG_NAME, "a")
+        .get_attribute("href")
+    )
+
+print(all_books)
