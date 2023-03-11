@@ -9,5 +9,14 @@ html_content = page.text
 # cria instância do objeto BeautifulSoup e usa o parser do HTML nativo do Python
 soup = BeautifulSoup(html_content, 'html.parser')
 
-# utiliza o método prettify para melhorar a visualização do conteúdo
-print(soup.prettify())
+# acessa tag 'title'
+title = soup.title
+
+# retorna o elemento HTL da tag
+print(title)
+
+# acessando a string de uma tag
+print(title.string)
+
+# verifica o tipo dessa string
+print(type(title.string))
