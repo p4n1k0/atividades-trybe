@@ -13,10 +13,10 @@ soup = BeautifulSoup(html_content, 'html.parser')
 # print(soup.find_all('p'))
 
 # imprime o elemento com o id especificado ou 'None' caso nenhum elemento corresponda a pesquisa
-print(soup.find(id='quote'))
+# print(soup.find(id='quote'))
 
 # imprime todo o texto da página
-# print(soup.get_text())
+print(soup.get_text())
 
 # imprime todas as 'divs' que peossuem a classe 'quote' ou uma lista vazia, caso nenhum elemento corresponda a pesquisa
 # print(soup.find_all('div', {'class': 'quote'}))
