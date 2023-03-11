@@ -9,14 +9,14 @@ html_content = page.text
 # cria instância do objeto BeautifulSoup e usa o parser do HTML nativo do Python
 soup = BeautifulSoup(html_content, 'html.parser')
 
-# acessa tag 'title'
-title = soup.title
+# imprime todas as ocorrências da tag 'p' da página ou uma lista vazia caso nenhum elemento corresponda a pesquisa
+print(soup.find_all('p'))
 
-# retorna o elemento HTL da tag
-print(title)
+# imprime o elemento com o id especificado ou 'None' caso nenhum elemento corresponda a pesquisa
+# print(soup.find(id='quote'))
 
-# acessando a string de uma tag
-print(title.string)
+# imprime todo o texto da página
+# print(soup.get_text())
 
-# verifica o tipo dessa string
-print(type(title.string))
+# imprime todas as 'divs' que peossuem a classe 'quote' ou uma lista vazia, caso nenhum elemento corresponda a pesquisa
+# print(soup.find_all('div', {'class': 'quote'}))
