@@ -3,6 +3,6 @@ Unix
 Bash
 Git
 Github
+HTML
+CSS
 JavaScript
-Python
-SLQ
