@@ -1,0 +1,109 @@
+use('business')
+// Retorno documento com _id = 8.
+// db.bios.find({ _id: 8 })
+
+// Retorno documento com _id = 8, exibindo campos _id e name
+// db.bios.find({ _id: 8 }, { name: 1 })
+
+// Retorno apenas os campos name e birth do documento com _id = 8
+// db.bios.find({ _id: 8 }, { name: 1, birth: 1, _id: 0 })
+
+// Retorno todos os documentos em que o campo name.first seja igua a John, utilizando pretty()
+// db.bios.find({ "name.first": "John" }).pretty()
+
+// Retorno os 3 primeiros documentos da coleção bios com pretty()
+// db.bios.find().limit(3).pretty()
+
+// Retorno 2 documentos da bios pulando os 5 primeiros documentos
+// db.bios.find().skip(5).limit(2)
+
+// Retorno quatidade de documentos da coleção books
+// db.books.countDocuments({})
+
+// Conto livos existentes com status "PUBLISH"
+// db.books.countDocuments(
+//    { status: 'PUBLISH' }
+// )
+
+// Exibo campos title, isbn e pagecount dos 3 primeiros livros sem o campo _id
+// db.books.find(
+//     {},
+//     {
+//         _id: 0,
+//         title: 1,
+//         isbn: 1,
+//         pageCount: 1
+//     }
+// ).limit(3).pretty()
+
+// Pulo 5 documentos e exibo campos _id, title, authors e status dos livros com status "MEAP", limitando 10 documentos
+// db.bookd.find(
+//    {
+//        status: "MEAP"
+//    },
+//    {
+//        title: 1,
+//        authors: 1,
+//        status: 1
+//    }
+<<<<<<< HEAD
+// ).skip(5).limit(10).pretty()
+=======
+// ).skip(5).limit(10).pretty() 
+>>>>>>> exercicios/28.2
+
+// Seleciono e faço a contagem dos restaurantes presentes nos bairros Queens, Staten Island e Bronx. (utilizando o atributo borough)
+// db.restaurants.countDocuments({ borough: { $in: ["Queens", "Staten Island", "Bronx"] } });
+
+// Seleciono e faço a contagem dos restaurantes que não possuem culinária do tipo American. (utilizando o atributo cuisine)
+// db.restaurants.countDocuments({ cuisine: { $ne: "American" } });
+
+// Seleciono e faço a contagem dos restaurantes que possuem avaliação maior ou igual a 8. (utilizando o atributo rating)
+// db.restaurants.countDocuments({ rating: { $gte: 8 } });
+
+// Seleciono e faço a contagem dos restaurantes que possuem avaliação menor que 4.
+// db.restaurants.countDocuments({ rating: { $lt: 4 } });
+
+// Seleciono e faço a contagem dos restaurantes que não possuem as avaliações 5, 6 e 7.
+<<<<<<< HEAD
+db.restaurants.countDocuments({ rating: { $nin: [5, 6, 7] } });
+=======
+// db.restaurants.countDocuments({ rating: { $nin: [5, 6, 7] } });
+
+// Seleciono e faço a contagem dos restaurantes que não possuem avaliação menor ou igual a 5, essa consulta também retorna restaurantes que não possuem o campo de avaliação.
+// db.restaurants.countDocuments({ rating: { $not: { $lte: 5 } }});
+
+// Seleciono e faço a contagem dos restaurantes em que a avaliação é maior ou igual a 6, ou restaurantes localizados no bairro Brooklyn.
+// db.restaurants.countDocuments({ $or: [{ rating: { $gte: 6 } }, { borough: "Brooklyn" }] });
+
+// Seleciono e faço a contagem dos restaurantes localizados nos bairros Queens, Staten Island e Brooklyn e possuem avaliação maior que 4.
+// db.restaurants.countDocuments({
+//     $and: [
+//       { borough: { $in: ['Queens', 'Staten Island', 'Brooklyn'] } },
+//       { rating: { $gt: 4 } },
+//     ],
+// });
+
+// Seleciono e faço a contagem dos restaurantes onde nem o campo avaliação é igual a 1, nem o campo culinária são do tipo American.
+// db.restaurants.countDocuments({ $nor: [{ rating: { $eq: 1 } }, { cuisine: "American" }] });
+
+// Seleciono e faoa a contagem dos restaurantes em que a avaliação é maior que 6 ou menor que 10, E esteja localizado no bairro Brooklyn OU não possuem culinária do tipo Delicatessen.
+// db.restaurants.countDocuments({
+//     $and: [
+//       { $or: [{ rating: { $gt: 6, $lt: 10 } }] },
+//       { $or: [{ borough: 'Brooklyn' }, { cuisine: { $ne: 'Delicatessen' } }] },
+//     ],
+// });
+
+// Ordeno alfabeticamente os restaurantes pelo nome (atributo name).
+// db.restaurants.find().sort({ "name": 1 }).pretty();
+
+// Ordeno os restaurantes de forma decrescente baseado nas avaliações.
+// db.restaurants.find().sort({ "rating": -1 }).pretty();
+
+// Removo o primeiro restaurante que possua culinária do tipo Ice Cream, Gelato, Yogurt, Ices.
+// db.restaurants.deleteOne({ cuisine: "Ice Cream, Gelato, Yogurt, Ices" });
+
+// Removo todos os restaurantes que possuem culinária do tipo American.
+db.restaurants.deleteMany({ cuisine: "American" });
+>>>>>>> exercicios/28.2
