@@ -6,7 +6,7 @@ function maior(a, b, c) {
     } else if (c > a && c > b) {
         return "O maior número é: " + c;
     } else {
-        return "Os núemros são iguais";
+        return "Os números são iguais";
     }
 }
 
