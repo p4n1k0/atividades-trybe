@@ -1,5 +1,5 @@
 const grade = 100;
-let message = '';
+let message = "";
 
 if (grade >= 80) {
     message = "Parabéns, você faz parte do grupo de pessoas aprovadas!";
@@ -7,10 +7,8 @@ if (grade >= 80) {
 
 else if (grade < 80 && grade >= 60) {
     message = "Você está na nossa lista de espera.";
-}
-
-else if (grade < 60) {
+} else {
     message = "Infelizmente, você reprovou.";
-}
+};
 
 console.log(message);
