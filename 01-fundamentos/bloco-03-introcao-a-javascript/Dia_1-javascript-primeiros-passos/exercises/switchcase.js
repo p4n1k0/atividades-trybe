@@ -1,10 +1,10 @@
-const peca = "Bispo";
+const peca = "bispo";
 
-switch (peca.toLowerCase()){
+switch (peca.toLowerCase()) {
     case "rei":
         console.log("Rei - uma casa apenas para qualquer direção.");
         break;
-    
+
     case "bispo":
         console.log("Bispo - diagonal");
         break;
@@ -16,7 +16,7 @@ switch (peca.toLowerCase()){
     case "torre":
         console.log("Torre - horizontal e vertical");
         break;
-            
+
     case "peao":
         console.log("Peao - Um casa a frente, apenas no primeiro movimento duas");
         break;
@@ -26,5 +26,5 @@ switch (peca.toLowerCase()){
         break;
 
     default:
-        console.log("Peça inválida");    
+        console.log("Peça inválida");
 }            
