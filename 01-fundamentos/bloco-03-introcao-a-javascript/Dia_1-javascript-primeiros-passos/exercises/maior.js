@@ -1,9 +1,9 @@
-function maiorMenor(a, b){
-    if(a > b){
+function maiorMenor(a, b) {
+    if (a > b) {
         return a + " é maior que " + b;
-    }else if(b > a){
+    } else if (b > a) {
         return b + " é maior que " + a;
-    }else{
+    } else {
         return "Os números são iguais";
     }
 }

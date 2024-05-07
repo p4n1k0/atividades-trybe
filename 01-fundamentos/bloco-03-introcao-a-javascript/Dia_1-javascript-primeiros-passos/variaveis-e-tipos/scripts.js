@@ -1,8 +1,7 @@
 const myName = "Gabriel";
 const birthCity = "São Paulo";
-let birthYear = "1992";
-birthYear = "2030";
-birthCity = "Maringá"
+const birthYear = "1992";
 
+console.log(myName);
+console.log(birthCity);
 console.log(birthYear);
-
