@@ -52,3 +52,23 @@ const verifyProp = (obj, key) => {
 }
 
 console.log(verifyProp(school, 'professor')); // false
+
+
+const changeKey = (obj, course, value) => {
+    let findCourse;
+    for (let index = 0; index < obj.lessons.length; index += 1) {
+        let element = obj.lessons[index];
+        if (element.course === course) {
+            findCourse = element;
+            break;
+        }
+    }
+    if (findCourse !== undefined) {
+        findCourse.shift = value;
+        return findCourse;
+    } else {
+        return 'Curso não encontrado';
+    }
+};
+
+console.log(changeKey(school, 'Python', 'Noite'));
