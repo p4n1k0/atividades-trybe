@@ -41,3 +41,14 @@ const getNumberOfStudents = (obj) => {
 }
 
 console.log(getNumberOfStudents(school));
+
+const verifyProp = (obj, key) => {
+    for (let index = 0; index < obj.lessons.length; index += 1) {
+        if (obj.lessons[index][key] === undefined) {
+            return false;
+        }
+    }
+    return true;
+}
+
+console.log(verifyProp(school, 'professor')); // false
