@@ -1,28 +1,19 @@
-function mudaCor (novaCor){
-    let elemento = document.getElementById("header-container");
-    elemento.style.background = novaCor;
+const headerContainer = document.querySelector('#header-container');
+headerContainer.style.background = 'green';
+const emergencyTasks = document.querySelector('.emergency-tasks');
+emergencyTasks.style.background = 'salmon';
+const noEmergencyTasks = document.querySelector('.no-emergency-tasks');
+noEmergencyTasks.style.background = '#ffd700';
+
+const emergencyTasksHeaders = document.querySelectorAll('.emergency-tasks h3');
+for (let i = 0; i < emergencyTasksHeaders.length; i += 1) {
+  emergencyTasksHeaders[i].style.background = 'purple';
 }
 
-mudaCor ("green");
-
-
-function corMuda (corNova){
-    let el = document.getElementsByTagName("section")[0];
-    el.style.background = corNova;
+const noEmergencyTasksHaders = document.querySelectorAll('.no-emergency-tasks h3');
+for (let i = 0; i < noEmergencyTasksHaders.length; i += 1) {
+    noEmergencyTasksHaders[i].style.background = 'black';
 }
 
-corMuda ("salmon");
-
-function changeColor (newColor){
-    let element = document.getElementsByTagName("section")[1];
-    element.style.background = newColor;
-}
-
-changeColor ("gray");
-
-function colorMuda (colorNew){
-    let elem = document.getElementById("footer-container");
-    elem.style.background = colorNew;
-}
-
-colorMuda ("blue");
+const footerHeader = document.querySelector('#footer-container');
+footerHeader.style.background = '#008080';

@@ -54,41 +54,45 @@
  Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
  Crie uma função que exiba o conteúdo de todas as tags <p> no console.
         */
-        function mudaTexto (){
-            let paragrafo = document.getElementsByTagName('p')[1];
-            paragrafo.innerText = 'Me vejo 2 anos mais velho';
-            console.log(paragrafo);
-        }
-        mudaTexto();
+        function changeText() {
+          let paragraph = document.getElementsByTagName('p')[1];
+          paragraph.innerHTML= 'Feliz demais da conta!';
+        }  
+;        changeText(); 
 
-        function mudaCor (){
-            let elemento = document.getElementsByClassName('main-content')[0];
-            elemento.style.background = 'rgb(76,164,109)';
-        }
-        mudaCor ();
+        function changeColor() {
+          let mainContent = document.getElementsByClassName('main-content')[0];
+          mainContent.style.background = 'green';
+        }  
+        changeColor();
 
-        function changeColor (){
-            let element = document.getElementsByClassName('center-content')[0];
-            element.style.background = 'white';
+        function changeSquareRed() {
+          let squareToGreen = document.getElementsByClassName('center-content')[0];
+          squareToGreen.style.background = 'white';
         }
-        changeColor ();
+        changeSquareRed();
 
-        function changeText (){
-            let el = document.getElementsByTagName('h1')[0];
-            el.innerHTML = "Exercício 5.1 - JavaScript";           
+        function changeTextH1() {
+          let title = document.getElementsByTagName('h1')[0];
+          title.innerHTML = 'Exercício 5.1 - JavaScript';
         }
-        changeText ();
+        changeTextH1();
 
-        function textoMuda (){
-            let texto = document.getElementsByTagName('p')[0];
-            texto.innerHTML = texto.innerHTML.toUpperCase();
+        function changeToUpCaser() {
+          let p = document.getElementsByTagName('p')[0];
+          p.innerHTML = p.innerHTML.toUpperCase();
         }
-        textoMuda();
-        // ref: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
-        
-        function paragrafos(){
-            
+        changeToUpCaser();
+
+        function showParagraphs() {
+          let paragraphs = document.getElementsByTagName('p');
+
+          for(let i = 0; i < paragraphs.length; i += 1) {            
+            console.log(paragraphs[i].innerHTML);
+          }
         }
+        showParagraphs();
+
 
     </script>
   </body>

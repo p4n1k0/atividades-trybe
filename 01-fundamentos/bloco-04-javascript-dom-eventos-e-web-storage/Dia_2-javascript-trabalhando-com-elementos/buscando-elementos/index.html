@@ -1,0 +1,26 @@
+<main id="parent-of-parent">
+    <section id="parent">
+        <section id="first-child"></section>
+        <section id="where-are-you">
+            <section id="first-child-of-child"></section>
+        </section>
+        Attention!
+        <section id="third-child"></section>
+        <section id="fourth-and-last-child"></section>
+    </section>
+</main>
+
+<script>
+    const whereAreYou = document.getElementById('where-are-you');
+    const parent = whereAreYou.parentElement;
+    parent.style.color = 'red';
+
+    const firstChildOfChild = whereAreYou.firstElementChild;
+    firstChildOfChild.innerText = 'First child of child';
+
+    const firstChild = parent.firstElementChild;
+    const firstChild2 = whereAreYou.previousElementSibling;
+    const tectElement = whereAreYou.nextSibling;
+    const thirdChild = whereAreYou.nextElementSibling;
+    const thirdChild2 = parent.lastElementChild.previousElementSibling;
+</script>
