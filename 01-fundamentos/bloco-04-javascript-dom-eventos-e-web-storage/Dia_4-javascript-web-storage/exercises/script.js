@@ -19,6 +19,8 @@ window.onload = () => {
         for (let index = 0; index < paragraphs.length; index += 1) {
             paragraphs[index].style.fontSize = size
         }
+        // Salvando o tamanho da fonte no localStorage
+        localStorage.setItem("fontSize", size)
     }
 
     const setLineHeight = (height) => {
