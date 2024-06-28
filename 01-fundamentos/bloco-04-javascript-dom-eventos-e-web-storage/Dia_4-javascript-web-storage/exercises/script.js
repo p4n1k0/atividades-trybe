@@ -28,6 +28,8 @@ window.onload = () => {
         for (let index = 0; index < paragraphs.length; index += 1) {
             paragraphs[index].style.lineHeight = height
         }
+        // Salvando o espaçamento das linhas no localStorage
+        localStorage.setItem("lineHeight", height)
     }
 
     const setFontFamily = (family) => {
