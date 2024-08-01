@@ -30,6 +30,7 @@ body {
     width: 100%;
     flex-basis: 500px;
     order: 1;
+    flex-grow: 1;
 }
 
 .menu-container li {
