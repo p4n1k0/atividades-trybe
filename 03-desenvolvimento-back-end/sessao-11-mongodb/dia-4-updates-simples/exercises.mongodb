@@ -1,0 +1,105 @@
+use('class')
+
+// Altero o imdbRating para 7.7 no filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// { $set: { imdbRating: 7.7 } },
+// );
+
+// Altero budget para 1 no filme Godzilla.
+// db.movies.updateOne(
+// { title: "Godzilla" },
+// { $set: { budget: 1 } },
+// );
+
+// Altero budget para 15 e imdbRating para 5.5 no filme Home Alone.
+// db.movies.updateOne(
+// { title: "Home Alone" },
+// {
+//  $set: {
+//    budget: 15,
+//    imdbRating: 5.5,
+//  },
+// },
+// );
+
+// Aumento em 2 o imdbRating do filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// { $inc: { imdbRating: 2 } },
+// );
+
+// Aumento em 5 o budget do filme Home Alone.
+// db.movies.updateOne(
+// { title: "Home Alone" },
+// { $inc: { budget: 5 } },
+// );
+
+// Multiplico por 4 o imdbRating do filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// { $mul: { imdbRating: 4 } },
+// );
+
+// Renomeio o campo budget para estimatedBudget do filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// { $rename: { budget: "estimatedBudget" } },
+// );
+
+// Utilizo o operador $min para alterar o budget para 5 do filme Home Alone.
+// db.movies.updateOne(
+// { title: "Home Alone" },
+// { $min: { budget: 5 } },
+// );
+
+// Utilizo o operador $max para alterar o imdbRating para 8.6 do filme Godzilla. Além disso, altere a categoria "adventure" para "thriller" do filme Godzilla.
+// db.movies.updateOne(
+// { title: "Godzilla" },
+// {
+//  $max: { imdbRating: 8.6 },
+//  $set: { "category.1": "thriller" },
+// },
+// );
+
+// Utilizo o operador $currentDate, crio um campo chamado lastUpdated com o tipo timestamp no filme Home Alone.
+// db.movies.updateOne(
+// { title: "Home Alone" },
+// {
+//  $currentDate: {
+//    lastUpdated: { $type: "timestamp" },
+//  },
+// },
+// );
+
+// Utilizo uma única operação, crio um campo chamado sequels e atribua a ele o valor 0 em todos os documentos.
+// db.movies.updateMany(
+// {},
+// { $set: { sequels: 0 } },
+// );
+
+// Utilizo uma única operação, removo os campos budget e estimatedBudget em todos os documentos.
+// db.movies.updateMany(
+// {},
+// {
+//  $unset: {
+//    budget: "",
+//    estimatedBudget: "",
+//  },
+// },
+// );
+
+// Para os filmes Batman ou Home Alone, atribuo a imdbRating o valor 17, caso o valor de imdbRating seja menor que 17.
+db.movies.updateMany(
+  {
+    $or: [
+      { title: "Batman" },
+      { title: "Home Alone" },
+    ],
+  },
+  {
+    $max: {
+      imdbRating: 17,
+    },
+  },
+);

@@ -1,0 +1,171 @@
+use ('cinema')
+
+// Adiciono a categoria "superhero" ao filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//   $push: { category: "superhero" },
+// },
+// );
+
+// Utilizando o modificador $each, adiciono as categorias "villain" e "comic-based" ao filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//  $push: {
+//    category: {
+//      $each: ["villain", "comic-based"],
+//    },
+//  },
+// },
+// );
+
+// Removo a categoria "action" do filme Batman
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//  $pull: { category: "action" },
+// },
+// );
+
+// Removo o primeiro elemento do array category do filme Batman
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//  $pop: { category: -1 },
+// },
+// );
+
+// Removo o último elemento do array category do filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//  $pop: { category: 1 },
+// },
+// );
+
+// Adiciono o elemento "action" ao array category do filme Batman, garantindo que esse valor não se duplique.
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//  $addToSet: { category: "action" },
+// },
+// );
+
+// Adiciono a categoria "90's" aos filmes Batman e Home Alone
+// db.movies.updateMany(
+// {
+//  title: {
+//    $in: ["Batman", "Home Alone"],
+//  },
+// },
+// {
+//  $push: { category: "90's" },
+// },
+// );
+
+// Crio um array de documentos chamado cast para o filme Home Alone.
+// db.movies.updateOne(
+// { title: "Home Alone" },
+// {
+//  $push: {
+//    cast: {
+//      $each: [
+//        {
+//          "actor": "Macaulay Culkin",
+//          "character": "Kevin",
+//        },
+//        {
+//          "actor": "Joe Pesci",
+//          "character": "Harry",
+//        },
+//        {
+//          "actor": "Daniel Stern",
+//        },
+//      ],
+//    },
+//  },
+// },
+// );
+
+ // Adiciono o campo character com o valor Marv ao array de cast em que o campo actor é igual a Daniel Stern no filme Home Alone.
+ // db.movies.updateOne(
+// {
+//  title: "Home Alone",
+//  "cast.actor": "Daniel Stern",
+// },
+// {
+//  $set: { "cast.$.character": "Marv" },
+// },
+// );
+
+// Crio um array de documentos chamado cast para o filme Batman.
+// db.movies.updateOne(
+// { title: "Batman" },
+// {
+//  $push: {
+//    cast: {
+//      $each: [
+//        {
+//          "character": "Batman",
+//        },
+//        {
+//          "character": "Alfred",
+//        },
+//        {
+//          "character": "Coringa",
+//        },
+//      ],
+//    },
+//  },
+// },
+// );
+
+// Adiciono o campo actor que é um array com o valor "Christian Bale" ao array de cast em que o campo character é igual a Batman;
+// db.movies.updateOne(
+// {
+//  title: "Batman",
+//  "cast.character": "Batman",
+// },
+// {
+//  $push: { "cast.$.actor": "Christian Bale" },
+// },
+// );
+
+// Adiciono o campo actor ẃ um array com o valor "Michael Caine" ao array de cast em que o campo character é igual a Alfred; 
+// db.movies.updateOne(
+// {
+//  title: "Batman",
+//  "cast.character": "Alfred",
+// },
+// {
+//  $push: { "cast.$.actor": "Michael Caine" },
+// },
+// );
+
+// Adiciono o campo actor que é um array com o valor "Heath Ledger" ao array de cast em que o campo character é igual a Coringa;
+// db.movies.updateOne(
+// {
+//  title: "Batman",
+//  "cast.character": "Coringa",
+// },
+// {
+//  $push: { "cast.$.actor": "Heath Ledger" },
+// },
+// );
+
+// Adiciono aos atores de cast do character Batman do filme Batman os valores "Michael Keaton", "Val Kilmer" e "George Clooney", e deixo o array em ordem alfabética.
+// db.movies.updateOne(
+// {
+//  title: "Batman",
+//  "cast.character": "Batman",
+// },
+// {
+//  $push: {
+//    "cast.$.actor": {
+//      $each: ["Michael Keaton", "Val Kilmer", "George Clooney"],
+//      $sort: 1,
+//    },
+//  },
+// },
+// );
