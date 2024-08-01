@@ -94,5 +94,7 @@ body {
 }
 
 @media (max-width: 700px) {
-    
+    #aside {
+        display: none;
+    }
 }
