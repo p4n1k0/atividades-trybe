@@ -29,7 +29,7 @@ const showPromo = (name, number) => {
     try {
         checkName(name);
         checkNumber(parseInt(number));
-        checkValidRage(number);
+        checkValidRange(number);
         const productObject = checkPromo(number);
 
         firstText.innerHTML = `Boas-vindas, ${name}!`;
@@ -37,6 +37,9 @@ const showPromo = (name, number) => {
         ${productObject.product} no valor de R$ ${productObject.price}`;
     } catch (err) {
         secondText.innerHTML = err.message;
+    } finally {
+        document.querySelector('#name-id').value = "";
+        document.querySelector('#number-id').value = "";
     }
 }
 
@@ -65,7 +68,7 @@ const checkPromo = (number) => {
 }
 
 // Quarta parte
-const checkValidRage = (number) => {
+const checkValidRange = (number) => {
     if (number < 1 || number > 10) {
         throw new Error('É necessário digitar um número entre 1 e 10');
 
