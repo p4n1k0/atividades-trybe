@@ -13,10 +13,10 @@ html {
 }
 
 p {
-    padding: 20pc;
+    padding: 20px;
 }
 
-@media screem and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     body {
         background-color: lightcoral;
         font-family: sans-serif;
@@ -33,5 +33,21 @@ p {
 }
 
 @media screen and (min-width: 600px) {
-    
+    body {
+        background-color: lightblue;
+    }
+
+    .container {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        background-color: lightgreen;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+    }
 }
