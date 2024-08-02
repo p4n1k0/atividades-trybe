@@ -25,14 +25,49 @@ button.addEventListener('click', () => {
 const showPromo = (name, number) => {
     const firstText = document.querySelector('#text-initial');
     const secondText = document.querySelector('#text-final');
-    const productObject = checkNumber(parseInt(number));
 
-    firstText.innerHTML = `Boas-vindas, ${name}!`;
-    secondText.innerHTML = `A promoção do dia é: 
-    ${productObject.product} no valor de R$ ${productObject.price}`;
+    try {
+        checkName(name);
+        checkNumber(parseInt(number));
+        checkValidRage(number);
+        const productObject = checkPromo(number);
+
+        firstText.innerHTML = `Boas-vindas, ${name}!`;
+        secondText.innerHTML = `A promoção do dia é: 
+        ${productObject.product} no valor de R$ ${productObject.price}`;
+    } catch (err) {
+        secondText.innerHTML = err.message;
+    }
+}
+
+const checkName = (name) => {
+    let letters = /[aA-zZ]+/;
+
+    if (!name.match(letters)) {
+        throw new Error('É necessário digitar um nome válido');
+    }
 }
 
 // Segunda parte
 const checkNumber = (number) => {
-    return promo[number - 1];
+    if (isNaN(number)) {
+        throw new Error('É necessário digitar um número');
+    }
+}
+
+// Terceira parte
+const checkPromo = (number) => {
+    for (let index = 0; index < promo.length; index += 1) {
+        if (number - 1 === index) {
+            return promo[index];
+        }
+    }
+}
+
+// Quarta parte
+const checkValidRage = (number) => {
+    if (number < 1 || number > 10) {
+        throw new Error('É necessário digitar um número entre 1 e 10');
+        
+    }
 }
