@@ -27,3 +27,9 @@ const filterStrongPokemons = (pokemons) => {
 
 console.log(filterStrongPokemons(pokemons));
 
+
+const getStrongPokemonNames = (pokemons) => pokemons
+    .filter(({ level }) => level > 50)
+    .map(({ name }) => name);
+
+console.log(getStrongPokemonNames(pokemons));
