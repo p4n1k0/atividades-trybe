@@ -33,3 +33,8 @@ const getStrongPokemonNames = (pokemons) => pokemons
     .map(({ name }) => name);
 
 console.log(getStrongPokemonNames(pokemons));
+
+
+const sortPokemons = pokemons.sort((a, b) => a.level - b.level);
+
+console.log(sortPokemons);
