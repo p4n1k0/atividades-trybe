@@ -61,22 +61,16 @@ const books = [
     },
   ];
   
-  const expectedResult = false;
+  const expectedResult = [
+    'Frank Herbert',
+    'George R. R. Martin',
+    'Isaac Asimov',
+    'J. R. R. Tolkien',
+  ];
+ 
+  function fantasyOrScienceFictionAuthors() {
 
-<<<<<<< HEAD
-  function authorUnique() {
-    return books.every((book) => 
-    !books.some((bookSome) =>
-    (bookSome.author.birthYear === book.author.birthYear)
-    && (bookSome.author.name !== book.author.name)));
   }
-=======
-function authorUnique() {
-  return books.every((book) =>
-  !books.some((bookSome) =>
-  (bookSome.author.birthYear === book.author.birthYear)
-  && (bookSome.author.name !== book.author.name)));
-}
 
-console.log(authorUnique());
->>>>>>> exercicios/8.3
+  console.log(fantasyOrScienceFictionAuthors());
+

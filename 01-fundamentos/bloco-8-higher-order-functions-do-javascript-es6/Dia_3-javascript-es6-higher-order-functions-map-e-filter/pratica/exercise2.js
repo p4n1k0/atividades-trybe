@@ -61,22 +61,35 @@ const books = [
     },
   ];
   
-  const expectedResult = false;
-
-<<<<<<< HEAD
-  function authorUnique() {
-    return books.every((book) => 
-    !books.some((bookSome) =>
-    (bookSome.author.birthYear === book.author.birthYear)
-    && (bookSome.author.name !== book.author.name)));
+  const expectedResult = [
+    {
+      age: 31,
+      author: 'Isaac Asimov',
+    },
+    {
+      age: 38,
+      author: 'H. P. Lovecraft',
+    },
+    {
+      age: 39,
+      author: 'Stephen King',
+    },
+    {
+      age: 43,
+      author: 'George R. R. Martin',
+    },
+    {
+      age: 45,
+      author: 'Frank Herbert',
+    },
+    {
+      age: 62,
+      author: 'J. R. R. Tolkien',
+    },
+  ];
+  
+  function nameAndAge() {
+    
   }
-=======
-function authorUnique() {
-  return books.every((book) =>
-  !books.some((bookSome) =>
-  (bookSome.author.birthYear === book.author.birthYear)
-  && (bookSome.author.name !== book.author.name)));
-}
-
-console.log(authorUnique());
->>>>>>> exercicios/8.3
+       
+  console.log(nameAndAge());

@@ -61,6 +61,7 @@ const books = [
     },
   ];
   
+<<<<<<< HEAD
   // Adicione o código do exercício aqui:
   function smallerName() {
     let nameBook;    
@@ -71,6 +72,16 @@ const books = [
     });
 
     // Variável nameBook que receberá o valor do menor nome;
+=======
+  function smallerName() {
+    let nameBook;
+    books.forEach((book) => {
+        if (!nameBook || book.name.length < nameBook.length) {
+            nameBook = book.name;
+        }
+    });  
+   
+>>>>>>> exercicios/8.3
     return nameBook;
   }
 
