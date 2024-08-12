@@ -106,8 +106,22 @@ console.log((countryInfoArray));
 const findCountry = (countries, countryName) => {
     const result = countries.find((country) => country.name === countryName);
 
-    if (result) throw new Error('País não encontrado!');
+    if (!result) throw new Error('País não encontrado!');
     return result;
 };
 
 console.log(findCountry(countries, 'Brazil'));
+
+
+const newCountry = {
+    name: 'Germany',
+    region: 'Europe',
+    currencies: [{ code: 'EUR', name: 'Euro' }],
+    capital: 'Berlin',
+    population: 83190556,
+    area: 357386
+};
+
+const addCountry = (countries, newCountry) => [...countries, newCountry];
+
+console.log(addCountry(countries, newCountry));
