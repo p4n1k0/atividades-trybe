@@ -107,11 +107,7 @@ const books = [
   ];
   
   function booksOrderedByReleaseYearDesc() {
-<<<<<<< HEAD
-    return books.sort((a, b) => b.releaseYear - a.releaseYear);
-=======
       return books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear);    
->>>>>>> exercicios/8.3
   }
 
   console.log(booksOrderedByReleaseYearDesc());

@@ -61,17 +61,8 @@ const books = [
     },
   ];
   
-<<<<<<< HEAD
-  // Adicione o código do exercício aqui:
-=======
->>>>>>> exercicios/8.3
   function authorBornIn1947() {
     return books.find((book) => book.author.birthYear === 1947).author.name;
   }
 
-<<<<<<< HEAD
   console.log(authorBornIn1947());
-  
-=======
-  console.log(authorBornIn1947());
->>>>>>> exercicios/8.3

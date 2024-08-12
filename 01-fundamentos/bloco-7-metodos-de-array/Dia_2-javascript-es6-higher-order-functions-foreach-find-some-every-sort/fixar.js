@@ -22,6 +22,7 @@ const findDivisibleBy3And5 = () => {
 
 console.log(findDivisibleBy3And5())
 
+<<<<<<< HEAD:01-fundamentos/bloco-7-metodos-de-array/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 <<<<<<< HEAD:01-fundamentos/bloco-8-higher-order-functions-do-javascript-es6/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/script.js
 // const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
@@ -30,15 +31,22 @@ console.log(findDivisibleBy3And5())
 //   return names.find((name) => name.length === 5);
 // }
 =======
+=======
+>>>>>>> exercicios/8.3:01-fundamentos/bloco-8-higher-order-functions-do-javascript-es6/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 //.find
 const names = ['João', 'Irene', 'Fernando', 'Maria'];
 
 const findNameWithFiveLetters = () => {
   return names.find((name) => name.length === 5);
 }
+<<<<<<< HEAD:01-fundamentos/bloco-7-metodos-de-array/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 >>>>>>> exercicios/8.3:01-fundamentos/bloco-8-higher-order-functions-do-javascript-es6/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 
 //console.log(findNameWithFiveLetters());
+=======
+
+console.log(findNameWithFiveLetters());
+>>>>>>> exercicios/8.3:01-fundamentos/bloco-8-higher-order-functions-do-javascript-es6/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 
 
 //find.
@@ -52,6 +60,7 @@ const musicas = [
     return musicas.find((musica) => musica.id === id);
   }
   
+<<<<<<< HEAD:01-fundamentos/bloco-7-metodos-de-array/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 <<<<<<< HEAD:01-fundamentos/bloco-8-higher-order-functions-do-javascript-es6/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/script.js
   console.log(findMusic('31031685'));
 
@@ -94,6 +103,10 @@ const people = [
 people.sort((a, b) => b.age - a.age);
 
 console.log(people);
+=======
+  console.log(findMusic('31031685'))
+
+>>>>>>> exercicios/8.3:01-fundamentos/bloco-8-higher-order-functions-do-javascript-es6/Dia_2-javascript-es6-higher-order-functions-foreach-find-some-every-sort/fixar.js
 =======
   console.log(findMusic('31031685'))
 

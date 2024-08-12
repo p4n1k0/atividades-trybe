@@ -63,14 +63,6 @@ const books = [
   
   const expectedResult = false;
 
-<<<<<<< HEAD
-  function authorUnique() {
-    return books.every((book) => 
-    !books.some((bookSome) =>
-    (bookSome.author.birthYear === book.author.birthYear)
-    && (bookSome.author.name !== book.author.name)));
-  }
-=======
 function authorUnique() {
   return books.every((book) =>
   !books.some((bookSome) =>
@@ -79,4 +71,3 @@ function authorUnique() {
 }
 
 console.log(authorUnique());
->>>>>>> exercicios/8.3
