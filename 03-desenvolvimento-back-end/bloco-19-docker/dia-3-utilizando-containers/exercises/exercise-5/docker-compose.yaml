@@ -1,0 +1,8 @@
+version: '3'
+
+services: 
+
+  frontent: 
+    build: ./exercise-5
+    ports:
+      - 8080:80
