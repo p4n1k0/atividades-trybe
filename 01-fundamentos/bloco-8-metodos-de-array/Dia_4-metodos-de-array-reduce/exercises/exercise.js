@@ -68,3 +68,22 @@ const countries = [
 const getPopulation = () => {
     return countries.reduce((acc, curr) => acc + curr.population, 0);
 };
+
+console.log(getPopulation());
+
+
+const longestName = () => {
+    return countries.reduce((acc, curr) => acc.name.length > curr.name.length ? acc : curr);
+};
+
+console.log(longestName());
+
+
+const totalAreaByRegion = (region = 'Europe') => {
+    return countries.reduce((acc, country) => {
+        if (country.region === region) {
+            return acc + country.area;
+        }
+        return acc;
+    }, 0);
+};
