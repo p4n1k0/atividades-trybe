@@ -44,9 +44,10 @@ const mockFile = JSON.stringify({
             name: 'Mounds',
             brandId: 3,
         },
-    ] });
+    ]
+});
 
-describe('Testando a API Cacao Trybe', () => {
+describe('Testando a API Cacau Trybe', () => {
     beforeEach(() => { sinon.stub(fs.promises, 'readFile').resolves(mockFile); });
     afterEach(() => { sinon.restore(); });
 });
@@ -65,6 +66,35 @@ describe('Usando o método GET em /chocolates', () => {
         expect(response.status).to.be.equal(200);
         expect(response.body.chocolates).to.deep.equal(output);
     });
+});
+
+describe('Usando o método GET em /chocolates/:id para buscar o ID 4', function () {
+    it('Retorna o chocolate Mounds', async function () {
+        const response = await chai
+            .request(app)
+            .get('/chocolates/4');
+
+        expect(response.status).to.be.equal(200);
+        expect(response.body.chocolate).to.deep.equal(
+            {
+                id: 4,
+                name: 'Mounds',
+                brandId: 3,
+            });
+    });
+});
+
+
+describe('Usando o método GET em /chocolates/:id para buscar o ID 99', function () {
+    it('Retorna status 404 com a mensagem "Chocolate not found"', async function () {
+        const response = await chai
+            .request(app)
+            .get('/chocolates/99');
+
+        expect(response.status).to.be.equal(404);
+        expect(response.body).to.deep.equal({ message: 'Chocolate not found' })
+    });
+
 });
 
 describe('Usando o método GET em /chocolates/brand/:brandId para buscar brandId 1', () => {
@@ -88,11 +118,11 @@ describe('Usando o método GET em /chocolates/brand/:brandId para buscar brandId
 });
 
 describe('Usando o método GET em /chocolates/total', () => {
-      it('Retorna a quantidade total de chocolates', async () => {
+    it('Retorna a quantidade total de chocolates', async () => {
         const response = await chai.request(app)
-          .get('/chocolates/total');
+            .get('/chocolates/total');
 
         expect(response.status).to.be.equal(200);
         expect(response.body).to.deep.equal({ totalChocolates: 4 });
     });
-  });
+});
