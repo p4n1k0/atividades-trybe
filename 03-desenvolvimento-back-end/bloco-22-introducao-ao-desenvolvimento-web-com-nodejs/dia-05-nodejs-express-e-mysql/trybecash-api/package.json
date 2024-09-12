@@ -1,7 +1,6 @@
 {
   "name": "trybecash-api",
   "version": "1.0.0",
-  "description": "",
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
@@ -11,16 +10,17 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "devDependencies": {
     "chai": "^4.3.6",
     "chai-http": "^4.3.0",
     "mocha": "^10.0.0",
-    "nodemon": "^2.0.19",
+    "nodemon": "2.0.15",
     "sinon": "^14.0.0"
   },
   "dependencies": {
-    "dotenv": "^16.0.1",
-    "express": "^4.17.1",
-    "mysql2": "^2.3.3"
+    "dotenv": "16.0",
+    "express": "4.17.1",
+    "mysql2": "3.0.0"
   }
 }
