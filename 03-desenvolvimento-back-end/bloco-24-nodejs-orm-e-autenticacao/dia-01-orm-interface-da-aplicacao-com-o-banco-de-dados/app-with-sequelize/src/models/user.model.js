@@ -3,6 +3,9 @@ UserModel = (sequelize, DataTypes) => {
         fullName: DataTypes.STRING,
         email: DataTypes.STRING,
     });
+    (async () => {
+        await sequelize.sync({ force: true });
+    })();
 
     return User;
 };
