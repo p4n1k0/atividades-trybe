@@ -9,26 +9,24 @@ const getAll = async () => {
 
 const getById = async (id) => {
   const book = await Book.findByPk(id);
-  
+
   return book;
 };
 
+
 const create = async ({ title, author, pageQuantity }) => {
   const book = await Book.create({ title, author, pageQuantity });
-
   return book;
-
 };
 
 const update = async (id, { title, author, pageQuantity }) => {
   const [updated] = await Book.update(
 
-    { 
+    {
       title,
       author,
-      pageQuantity, 
-
-    }, 
+      pageQuantity,
+    },
 
     { where: { id } },
   );
