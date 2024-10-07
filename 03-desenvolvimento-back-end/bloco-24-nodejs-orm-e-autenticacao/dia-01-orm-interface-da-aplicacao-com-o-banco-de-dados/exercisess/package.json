@@ -1,17 +1,17 @@
 {
-  "name": "app-with-sequelize",
+  "name": "exercisess",
   "version": "1.0.0",
-  "main": "src/server.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "4.17.3",
+    "express": "4.17.1",
     "mysql2": "3.0.0",
     "sequelize": "6.3.4"
   },
