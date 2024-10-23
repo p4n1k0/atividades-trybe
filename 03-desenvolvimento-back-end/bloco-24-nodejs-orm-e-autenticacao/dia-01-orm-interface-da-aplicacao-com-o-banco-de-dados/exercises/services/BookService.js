@@ -38,16 +38,11 @@ const update = async (id, { title, author, pageQuantity, publisher }) => {
 };
 
 const remove = async (id) => {
-
   const removed = await Book.destroy(
-
     { where: { id } },
-
   );
 
-
   return removed;
-
 };
 
 const getByAuthor = async (author) => {
