@@ -1,4 +1,3 @@
-// cole esse código dentro do arquivo da migration "users-books"
 "use strict";
 
 /** @type {import('sequelize-cli').Migration} */
