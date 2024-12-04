@@ -1,0 +1,11 @@
+WORDS = [
+    "cat",
+    "elephant",
+    "dog",
+    "monkey",
+    "duck",
+    "chameleon",
+    "bear",
+    "moose",
+    "rooster",
+]
