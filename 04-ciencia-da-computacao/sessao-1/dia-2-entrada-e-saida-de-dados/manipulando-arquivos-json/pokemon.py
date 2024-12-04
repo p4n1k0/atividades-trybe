@@ -1,15 +1,30 @@
 import json
+import random
 
-# leitura de todos os pokemons
-with open("pokemons.json") as file:
-    pokemons = json.load(file)["results"]
 
-# separamos somente os do tipo grama
-grass_type_pokemons = [
-    pokemon for pokemon in pokemons if "Grass" in pokemon["type"]
-]
+def shot(pokemon_name):
+    wrong_shot = True
+    num_of_shots = 0
+    while (wrong_shot):
+        num_of_shots += 1
+        shot = input("Quem é esse pokemon? ")
+        if (shot == pokemon_name):
+            print("Você acertou! Parabéns!")
+            break
+        elif num_of_shots == len(pokemon_name):
+            print("Você errou!")
+            break
+        else:
+            print("Dica: ", end="")
+            for i in range(0, num_of_shots):
+                print(pokemon_name[i], end="")
+            print("")
 
-# abre o arquivo para escrita
-with open("grass_pokemons.json", "w") as file:
-    # escreve no arquivo já transformando em formato json a estrutura
-    json.dump(grass_type_pokemons, file)
+
+if __name__ == "__main__":
+    with open("pokemons.json") as file:
+        pokemons = json.load(file)["results"]
+        pokemon = random.choice(pokemons)
+        pokemon_name = pokemon["name"]
+
+    shot(pokemon_name)
