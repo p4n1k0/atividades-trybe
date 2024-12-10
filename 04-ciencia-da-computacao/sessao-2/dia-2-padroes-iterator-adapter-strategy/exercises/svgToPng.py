@@ -31,3 +31,4 @@ class SvgAdapter(PngInterface):
 
     def draw(self):
         print(f"Drawing {self.svg.get_image()}")
+        
