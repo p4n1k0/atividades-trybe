@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' /home/tarick/Documentos/atividades-trybe/04-ciencia-da-computacao/sessao-3/dia-1-raspagem-de-dados/exercises/.venv/bin/python3 "$0" "$@"
+'''exec' /home/tarick/Documentos/atividades-trybe/04-ciencia-da-computacao/sessao-3/dia-1-raspagem-de-dados/exercises2/.venv/bin/python3 "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
