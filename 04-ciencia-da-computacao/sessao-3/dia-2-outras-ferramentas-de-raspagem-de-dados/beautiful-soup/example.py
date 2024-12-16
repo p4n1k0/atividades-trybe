@@ -24,5 +24,11 @@ print(title.name)
 # acessando a tag 'footer'
 footer = soup.footer
 
-# acessando o atributo classe da tag footer
-print(footer['class'])
+# retorna o elemento HTML da tag
+print(title)
+
+# Acessando a string de uma tag
+print(title.string)
+
+# Verificando o tipo dessa string
+print(type(title.string))
