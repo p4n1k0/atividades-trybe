@@ -28,6 +28,9 @@ class ListaArray:
     def remove(self, index):
         # removeremos o item, retornando-o
         return self.data.pop(index)
+    
+    def update(self, index, value):
+        self.data[index] = value
 
 
 # vamos inicializar e preencher uma estrutura de dados array
@@ -47,6 +50,9 @@ print(array)  # saída: ["Valeria", "Marcos", "Patrícia"]
 # inserindo em uma posição intermediária
 array.set(1, "Miguel")
 print(array) # saída: ['Valeria', 'Miguel', 'Marcos', 'Patrícia']
+
+array.update(2, 10)
+print(array.data)
 
 # quando começamos as inserções o valor muda
 array_memory_size = sys.getsizeof(array.data)
