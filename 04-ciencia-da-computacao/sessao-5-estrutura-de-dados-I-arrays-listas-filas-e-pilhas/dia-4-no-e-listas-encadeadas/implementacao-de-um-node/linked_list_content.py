@@ -87,6 +87,7 @@ class LinkedList:
             value_returned = Node(value_to_be_returned.value)
             return value_returned
         
+class DoublyLinkedList:        
     def index_of(self, value):
         position = 1
         current_value = self.head_value
@@ -96,6 +97,19 @@ class LinkedList:
             current_value = current_value.next
             position += 1
         return -1
+    
+    def delete_duplicates(linked_list):
+        if len(linked_list) <= 1:
+            return linked_list
+
+        current_element = linked_list.head_value
+
+        while current_element and current_element.next:
+            if current_element.value == current_element.next.value:
+                current_element.next = current_element.next.next
+            else:
+                current_element = current_element.next
+        return linked_list
         
     def is_empty(self):
         return not self.__length
