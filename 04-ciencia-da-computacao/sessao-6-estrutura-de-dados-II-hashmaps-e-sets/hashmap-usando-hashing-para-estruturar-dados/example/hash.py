@@ -5,14 +5,14 @@ class Employee:
         
 class HashMap:
     def __init__(self):
-        self._buckets = [None for i in range(100)]
+        self._buckets = [[] for i in range(10)]
         
     def get_address(self, id_num):
         return id_num % 10
     
     def insert(self, employee):
         address = self.get_address(employee.id_num)
-        self._buckets[address] = employee
+        self._buckets[address].append(employee)
         
     def get_value(self, id_num):
         address = self.get_address(id_num)
