@@ -16,7 +16,10 @@ class HashMap:
         
     def get_value(self, id_num):
         address = self.get_address(id_num)
-        return self._buckets[address].name
+        for item in self._buckets[address]:
+            if item.id_num == id_num:
+                return item.name
+        return None
     
     def has(self, id_num):
         address = self.get_address(id_num)
