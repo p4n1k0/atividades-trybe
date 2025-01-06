@@ -4,5 +4,8 @@ class Employee:
         self.name = name
         
 class HashMap:
+    def __init__(self):
+        self._buckets = [None for i in range(100)]
+        
     def get_address(self, id_num):
         return id_num % 10
