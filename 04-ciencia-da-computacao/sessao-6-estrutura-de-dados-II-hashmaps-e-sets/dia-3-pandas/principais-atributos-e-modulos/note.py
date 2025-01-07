@@ -1,20 +1,20 @@
 import pandas as pd
 
 
-def calcula_situacao(media):
-    return "Aprovado" if media >= 7 else "Reprovado"
-
-
-notas = pd.DataFrame({
+primeira_nota = pd.DataFrame({
     "nome": ["maria", "joão", "pedro", "ana"],
     "primeira_nota": [9, 8, 7, 8],
+})
+
+segunda_nota = pd.DataFrame({
+    "nome": ["maria", "joão", "pedro", "ana"],
     "segunda_nota": [8, 7, 9, 3]
 })
 
-# Cria uma nova coluna chamada media
-notas["media"] = (notas["primeira_nota"] + notas["segunda_nota"]) / 2
-
-# Cria uma nova coluna chamada situacao no DataFrame com Aprovado ou Reprovado com base na média
-notas["situacao"] = notas["media"].apply(calcula_situacao)
-
-print(notas.groupby(by="situacao"))
+par_de_notas = primeira_nota.merge(segunda_nota)
+print(par_de_notas)
+#     nome  primeira_nota  segunda_nota
+# 0  maria              9             8
+# 1   joão              8             7
+# 2  pedro              7             9
+# 3    ana              8             3
