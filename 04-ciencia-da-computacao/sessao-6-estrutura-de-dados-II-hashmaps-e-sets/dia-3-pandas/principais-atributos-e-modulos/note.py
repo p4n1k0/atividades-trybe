@@ -17,4 +17,4 @@ notas["media"] = (notas["primeira_nota"] + notas["segunda_nota"]) / 2
 # Cria uma nova coluna chamada situacao no DataFrame com Aprovado ou Reprovado com base na média
 notas["situacao"] = notas["media"].apply(calcula_situacao)
 
-print(notas)
+print(notas.groupby(by="situacao"))
