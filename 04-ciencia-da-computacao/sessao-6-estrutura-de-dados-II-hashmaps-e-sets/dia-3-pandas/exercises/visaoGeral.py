@@ -21,3 +21,10 @@ print(count_countries_by_confederation)
 conmebol_countries = df.loc[df["confederation"] == "CONMEBOL"]
 
 print(conmebol_countries)
+
+
+uefa_countries = df[df["confederation"] == "UEFA"]
+
+audience_average = uefa_countries["tv_audience_share"].mean()
+
+print(audience_average)
