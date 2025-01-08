@@ -11,3 +11,8 @@ global_share_greater_2 = df["population_share"] > 2
 result = df[global_share_greater_2]
 
 print(result)
+
+# Para contar os países por confederação usamos o método count() e reset_index() para dar um nome à coluna que mostra a contagem.
+count_countries_by_confederation = df.groupby("confederation")["country"].count().reset_index(name="count")
+
+print(count_countries_by_confederation)
