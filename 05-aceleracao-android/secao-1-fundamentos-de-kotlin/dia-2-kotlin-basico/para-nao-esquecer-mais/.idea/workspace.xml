@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ac498629-0111-4ac6-b639-6312ad98ef70" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/area.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/big.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/biggest_name.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/media.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/paints.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/people.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/quadrado.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-1-aprendendo-python/escrevendo-os-primeiros-arquivos/triangle.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/dicas-pythonicas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/dicas-pythonicas/dicaFPrinting.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/dicas-pythonicas/dicaTabulate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/estruturando-uma-aplicacao/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/estruturando-uma-aplicacao/entranceAndExit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/exercises/books.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/exercises/porcent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/exercises/report.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/exercises/scrambedWord.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/exercises/verticalName.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/exercises/words.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-csv/department_report.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-csv/graduacao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-csv/graduacao_unb.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-csv/new_department_report.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-json/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-json/pokemon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/manipulando-arquivos-json/pokemons.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-2-entrada-e-saida-de-dados/pratice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/codigo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/emails.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/pokemon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/test_codigo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/test_emails.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/test_exceptions.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/test_pokemon.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/test_translate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/test_validate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/translate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-1-introducao-a-python/dia-3-testes/testes-automatizados/validate.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-1-poo-em-python/composicao/composicao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-1-poo-em-python/exercises/estatistica.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-1-poo-em-python/exercises/geometricas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-1-poo-em-python/exercises/television.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-1-poo-em-python/heranca/heranca.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-2-padroes-iterator-adapter-strategy/exercises/baralho.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-2-padroes-iterator-adapter-strategy/exercises/orcament.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-2-padroes-iterator-adapter-strategy/exercises/starWars.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-2-padroes-iterator-adapter-strategy/exercises/svgToPng.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-3-padroes-decorator-observer-factory/codeSmells.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-3-padroes-decorator-observer-factory/decorator.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-3-padroes-decorator-observer-factory/factory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-2-padroes-de-projeto/dia-3-padroes-decorator-observer-factory/observer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/banco-de-dados/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/banco-de-dados/exemplo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/crawler/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/crawler/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/crawler/crawler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/crawler/teste.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/exercises/bandeiras.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/exercises/biblioteca.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/exercises/exercises.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/exercises/paginacao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/requisicoes-web/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/requisicoes-web/exemplo_scrape.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/requisicoes-web/requisicao.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-1-raspagem-de-dados/requisicoes-web/teste.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/beautiful-soup/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/beautiful-soup/example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/beautiful-soup/scrape_bsoup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/exercises/exercise_bsoup.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/exercises/exerciselenium.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/exercises/extraction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/exercises/imprime.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/selenium/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-3-raspagem-de-dados/dia-2-outras-ferramentas-de-raspagem-de-dados/selenium/example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-1-complexidade-de-algoritmos/complexidade-quadratica/cQuadratica.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-1-complexidade-de-algoritmos/exercises/exercise1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-1-complexidade-de-algoritmos/exercises/exercise2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-1-complexidade-de-algoritmos/exercises/exercise3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-2-recursividade-e-estrategias-para-solucao-de-algoritmos/a-pilha-de-chamadas/pChamadas.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-2-recursividade-e-estrategias-para-solucao-de-algoritmos/exercises/divisor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-2-recursividade-e-estrategias-para-solucao-de-algoritmos/exercises/nMaior.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-2-recursividade-e-estrategias-para-solucao-de-algoritmos/exercises/nRecursivo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-de-busca/busca_binaria.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-de-busca/busca_linear.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-que-usam-dividir-e-conquistar/merge_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-que-usam-dividir-e-conquistar/quick_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-que-usam-forca-bruta/insertion.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-que-usam-forca-bruta/selection.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/algoritmos-que-usam-solucoes-iterativas/bubble_sort.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/exercises/Cronometro.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/exercises/comparar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/exercises/error.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/exercises/iterativo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-4-algoritmos/dia-3-algoritmos-de-ordenacao-e-busca/exercises/ordem.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/main_memory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/my_platform.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/operating_system.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/process_id.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/resources.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/secondary_memory.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-1-arquitetura-de-computadores/pc/seconds.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-2-arquitetura-de-redes/diretorio/some-dir/https-server/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-2-arquitetura-de-redes/diretorio/some-dir/https-server/https.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-2-arquitetura-de-redes/diretorio/some-dir/https-server/key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-2-arquitetura-de-redes/exercise/servidor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-2-arquitetura-de-redes/exercise/transporte.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/estrutura-de-dados-array/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/estrutura-de-dados-array/example_array.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/estrutura-de-dados-array/functions_examples.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/estrutura-de-dados-array/module_array_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/estrutura-de-dados-array/multidimensional_array_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/estrutura-de-dados-array/numpy_array_example.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/exercises/aleatorio.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/exercises/bons_pares.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/exercises/instant_studants.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/exercises/max_time.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-3-arrays/exercises/server_count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-4-no-e-listas-encadeadas/implementacao-de-um-node/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-4-no-e-listas-encadeadas/implementacao-de-um-node/fifo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-4-no-e-listas-encadeadas/implementacao-de-um-node/lifo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-4-no-e-listas-encadeadas/implementacao-de-um-node/linked_list_content.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-4-no-e-listas-encadeadas/implementacao-de-um-node/node.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/filas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/filas/que.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/utilizando-pilhas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/utilizando-pilhas/expression_solver.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/utilizando-pilhas/menu.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/utilizando-pilhas/reverse.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/utilizando-pilhas/stack.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-5-estrutura-de-dados-I-arrays-listas-filas-e-pilhas/dia-5-pilhas-e-filas/utilizando-pilhas/stack_limit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/exercises/scores.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/hashmap-usando-hashing-para-estruturar-dados/example/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/hashmap-usando-hashing-para-estruturar-dados/example/character.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/hashmap-usando-hashing-para-estruturar-dados/example/comprehension.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/hashmap-usando-hashing-para-estruturar-dados/example/dictionary.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-1-hashmap-e-dict/hashmap-usando-hashing-para-estruturar-dados/example/hash.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-2-set/criando-a-classe-conjunto/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-2-set/criando-a-classe-conjunto/classet.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-2-set/criando-a-classe-conjunto/conjunter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-2-set/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-2-set/exercises/blefe.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-2-set/exercises/longerstr.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/dataframes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/dataframes/data_frame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/dataframes/series_panda.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/exercises/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/exercises/fifa_audience.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/exercises/visaoGeral.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/populando-e-consultando-banco-de-dados/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/populando-e-consultando-banco-de-dados/bancode.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/atrEmetodos.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/chuvas_morumbi.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/chuvas_morumbi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/consulte.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/lok.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/note.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/read.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../04-ciencia-da-computacao/sessao-6-estrutura-de-dados-II-hashmaps-e-sets/dia-3-pandas/principais-atributos-e-modulos/regione.py" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2rPAMTkuSoIM0aRx1TBM20h23dI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "exercicios/16.5",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ac498629-0111-4ac6-b639-6312ad98ef70" name="Changes" comment="" />
+      <created>1736450291113</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1736450291113</updated>
+    </task>
+    <servers />
+  </component>
+</project>
