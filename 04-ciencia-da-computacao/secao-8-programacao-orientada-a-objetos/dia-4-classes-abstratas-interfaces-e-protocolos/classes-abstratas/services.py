@@ -34,7 +34,7 @@ class Mail(Deliverable):
 
 
 class ShippingCompany(Deliverable):
-    def delivery(self, customer: Customer, endereco: Endereco) -> None:
+    def delivery(self, customer: Customer, endereco: Address) -> None:
         print(f"A carga foi entregue com sucesso para o cliente {customer.name}")
         print(
             f"Endereço: {endereco.street}, {endereco.number}, "
