@@ -1,11 +1,18 @@
+from typing import Optional
+
+
 class Person:
-    def print_name_and_age(self, age: int) -> None:
-        print(f"{self.name} tem {age} anos.")
+    def __init__(
+        self,
+        name: str,
+        age: Optional[int] = None,
+        account_balance: Optional[int] = None,
+    ) -> None:
+        self.age = age
+        self.name = name
+        self.account_balance = account_balance
 
-alice = Person()
-alice.name = "Alice"
-alice.print_name_and_age(20) # saída: Alice tem 20 anos.
-
-john = Person()
-john.name = "John"
-john.print_name_and_age(28) # saída: John tem 28 anos.
+person_1 = Person("Marcelo", 22, 700)
+person_2 = Person("Matheus")
+person_3 = Person("Maria", 33)
+person_4 = Person("Márcia", account_balance=100)
