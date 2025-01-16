@@ -1,18 +1,10 @@
 from flask import Flask, render_template
-
-
+from product import Product
 app = Flask(__name__)
-
+products = []
 @app.route('/')
-def index():
-    filmes = [
-        {'titulo': 'O Poderoso Chefão', 'ano': 1972},
-        {'titulo': 'Interestelar', 'ano': 2014},
-        {'titulo': 'A Origem', 'ano': 2010},
-        {'titulo': 'Clube da Luta', 'ano': 1999},
-        {'titulo': 'Pulp Fiction', 'ano': 1994}
-    ]
-    return render_template('index.html', filmes=filmes)
-
+def products_view():
+    return render_template('products.html', products=products)
+   
 if __name__ == '__main__':
     app.run()
