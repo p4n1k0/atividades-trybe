@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Lista de Alunos</title>
+    <meta charset="UTF-8">
+    <title>Alunos</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -17,8 +18,8 @@
             <td>{{ aluno.nome }}</td>
             <td>{{ aluno.matricula }}</td>
             <td>
-                <a href="/alunos/editar/{{ loop.index0 }}">Editar</a>
-                <a href="/alunos/excluir/{{ loop.index0 }}">Excluir</a>
+                <a href="/alunos/editar/{{ aluno.matricula }}">Editar</a>
+                <a href="/alunos/excluir/{{ aluno.matricula }}">Excluir</a>
             </td>
         </tr>
         {% endfor %}
