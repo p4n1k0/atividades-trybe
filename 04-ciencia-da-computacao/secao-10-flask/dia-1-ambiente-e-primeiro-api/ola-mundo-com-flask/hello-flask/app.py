@@ -1,18 +1,18 @@
 from flask import Flask, render_template
 
+
 app = Flask(__name__)
 
-class Book:
-    def __init__(self, title, author, year):
-        self.title = title
-        self.author = author
-        self.year = year
-
-book = Book('Dom Casmurro', 'Machado de Assis', 1899)
-
 @app.route('/')
-def book_view():
-    return render_template('book.html', book=book)
+def index():
+    filmes = [
+        {'titulo': 'O Poderoso Chefão', 'ano': 1972},
+        {'titulo': 'Interestelar', 'ano': 2014},
+        {'titulo': 'A Origem', 'ano': 2010},
+        {'titulo': 'Clube da Luta', 'ano': 1999},
+        {'titulo': 'Pulp Fiction', 'ano': 1994}
+    ]
+    return render_template('index.html', filmes=filmes)
 
 if __name__ == '__main__':
     app.run()
