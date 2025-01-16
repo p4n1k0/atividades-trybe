@@ -1,17 +1,27 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from controllers.filme_controller import FilmeController
 
 app = Flask(__name__)
+filme_controller = FilmeController()
 
-@app.route('/')
+
+@app.route("/", methods=["GET", "POST"])
 def index():
-    filmes = [
-        {'titulo': 'O Poderoso Chefão', 'ano': 1972},
-        {'titulo': 'Interestelar', 'ano': 2014},
-        {'titulo': 'A Origem', 'ano': 2010},
-        {'titulo': 'Clube da Luta', 'ano': 1999},
-        {'titulo': 'Pulp Fiction', 'ano': 1994}
-    ]
-    return render_template('index.html', filmes=filmes)
+    if request.method == "POST":
+        titulo = request.form.get("titulo")
+        filmes = filme_controller.buscar_filmes_por_titulo(titulo)
+    else:
+        filmes = filme_controller.buscar_filmes_por_titulo()
+        # Exemplo de busca inicial
+    return render_template("index.html", filmes=filmes)
 
-if __name__ == '__main__':
-    app.run()
+
+@app.route("/filmes/<id>")
+def filme(id):
+    print(id)
+    filme = filme_controller.buscar_filme_por_id(id)
+    return render_template("filme.html", filme=filme)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
