@@ -9,6 +9,8 @@
     {% for ingrediente in ingredientes %}
         <p>{{ ingrediente|capitalize }}</p>
     {% endfor %}
-    <span>{{ preparo }}</span>
+    {% for passo in preparo|converte_para_lista %}
+        <p>{{ passo }}</p>
+    {% endfor %}
 </body>
 </html>
