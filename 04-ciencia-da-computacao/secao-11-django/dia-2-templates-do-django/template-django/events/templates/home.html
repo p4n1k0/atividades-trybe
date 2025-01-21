@@ -7,4 +7,9 @@ Primeiro Template
 {% block content %}
 <h1> Meu primeiro template usando Django! </h1>
 <h2> {{ company }} </h2>
+{% for event in events %}
+<p> <a href="{% url 'details-page' event.id %}"> {{ event }} </a> </p>
+{% empty %}
+<p> Não existem eventos cadastrados </p>
+{% endfor %}
 {% endblock %}
