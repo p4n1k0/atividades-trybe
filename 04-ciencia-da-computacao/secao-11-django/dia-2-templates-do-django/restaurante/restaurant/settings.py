@@ -132,11 +132,7 @@ STATICFILES_DIRS = [
     str(BASE_DIR / 'media/'),
 ]
 
-STORAGE = {
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"
-    }
-}
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 WHITE_NOISE_AUTOREFRESH = True
 
