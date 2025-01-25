@@ -4,15 +4,17 @@ from .models import Singer, Music, Playlist
 from .serialyzers import SingerSerializer, MusicSerializer, PlaylistSerializer
 
 
+
 class SingerViewSet(viewsets.ModelViewSet):
     queryset = Singer.objects.all()
     serializer_class = SingerSerializer
-    
-    
+
+
 
 class MusicViewSet(viewsets.ModelViewSet):
     queryset = Music.objects.all()
     serializer_class = MusicSerializer
+
 
 
 class PlaylistViewSet(viewsets.ModelViewSet):

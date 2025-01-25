@@ -21,10 +21,10 @@ from core.views import SingerViewSet, MusicViewSet, PlaylistViewSet
 
 router = routers.DefaultRouter()
 router.register(r'singers', SingerViewSet)
-router.register('musics', MusicViewSet)
+router.register(r'musics', MusicViewSet)
 router.register(r'playlists', PlaylistViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(router.urls))
+    path('', include(router.urls)),
 ]
